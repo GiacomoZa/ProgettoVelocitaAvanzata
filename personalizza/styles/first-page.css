@@ -1,0 +1,554 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.first-page-3kr {
+  width: 100%;
+  height: 102.4rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.first-page-3kr .rectangle-3-gJ2 {
+  width: 144rem;
+  height: 6.4rem;
+  position: absolute;
+  left: 0;
+  top: 96rem;
+  box-shadow: 0 -0.4rem 1rem rgba(0, 0, 0, 0.25);
+  background-color: #181818;
+}
+.first-page-3kr .price-69-000-HYi {
+  width: 15.2rem;
+  height: 2.9rem;
+  position: absolute;
+  left: 6.5rem;
+  top: 97.8rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+}
+.first-page-3kr .price-69-000-HYi .price-69-000-HYi-sub-0 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.first-page-3kr .price-69-000-HYi .price-69-000-HYi-sub-1 {
+}
+.first-page-3kr .rectangle-1-AW2 {
+  width: 56.5rem;
+  height: 102.4rem;
+  position: absolute;
+  left: 87.5rem;
+  top: 0;
+  border: solid 0 #000000;
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+}
+.first-page-3kr .rectangle-2-3pi {
+  width: 144rem;
+  height: 7.8rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid 0 #000000;
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+}
+.first-page-3kr .rectangle-4-wv6 {
+  width: 23.4rem;
+  height: 5.2rem;
+  position: absolute;
+  left: 102.6rem;
+  top: 41.4rem;
+  border: solid 0 #000000;
+  box-sizing: border-box;
+  box-shadow: 0 -0.4rem 1rem rgba(0, 0, 0, 0.25);
+  background-color: #f8313e;
+}
+.first-page-3kr .rectangle-5-FQz {
+  width: 23.4rem;
+  height: 5.2rem;
+  position: absolute;
+  left: 102.6rem;
+  top: 80.1rem;
+  border: solid 0 #000000;
+  box-sizing: border-box;
+  box-shadow: 0 -0.4rem 1rem rgba(0, 0, 0, 0.25);
+  background-color: #f8313e;
+}
+.first-page-3kr .rectangle-6-jb4 {
+  width: 56.5rem;
+  height: 6.4rem;
+  position: absolute;
+  left: 87.5rem;
+  top: 96rem;
+  border: solid 0 #000000;
+  box-sizing: border-box;
+  box-shadow: -0.4rem -0.4rem 1rem rgba(0, 0, 0, 0.25);
+  background-color: #f8313e;
+}
+.first-page-3kr .rectangle-7-DFL {
+  width: 28.5rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 29.5rem;
+  top: 89.1rem;
+  border: solid 0 #000000;
+  box-sizing: border-box;
+  box-shadow: -0.4rem -0.4rem 1rem rgba(0, 0, 0, 0.25);
+  background-color: #f8313e;
+}
+.first-page-3kr .rectangle-8-J1t {
+  width: 14.2rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 43.8rem;
+  top: 89.1rem;
+  border: solid 0 #000000;
+  box-sizing: border-box;
+  box-shadow: -0.2rem 0 0.5rem rgba(0, 0, 0, 0.1000000015);
+  background-color: #ffffff;
+}
+.first-page-3kr .velocit-avanzata-meser-P3L {
+  width: 31rem;
+  height: 2.9rem;
+  position: absolute;
+  left: 9.2rem;
+  top: 2.5rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+}
+.first-page-3kr .velocit-avanzata-meser-P3L .velocit-avanzata-meser-P3L-sub-0 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.first-page-3kr .velocit-avanzata-meser-P3L .velocit-avanzata-meser-P3L-sub-1 {
+}
+.first-page-3kr .ellipse-1-hiE {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 112.1rem;
+  top: 91.4rem;
+  background-color: #f8313e;
+  border-radius: 0.9rem;
+}
+.first-page-3kr .ellipse-2-ReE {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 114.9rem;
+  top: 91.4rem;
+  border: solid 0.2rem #000000;
+  box-sizing: border-box;
+  border-radius: 0.9rem;
+}
+.first-page-3kr .ellipse-3-8oY {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 117.7rem;
+  top: 91.4rem;
+  border: solid 0.2rem #000000;
+  box-sizing: border-box;
+  border-radius: 0.9rem;
+}
+.first-page-3kr .motore-T58 {
+  width: 11.4rem;
+  height: 4.3rem;
+  position: absolute;
+  left: 90.7rem;
+  top: 12rem;
+  font-size: 3.6rem;
+  font-weight: 300;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .pacchetto-9Cr {
+  width: 16rem;
+  height: 4.3rem;
+  position: absolute;
+  left: 90.7rem;
+  top: 50.7rem;
+  font-size: 3.6rem;
+  font-weight: 300;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .meser-2300-Rw4 {
+  width: 12.7rem;
+  height: 2.9rem;
+  position: absolute;
+  left: 90.7rem;
+  top: 17.8rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .model-sport-w8i {
+  width: 13.1rem;
+  height: 2.9rem;
+  position: absolute;
+  left: 90.7rem;
+  top: 56.5rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .carburante--SLN {
+  width: 7.4rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 90.9rem;
+  top: 23.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .sospensioni-sport-freni-w2E {
+  width: 15.5rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 90.9rem;
+  top: 62.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .potenza--QgW {
+  width: 5.6rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 114rem;
+  top: 23.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .ruote-86i {
+  width: 5.7rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 129.3rem;
+  top: 62.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .consumo--q18 {
+  width: 6.4rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 90.9rem;
+  top: 28.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .interni-sport-LTg {
+  width: 7.6rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 90.9rem;
+  top: 67.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .accelerazione--dxa {
+  width: 9.3rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 114rem;
+  top: 28.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .luci-full-led-L6J {
+  width: 7.7rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 111.9rem;
+  top: 67.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .pacchetto-areodinamico-RNe {
+  width: 15.1rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 126rem;
+  top: 67.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .trazione--Wut {
+  width: 5.8rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 90.9rem;
+  top: 33.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .sport-transmission-R1G {
+  width: 11.9rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 110.4rem;
+  top: 62.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .trasmissione--XCi {
+  width: 8.9rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 114rem;
+  top: 33.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .gas-QXQ {
+  width: 2.3rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 100.9rem;
+  top: 23.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .kw-260-ps-WaS {
+  width: 10.4rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 124rem;
+  top: 23.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .km-1n6 {
+  width: 7.1rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 100.9rem;
+  top: 28.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .s-Wir {
+  width: 3rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 124rem;
+  top: 28.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .posteriore-DNN {
+  width: 6.4rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 100.9rem;
+  top: 33.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .automatica-sequenziale-v1t {
+  width: 15.1rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 124rem;
+  top: 33.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .select-motore-Czz {
+  width: 12.5rem;
+  height: 2.4rem;
+  position: absolute;
+  left: 108.5rem;
+  top: 42.9rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .select-pacchetto-X1g {
+  width: 15rem;
+  height: 2.4rem;
+  position: absolute;
+  left: 107.3rem;
+  top: 81.6rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .procedi-1hY {
+  width: 9.8rem;
+  height: 2.9rem;
+  position: absolute;
+  left: 110.85rem;
+  top: 97.8rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .esterni-KCS {
+  width: 4.4rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 34.45rem;
+  top: 90.1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .interni-Qjg {
+  width: 4rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 48.9rem;
+  top: 90.1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  text-transform: capitalize;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.first-page-3kr .foto1-2-ikN {
+  width: 102.1rem;
+  height: 41.3rem;
+  position: absolute;
+  left: 0;
+  top: 35.8rem;
+  object-fit: cover;
+  vertical-align: top;
+}
