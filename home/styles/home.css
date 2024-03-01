@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #000000;
-  border-radius: 4.6154rem;
+
 }
 .home-wnn .header-ZpA {
   margin-bottom: 13.8846rem;
@@ -382,13 +382,14 @@ body {
   font-family: Advent Pro, 'Source Sans Pro';
   white-space: nowrap;
 }
-.home-wnn .auto-group-sxpx-TC2 .fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA {
+.home-wnn .auto-group-sxpx-TC2 .storia-testoesterno1 {
   width: 52.2rem;
-  height: 20.4rem;
+  height: auto; /* Cambiato da 20.4rem a auto per adattarsi al contenuto */
   position: absolute;
   left: 83.8rem;
   top: 99.7rem;
   display: flex;
+  flex-direction: column; /* Aggiunto per garantire che il testo vada a capo correttamente */
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.195;
@@ -396,36 +397,22 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-.home-wnn .auto-group-sxpx-TC2 .fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA .fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA-sub-0 {
+
+.home-wnn .auto-group-sxpx-TC2 .storia-testointernotitolo1 {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.195;
   letter-spacing: 0.25rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
+  display: inline-block; /* Per mantenere il titolo sulla stessa riga */
 }
-.home-wnn .auto-group-sxpx-TC2 .dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn {
-  width: 50.7rem;
-  height: 20.4rem;
-  position: absolute;
-  left: 83.8rem;
-  top: 126.1rem;
-  display: flex;
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.195;
-  letter-spacing: 0.25rem;
-  color: #ffffff;
-  font-family: Advent Pro, 'Source Sans Pro';
+
+.home-wnn .auto-group-sxpx-TC2 .storia-testoesterno1 > div {
+  display: block; /* Per far andare a capo il testo successivo al titolo */
+  margin-top: 10px;
 }
-.home-wnn .auto-group-sxpx-TC2 .dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn .dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn-sub-0 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.195;
-  letter-spacing: 0.25rem;
-  color: #ffffff;
-  font-family: Advent Pro, 'Source Sans Pro';
-}
+
 .home-wnn .auto-group-uapy-yFU {
   box-sizing: border-box;
   padding: 10.1rem 14.1rem 11.85rem 8rem;
@@ -437,7 +424,8 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../assets/f1ec18-f83e-4f4f-bd27-decb23da4cd2-fotor-20240228175647-1-bg.png');
+  background-image: url('../assets/f1ec18-f83e-4f4f-bd27-decb23da4cd2-fotor-20240228175647-1-bg.jpg');
+ 
   flex-shrink: 0;
 }
 .home-wnn .auto-group-uapy-yFU .sostenibilit-H1G {
