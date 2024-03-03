@@ -112,7 +112,7 @@ body {
   height: 3.2rem;
   position: absolute;
   left: 29.5rem;
-  top: 80%;
+  top: 83%;
   border: solid 0 #000000;
   box-sizing: border-box;
   box-shadow: -0.4rem -0.4rem 1rem rgba(0, 0, 0, 0.25);
@@ -123,7 +123,7 @@ body {
   height: 3.2rem;
   position: absolute;
   left: 43.8rem;
-  top: 80%;
+  top: 83%;
   border: solid 0 #000000;
   box-sizing: border-box;
   box-shadow: -0.2rem 0 0.5rem rgba(0, 0, 0, 0.1000000015);
@@ -148,33 +148,33 @@ body {
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
 }
-.first-page-3kr .motore-T58 {
+.first-page-3kr .tappezzeria-T58 {
   width: 11.4rem;
   height: 4.3rem;
   position: absolute;
   left: 90.7rem;
   top: 12rem;
   font-size: 3.6rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1725;
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
   white-space: nowrap;
 }
-.first-page-3kr .pacchetto-9Cr {
+.first-page-3kr .dettagli-9Cr {
   width: 16rem;
   height: 4.3rem;
   position: absolute;
   left: 63%;
   top: 42rem;
   font-size: 3.6rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1725;
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
   white-space: nowrap;
 }
-.first-page-3kr .select-motore-Czz {
+.first-page-3kr .select-tappezzeria-Czz {
   width: 15rem;
   height: 2.4rem;
   position: absolute;
@@ -187,11 +187,11 @@ body {
   font-family: Roboto, 'Source Sans Pro';
   white-space: nowrap;
 }
-.first-page-3kr .select-pacchetto-X1g {
+.first-page-3kr .select-dettagli-X1g {
   width: 15rem;
   height: 2.4rem;
   position: absolute;
-  left: 74.2%;
+  left: 74.5%;
   top: 63rem;
   text-align: center;
   font-size: 2rem;
@@ -221,7 +221,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 34.45rem;
-  top: 81%;
+  top: 84%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
@@ -236,7 +236,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 48.9rem;
-  top: 81%;
+  top: 84%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
@@ -247,11 +247,43 @@ body {
   white-space: nowrap;
 }
 .first-page-3kr .foto1-2-ikN {
-  width: 85rem;
-  height: 41.3rem;
+  width: 84.5rem;
+  height: 53rem;
   position: absolute;
-  left: 0;
-  top: 28%;
+  left: 1%;
+  top: 9.5rem;
   object-fit: cover;
+  vertical-align: top;
+}
+.first-page-3kr .pelleNera {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 72.5%;
+  top: 20rem;
+  vertical-align: top;
+}
+.first-page-3kr .pelleMarrone {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 80.5%;
+  top: 20rem;
+  vertical-align: top;
+}
+.first-page-3kr .aluminium {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 72.5%;
+  top: 50rem;
+  vertical-align: top;
+}
+.first-page-3kr .carbonFiber {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 80.5%;
+  top: 50rem;
   vertical-align: top;
 }
