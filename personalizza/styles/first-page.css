@@ -1,4 +1,3 @@
-
 html {
 	font-size:62.5%;
 }
@@ -16,7 +15,7 @@ body {
   width: 144rem;
 }.first-page-3kr {
   width: 100%;
-  height: 102.4rem;
+  height: 100vh;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -27,7 +26,7 @@ body {
   height: 6.4rem;
   position: absolute;
   left: 0;
-  top: 96rem;
+  top: 93%;
   box-shadow: 0 -0.4rem 1rem rgba(0, 0, 0, 0.25);
   background-color: #181818;
 }
@@ -36,7 +35,7 @@ body {
   height: 2.9rem;
   position: absolute;
   left: 6.5rem;
-  top: 97.8rem;
+  top: 95%;
   font-size: 2.4rem;
   font-weight: 300;
   line-height: 1.1725;
@@ -76,22 +75,22 @@ body {
   background-color: #ffffff;
 }
 .first-page-3kr .rectangle-4-wv6 {
-  width: 23.4rem;
-  height: 5.2rem;
+  width: 20rem;
+  height: 4.5rem;
   position: absolute;
-  left: 102.6rem;
-  top: 41.4rem;
+  left: 72.5%;
+  top: 35rem;
   border: solid 0 #000000;
   box-sizing: border-box;
   box-shadow: 0 -0.4rem 1rem rgba(0, 0, 0, 0.25);
   background-color: #f8313e;
 }
 .first-page-3kr .rectangle-5-FQz {
-  width: 23.4rem;
-  height: 5.2rem;
+  width: 20rem;
+  height: 4rem;
   position: absolute;
-  left: 102.6rem;
-  top: 80.1rem;
+  left: 72.5%;
+  top: 62rem;
   border: solid 0 #000000;
   box-sizing: border-box;
   box-shadow: 0 -0.4rem 1rem rgba(0, 0, 0, 0.25);
@@ -102,7 +101,7 @@ body {
   height: 6.4rem;
   position: absolute;
   left: 87.5rem;
-  top: 96rem;
+  top: 93%;
   border: solid 0 #000000;
   box-sizing: border-box;
   box-shadow: -0.4rem -0.4rem 1rem rgba(0, 0, 0, 0.25);
@@ -113,7 +112,7 @@ body {
   height: 3.2rem;
   position: absolute;
   left: 29.5rem;
-  top: 89.1rem;
+  top: 80%;
   border: solid 0 #000000;
   box-sizing: border-box;
   box-shadow: -0.4rem -0.4rem 1rem rgba(0, 0, 0, 0.25);
@@ -124,7 +123,7 @@ body {
   height: 3.2rem;
   position: absolute;
   left: 43.8rem;
-  top: 89.1rem;
+  top: 80%;
   border: solid 0 #000000;
   box-sizing: border-box;
   box-shadow: -0.2rem 0 0.5rem rgba(0, 0, 0, 0.1000000015);
@@ -134,16 +133,13 @@ body {
   width: 31rem;
   height: 2.9rem;
   position: absolute;
-  left: 9.2rem;
+  left: 5rem;
   top: 2.5rem;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 1.1725;
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: baseline;
 }
 .first-page-3kr .velocit-avanzata-meser-P3L .velocit-avanzata-meser-P3L-sub-0 {
   font-size: 2.4rem;
@@ -151,35 +147,6 @@ body {
   line-height: 1.1725;
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
-}
-.first-page-3kr .ellipse-1-hiE {
-  width: 1.8rem;
-  height: 1.8rem;
-  position: absolute;
-  left: 112.1rem;
-  top: 91.4rem;
-  background-color: #f8313e;
-  border-radius: 0.9rem;
-}
-.first-page-3kr .ellipse-2-ReE {
-  width: 1.8rem;
-  height: 1.8rem;
-  position: absolute;
-  left: 114.9rem;
-  top: 91.4rem;
-  border: solid 0.2rem #000000;
-  box-sizing: border-box;
-  border-radius: 0.9rem;
-}
-.first-page-3kr .ellipse-3-8oY {
-  width: 1.8rem;
-  height: 1.8rem;
-  position: absolute;
-  left: 117.7rem;
-  top: 91.4rem;
-  border: solid 0.2rem #000000;
-  box-sizing: border-box;
-  border-radius: 0.9rem;
 }
 .first-page-3kr .motore-T58 {
   width: 11.4rem;
@@ -198,8 +165,8 @@ body {
   width: 16rem;
   height: 4.3rem;
   position: absolute;
-  left: 90.7rem;
-  top: 50.7rem;
+  left: 63%;
+  top: 42rem;
   font-size: 3.6rem;
   font-weight: 300;
   line-height: 1.1725;
@@ -211,8 +178,8 @@ body {
   width: 12.7rem;
   height: 2.9rem;
   position: absolute;
-  left: 90.7rem;
-  top: 17.8rem;
+  left: 73%;
+  top: 13rem;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -224,8 +191,8 @@ body {
   width: 13.1rem;
   height: 2.9rem;
   position: absolute;
-  left: 90.7rem;
-  top: 56.5rem;
+  left: 76%;
+  top: 43rem;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -237,8 +204,8 @@ body {
   width: 7.4rem;
   height: 1.7rem;
   position: absolute;
-  left: 90.9rem;
-  top: 23.8rem;
+  left: 63%;
+  top: 20rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.1725;
@@ -250,8 +217,8 @@ body {
   width: 15.5rem;
   height: 1.7rem;
   position: absolute;
-  left: 90.9rem;
-  top: 62.5rem;
+  left: 63%;
+  top: 50rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -263,8 +230,8 @@ body {
   width: 5.6rem;
   height: 1.7rem;
   position: absolute;
-  left: 114rem;
-  top: 23.8rem;
+  left: 79%;
+  top: 20rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.1725;
@@ -276,8 +243,8 @@ body {
   width: 5.7rem;
   height: 1.7rem;
   position: absolute;
-  left: 129.3rem;
-  top: 62.5rem;
+  left: 89%;
+  top: 50rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -289,8 +256,8 @@ body {
   width: 6.4rem;
   height: 1.7rem;
   position: absolute;
-  left: 90.9rem;
-  top: 28.8rem;
+  left: 63%;
+  top: 25rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.1725;
@@ -302,8 +269,8 @@ body {
   width: 7.6rem;
   height: 1.7rem;
   position: absolute;
-  left: 90.9rem;
-  top: 67.5rem;
+  left: 63%;
+  top: 56rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -315,8 +282,8 @@ body {
   width: 9.3rem;
   height: 1.7rem;
   position: absolute;
-  left: 114rem;
-  top: 28.8rem;
+  left: 79%;
+  top: 25rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.1725;
@@ -328,8 +295,8 @@ body {
   width: 7.7rem;
   height: 1.7rem;
   position: absolute;
-  left: 111.9rem;
-  top: 67.5rem;
+  left: 74%;
+  top: 56rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -341,8 +308,8 @@ body {
   width: 15.1rem;
   height: 1.7rem;
   position: absolute;
-  left: 126rem;
-  top: 67.5rem;
+  left: 84%;
+  top: 56rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -354,8 +321,8 @@ body {
   width: 5.8rem;
   height: 1.7rem;
   position: absolute;
-  left: 90.9rem;
-  top: 33.8rem;
+  left: 63%;
+  top: 30rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.1725;
@@ -367,8 +334,8 @@ body {
   width: 11.9rem;
   height: 1.7rem;
   position: absolute;
-  left: 110.4rem;
-  top: 62.2rem;
+  left: 77%;
+  top: 50rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -380,8 +347,8 @@ body {
   width: 8.9rem;
   height: 1.7rem;
   position: absolute;
-  left: 114rem;
-  top: 33.8rem;
+  left: 79%;
+  top: 30rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.1725;
@@ -393,8 +360,8 @@ body {
   width: 2.3rem;
   height: 1.7rem;
   position: absolute;
-  left: 100.9rem;
-  top: 23.8rem;
+  left: 70%;
+  top: 20rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -406,8 +373,8 @@ body {
   width: 10.4rem;
   height: 1.7rem;
   position: absolute;
-  left: 124rem;
-  top: 23.8rem;
+  left: 86%;
+  top: 20rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -419,8 +386,8 @@ body {
   width: 7.1rem;
   height: 1.7rem;
   position: absolute;
-  left: 100.9rem;
-  top: 28.8rem;
+  left: 70%;
+  top: 25rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -432,8 +399,8 @@ body {
   width: 3rem;
   height: 1.7rem;
   position: absolute;
-  left: 124rem;
-  top: 28.8rem;
+  left: 86%;
+  top: 25rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -445,8 +412,8 @@ body {
   width: 6.4rem;
   height: 1.7rem;
   position: absolute;
-  left: 100.9rem;
-  top: 33.8rem;
+  left: 70%;
+  top: 30rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -458,8 +425,8 @@ body {
   width: 15.1rem;
   height: 1.7rem;
   position: absolute;
-  left: 124rem;
-  top: 33.8rem;
+  left: 86%;
+  top: 30rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -468,13 +435,13 @@ body {
   white-space: nowrap;
 }
 .first-page-3kr .select-motore-Czz {
-  width: 12.5rem;
+  width: 12rem;
   height: 2.4rem;
   position: absolute;
-  left: 108.5rem;
-  top: 42.9rem;
+  left: 75%;
+  top: 36.1rem;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.1725;
   color: #ffffff;
   font-family: Roboto, 'Source Sans Pro';
@@ -484,8 +451,8 @@ body {
   width: 15rem;
   height: 2.4rem;
   position: absolute;
-  left: 107.3rem;
-  top: 81.6rem;
+  left: 74.5%;
+  top: 63rem;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
@@ -499,7 +466,7 @@ body {
   height: 2.9rem;
   position: absolute;
   left: 110.85rem;
-  top: 97.8rem;
+  top: 95%;
   text-align: center;
   font-size: 2.4rem;
   font-weight: 400;
@@ -514,7 +481,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 34.45rem;
-  top: 90.1rem;
+  top: 81%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
@@ -529,7 +496,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 48.9rem;
-  top: 90.1rem;
+  top: 81%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
@@ -540,11 +507,11 @@ body {
   white-space: nowrap;
 }
 .first-page-3kr .foto1-2-ikN {
-  width: 102.1rem;
+  width: 85rem;
   height: 41.3rem;
   position: absolute;
   left: 0;
-  top: 35.8rem;
+  top: 28%;
   object-fit: cover;
   vertical-align: top;
 }
