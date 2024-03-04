@@ -16,7 +16,6 @@ body {
 }.first-page-3kr {
   width: 100%;
   height: 100vh;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   background-color: #ffffff;

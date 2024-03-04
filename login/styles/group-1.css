@@ -1,4 +1,3 @@
-
 html {
 	font-size:62.5%;
 }
@@ -13,10 +12,35 @@ input {
 	border: none;
 }
 body {
-  width: 144.1rem;
-}.group-1-B8A {
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  min-width: 650px;
+  min-height: 750px;
+}
+@media screen and (max-width: 650px){
+  html{
+      width: 650px;
+      overflow: auto;
+  }
+}
+@media screen and (max-height: 750px){
+  html{
+      height: 750px;
+      overflow: auto;
+  }
+}
+.group-1-B8A {
   width: 100%;
-  height: 97rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .group-1-B8A .frame-8-LFx {
   width: 100%;
@@ -25,23 +49,28 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../assets/image-8-bg.png');
+  background-image: url('../assets/sfondo.jpg');
+  display: flex;
+  align-items: flex-start;
 }
 .group-1-B8A .frame-8-LFx .rectangle-6-Ud4 {
-  width: 66rem;
-  height: 80.1rem;
+  width: 50%;
+  height: 70%;
   position: absolute;
-  left: 39.1rem;
-  top: 9.3rem;
+  top: 10%;
   background-color: #000000;
   border-radius: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .group-1-B8A .frame-8-LFx .new-member-register-now-zbQ {
   width: 17.4rem;
   height: 1.7rem;
   position: absolute;
-  left: 63.4rem;
-  top: 68.3rem;
+  left: 50%;
+  transform: translateX(-50%);  
+  padding-top: 10px;
+  top: 75%;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.2190000094;
@@ -50,6 +79,7 @@ body {
   white-space: nowrap;
   display: flex;
   align-items: baseline;
+  text-align: center;
 }
 .group-1-B8A .frame-8-LFx .new-member-register-now-zbQ .new-member-register-now-zbQ-sub-0 {
   font-size: 1.3rem;
@@ -76,89 +106,51 @@ body {
   width: 25.5rem;
   height: 4.6rem;
   position: absolute;
-  left: 59.3rem;
-  top: 26.9rem;
+  left: 50%;
+  transform: translateX(-50%); 
+  top: 33%;
   font-size: 3.6rem;
   font-weight: 800;
   line-height: 1.255;
   color: #ffffff;
   font-family: Mulish, 'Source Sans Pro';
   white-space: nowrap;
+  text-align: center;
 }
 .group-1-B8A .frame-8-LFx .sign-in-to-access-your-account-qP4 {
   width: 19rem;
   height: 1.8rem;
   position: absolute;
-  left: 62.5rem;
-  top: 31.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.255;
   color: #ffffff;
   font-family: Mulish, 'Source Sans Pro';
   white-space: nowrap;
+  text-align: center;
 }
 .group-1-B8A .frame-8-LFx .rectangle-8-jjL {
   width: 30rem;
   height: 5rem;
   position: absolute;
-  left: 57rem;
-  top: 38rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
   background-color: rgba(196, 196, 196, 0.8000000119);
   border-radius: 1rem;
-}
-.group-1-B8A .frame-8-LFx .enter-your-email-TQS {
-  width: 10.5rem;
-  height: 1.8rem;
-  position: absolute;
-  left: 59.2rem;
-  top: 39.7rem;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.255;
-  color: rgba(0, 0, 0, 0.5);
-  font-family: Mulish, 'Source Sans Pro';
-  white-space: nowrap;
-}
-.group-1-B8A .frame-8-LFx .mail-Lz2 {
-  width: 2rem;
-  height: 1.6rem;
-  position: absolute;
-  left: 83rem;
-  top: 39.7rem;
-  object-fit: contain;
-  vertical-align: top;
 }
 .group-1-B8A .frame-8-LFx .rectangle-5-UKY {
   width: 30rem;
   height: 5rem;
   position: absolute;
-  left: 57.1rem;
-  top: 45.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%;
   background-color: rgba(196, 196, 196, 0.8000000119);
   border-radius: 1rem;
-}
-.group-1-B8A .frame-8-LFx .password-zHt {
-  width: 6.5rem;
-  height: 1.8rem;
-  position: absolute;
-  left: 59.3rem;
-  top: 47.2rem;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.255;
-  color: rgba(0, 0, 0, 0.5);
-  font-family: Mulish, 'Source Sans Pro';
-  white-space: nowrap;
-}
-.group-1-B8A .frame-8-LFx .lock-teA {
-  width: 1.8rem;
-  height: 2rem;
-  position: absolute;
-  left: 83.2rem;
-  top: 46.8rem;
-  object-fit: contain;
-  vertical-align: top;
 }
 .group-1-B8A .frame-8-LFx .frame-6-2VU {
   box-sizing: border-box;
@@ -167,8 +159,9 @@ body {
   height: 4.7077rem;
   cursor: pointer;
   position: absolute;
-  left: 65.3rem;
-  top: 57.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -201,8 +194,9 @@ body {
   width: 15.6rem;
   height: 14.1rem;
   position: absolute;
-  left: 64.2rem;
-  top: 12.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 14%;
   object-fit: cover;
   vertical-align: top;
 }
