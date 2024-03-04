@@ -13,8 +13,11 @@ input {
 	border: none;
 }
 body {
-  width: 144rem;
-}.home-wnn {
+  width: 100vw;
+}
+
+
+.home-wnn {
   width: 100%;
   overflow: hidden;
   position: relative;

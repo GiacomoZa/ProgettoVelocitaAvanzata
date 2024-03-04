@@ -10,30 +10,27 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400"/>
   <link rel="stylesheet" href="./styles/home.css"/>
+  <script src="javascript.js"></script>
 </head>
 <body>
 <div class="home-wnn">
   <div class="header-ZpA">
     <div class="logo-wrapper-3WN">
-      <div class="italian-g3Y">Italian</div>
+      <div class="italian-g3Y" >Italian</div>
       <img class="line-1-hzE" src="./assets/line-1.png"/>
-      <div class="english-RQS">English</div>
+      <div class="english-RQS" >English</div>
       <img class="screenshot-2024-02-23-alle-0822-1-uaW" src="./assets/screenshot-2024-02-23-alle-0822-1.png"/>
-      <div class="auto-group-6hfc-oft">
-        <div class="search-fxz">Search</div>
-        <img class="search-xhC" src="./assets/search.png"/>
-        <img class="line-2-Ttr" src="./assets/line-2.png"/>
-      </div>
-      <div class="login-PnW">Login</div>
-      <img class="vector-tUN" src="./assets/vector.png"/>
+      
+      <div class="login-PnW" onclick="(Redirect('../login/group-1.html'))" >Login</div>
+      <img class="vector-tUN"  src="./assets/vector.png"/>
       <div class="chevron-down-bta">
       </div>
     </div>
     <div class="navigation-6qL">
-      <div class="history-1SW">History</div>
-      <div class="sustainability-W8N">Sustainability</div>
-      <div class="design-DYa">Design</div>
-      <div class="innovation-jWv">Innovation</div>
+      <div class="history-1SW" onclick="scorri('storia')">History</div>
+      <div class="sustainability-W8N" onclick="scorri('sostenibilita')">Sustainability</div>
+      <div class="design-DYa" onclick="scorri('design')">Design</div>
+      <div class="innovation-jWv" onclick="scorri('innovazione')">Innovation</div>
     </div>
   </div>
   <div class="auto-group-sxpx-TC2">
@@ -55,7 +52,7 @@
     </div>
     <div class="rectangle-4-rqk">
     </div>
-    <div class="storia-y9g">Storia</div>
+    <div  id="storia" class="storia-y9g">Storia</div>
     <div class="storia-testoesterno1">
       <div class="storia-testointernotitolo1">Fondazione e Innovazione</div>
       <div>Nel 2005, Carlo Bianchi e un gruppo di appassionati fondarono Velocità Avanzata con l&#39;obiettivo di creare automobili sportive all&#39;avanguardia. </div>
@@ -67,7 +64,7 @@
     </div>
   </div>
   <div class="auto-group-uapy-yFU">
-    <div class="sostenibilit-H1G">Sostenibilità</div>
+    <div  id="sostenibilita" class="sostenibilit-H1G">Sostenibilità</div>
     <div class="primo-paragrafo">In Velocità Avanzata, la sostenibilità è un impegno fondamentale per il nostro futuro. Ci concentriamo su tre pilastri: ambiente, sociale ed economia.</div>
     <div class="auto-group-npyt-MvE">
       <div class="auto-group-tb3k-VmY">
@@ -84,11 +81,11 @@
     </div>
   </div>
   <div class="auto-group-r2kg-arr">
-    <div class="design-5oc">Design</div>
+    <div id="design" class="design-5oc">Design</div>
     <div class="un-nuovo-design-ridefinito-e-migliorato-che-trascende-gli-standard-moderni-per-le-autovetture-Bbk">Un nuovo design ridefinito e migliorato, che  trascende gli standard moderni per le autovetture</div>
     <img class="foto2-removebg-1-2cN" src="./assets/foto2-removebg-1.png"/>
   </div>
-  <div class="innovazione-Y4v">Innovazione</div>
+  <div id="innovazione" class="innovazione-Y4v">Innovazione</div>
   <div class="auto-group-i2ei-f9Y">
     <div class="auto-group-l7rw-xeS">
       <div class="paragrafo-connettivita">
