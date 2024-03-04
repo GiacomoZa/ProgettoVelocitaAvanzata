@@ -10,30 +10,27 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400"/>
   <link rel="stylesheet" href="./styles/home.css"/>
+  <script src="javascript.js"></script>
 </head>
 <body>
 <div class="home-wnn">
   <div class="header-ZpA">
     <div class="logo-wrapper-3WN">
-      <div class="italian-g3Y">Italian</div>
+      <div class="italian-g3Y" >Italian</div>
       <img class="line-1-hzE" src="./assets/line-1.png"/>
-      <div class="english-RQS">English</div>
+      <div class="english-RQS" >English</div>
       <img class="screenshot-2024-02-23-alle-0822-1-uaW" src="./assets/screenshot-2024-02-23-alle-0822-1.png"/>
-      <div class="auto-group-6hfc-oft">
-        <div class="search-fxz">Search</div>
-        <img class="search-xhC" src="./assets/search.png"/>
-        <img class="line-2-Ttr" src="./assets/line-2.png"/>
-      </div>
-      <div class="login-PnW">Login</div>
-      <img class="vector-tUN" src="./assets/vector.png"/>
+      
+      <div class="login-PnW" onclick="(Redirect('../login/group-1.html'))" >Login</div>
+      <img class="vector-tUN"  src="./assets/vector.png"/>
       <div class="chevron-down-bta">
       </div>
     </div>
     <div class="navigation-6qL">
-      <div class="history-1SW">History</div>
-      <div class="sustainability-W8N">Sustainability</div>
-      <div class="design-DYa">Design</div>
-      <div class="innovation-jWv">Innovation</div>
+      <div class="history-1SW" onclick="scorri('storia')">History</div>
+      <div class="sustainability-W8N" onclick="scorri('sostenibilita')">Sustainability</div>
+      <div class="design-DYa" onclick="scorri('design')">Design</div>
+      <div class="innovation-jWv" onclick="scorri('innovazione')">Innovation</div>
     </div>
   </div>
   <div class="auto-group-sxpx-TC2">
@@ -42,7 +39,6 @@
     <img class="meser-GfG" src="./assets/meser.png"/>
     <div class="foto1-1-oQJ">
     </div>
-    <div class="tooltip-5sc">Fuel consumption optimized by 78% from previous generation</div>
     <img class="mask-group-U94" src="./assets/mask-group.png"/>
     <img class="mask-group-2-zNJ" src="./assets/mask-group-2.png"/>
     <div class="caption-tTg">
@@ -56,102 +52,57 @@
     </div>
     <div class="rectangle-4-rqk">
     </div>
-    <div class="storia-y9g">Storia</div>
-    <div class="fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA">
-      <span class="fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA-sub-0">
-      Fondazione e Innovazione
-      <br/>
-      
-      <br/>
-      
-      </span>
-      <span class="fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA-sub-1">Nel 2005, Carlo Bianchi e un gruppo di appassionati fondarono Velocità Avanzata con l&#39;obiettivo di creare automobili sportive all&#39;avanguardia. </span>
+    <div  id="storia" class="storia-y9g">Storia</div>
+    <div class="storia-testoesterno1">
+      <div class="storia-testointernotitolo1">Fondazione e Innovazione</div>
+      <div>Nel 2005, Carlo Bianchi e un gruppo di appassionati fondarono Velocità Avanzata con l&#39;obiettivo di creare automobili sportive all&#39;avanguardia. </div>
     </div>
-    <div class="dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn">
-      <span class="dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn-sub-0">
-      Dominio in Pista
-      <br/>
-      
-      <br/>
-      
-      </span>
-      <span class="dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn-sub-1">Le vetture di Velocità Avanzata dominarono le competizioni automobilistiche, conquistando titoli in campionati GT, endurance e rally. </span>
+   
+    <div style="margin-top: 18%;" class="storia-testoesterno1">
+      <div class="storia-testointernotitolo1">Dominio in Pista</div>
+      <div>Le vetture di Velocità Avanzata dominarono le competizioni automobilistiche, conquistando titoli in campionati GT, endurance e rally. </div>
     </div>
   </div>
   <div class="auto-group-uapy-yFU">
-    <div class="sostenibilit-H1G">Sostenibilità</div>
-    <div class="in-velocit-avanzata-la-sostenibilit-un-impegno-fondamentale-per-il-nostro-futuro-ci-concentriamo-su-tre-pilastri-ambiente-sociale-ed-economia-AKx">In Velocità Avanzata, la sostenibilità è un impegno fondamentale per il nostro futuro. Ci concentriamo su tre pilastri: ambiente, sociale ed economia.</div>
+    <div  id="sostenibilita" class="sostenibilit-H1G">Sostenibilità</div>
+    <div class="primo-paragrafo">In Velocità Avanzata, la sostenibilità è un impegno fondamentale per il nostro futuro. Ci concentriamo su tre pilastri: ambiente, sociale ed economia.</div>
     <div class="auto-group-npyt-MvE">
       <div class="auto-group-tb3k-VmY">
         <div class="nuovo-motore-full-electric-2Fg">Nuovo motore full-electric</div>
-        <div class="la-nostra-nuova-autovettura-dotata-di-un-motore-elettrico-allavanguardia-che-offre-prestazioni-elevate-e-unesperienza-di-guida-fluida-e-silenziosa-con-autonomia-stimata-fino-a-500km-con-una-ricarica-da-0-80-in-soli-25-mininuti-XiE">
-        La nostra nuova autovettura è dotata di un motore elettrico all&#39;avanguardia che offre prestazioni elevate e un&#39;esperienza di guida fluida e silenziosa. 
-        <br/>
-        
-        <br/>
-        Con autonomia stimata fino a 500km con una ricarica.
-        <br/>
-        
-        <br/>
-        Da 0-80% in soli 25 mininuti.
+        <div class="secondo-paragrafo">
+        La nostra nuova autovettura è dotata di un motore elettrico all&#39;avanguardia che offre prestazioni elevate e un&#39;esperienza di guida fluida e silenziosa. Con autonomia stimata fino a 500km con una ricarica. Da 0-80% in soli 25 mininuti.
         </div>
       </div>
-      <div class="dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6">
-        <span class="dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6-sub-0">
-        Dal 2018 riduciamo i consumi
-        <br/>
-        
-        <br/>
-        
-        </span>
-        <span class="dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6-sub-1">Ci impegniamo a ridurre l&#39;impatto ambientale della nostra produzione. Le nostre fabbriche sono progettate per minimizzare i consumi energetici e le emissioni.</span>
+      <div>
+        <div class="dal2018">Dal 2018 riduciamo i consumi</div>
+        <br><br><br>
+        <div class="dal2018paragrafo">Ci impegniamo a ridurre l&#39;impatto ambientale della nostra produzione. Le nostre fabbriche sono progettate per minimizzare i consumi energetici e le emissioni.</div>
       </div>
     </div>
   </div>
   <div class="auto-group-r2kg-arr">
-    <div class="design-5oc">Design</div>
+    <div id="design" class="design-5oc">Design</div>
     <div class="un-nuovo-design-ridefinito-e-migliorato-che-trascende-gli-standard-moderni-per-le-autovetture-Bbk">Un nuovo design ridefinito e migliorato, che  trascende gli standard moderni per le autovetture</div>
     <img class="foto2-removebg-1-2cN" src="./assets/foto2-removebg-1.png"/>
   </div>
-  <div class="innovazione-Y4v">Innovazione</div>
+  <div id="innovazione" class="innovazione-Y4v">Innovazione</div>
   <div class="auto-group-i2ei-f9Y">
     <div class="auto-group-l7rw-xeS">
-      <div class="connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA">
-        <span class="connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA-sub-0">
-        Connettività
-        <br/>
-        
-        <br/>
-        
-        </span>
-        <span class="connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA-sub-1">La nostra autovettura è dotata di sistemi di connettività avanzati che ti permettono di rimanere sempre connesso e di avere accesso a un&#39;ampia gamma di servizi in tempo reale.</span>
+      <div class="paragrafo-connettivita">
+        <div class="connettivita">Connettività</div>
+     <br>
+        <div class="connettivita-testo">La nostra autovettura è dotata di sistemi di connettività avanzati che ti permettono di rimanere sempre connesso e di avere accesso a un&#39;ampia gamma di servizi in tempo reale.</div>
       </div>
-      <div class="guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC">
-        <span class="guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC-sub-0">
-        Guida Autonoma
-        <br/>
-        
-        <br/>
-        
-        </span>
-        <span class="guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC-sub-1">
-        Le nuove tecnologie di guida autonoma,
-        <br/>
-        in collaborazione con Tesla, garantiscono
-        <br/>
-        comfort e sicurezza per i lunghi tragitti.
-        </span>
+      <div class="paragrafo-guida-autonoma">
+        <div class="guida-autonoma">Guida Autonoma</div>
+       <br>
+        <div class="guida-autonoma-testo">Le nuove tecnologie di guida autonoma, in collaborazione con Tesla, garantiscono comfort e sicurezza per i lunghi tragitti.</div>
       </div>
     </div>
-    <div class="interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2">
-      <span class="interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2-sub-0">
-      Interfaccia intuitiva
-      <br/>
-      
-      <br/>
-      
-      </span>
-      <span class="interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2-sub-1">Per un’esprienza di guida semplice e senza distrazioni</span>
+    <div class="paragrafo-interfaccia">
+      <div class="interfaccia">Interfaccia intuitiva</div>
+      <br>
+      <div class="interfaccia-testo">Per un’esprienza di guida semplice e senza distrazioni</div>
     </div>
   </div>
   <div class="line-3-H1p">

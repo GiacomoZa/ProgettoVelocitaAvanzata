@@ -13,8 +13,11 @@ input {
 	border: none;
 }
 body {
-  width: 144rem;
-}.home-wnn {
+  width: 100vw;
+}
+
+
+.home-wnn {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -22,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #000000;
-  border-radius: 4.6154rem;
+
 }
 .home-wnn .header-ZpA {
   margin-bottom: 13.8846rem;
@@ -382,13 +385,14 @@ body {
   font-family: Advent Pro, 'Source Sans Pro';
   white-space: nowrap;
 }
-.home-wnn .auto-group-sxpx-TC2 .fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA {
+.home-wnn .auto-group-sxpx-TC2 .storia-testoesterno1 {
   width: 52.2rem;
-  height: 20.4rem;
+  height: auto; /* Cambiato da 20.4rem a auto per adattarsi al contenuto */
   position: absolute;
   left: 83.8rem;
   top: 99.7rem;
   display: flex;
+  flex-direction: column; /* Aggiunto per garantire che il testo vada a capo correttamente */
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.195;
@@ -396,36 +400,22 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-.home-wnn .auto-group-sxpx-TC2 .fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA .fondazione-e-innovazione-nel-2005-carlo-bianchi-e-un-gruppo-di-appassionati-fondarono-velocit-avanzata-con-lobiettivo-di-creare-automobili-sportive-allavanguardia-rzA-sub-0 {
+
+.home-wnn .auto-group-sxpx-TC2 .storia-testointernotitolo1 {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.195;
   letter-spacing: 0.25rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
+  display: inline-block; /* Per mantenere il titolo sulla stessa riga */
 }
-.home-wnn .auto-group-sxpx-TC2 .dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn {
-  width: 50.7rem;
-  height: 20.4rem;
-  position: absolute;
-  left: 83.8rem;
-  top: 126.1rem;
-  display: flex;
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.195;
-  letter-spacing: 0.25rem;
-  color: #ffffff;
-  font-family: Advent Pro, 'Source Sans Pro';
+
+.home-wnn .auto-group-sxpx-TC2 .storia-testoesterno1 > div {
+  display: block; /* Per far andare a capo il testo successivo al titolo */
+  margin-top: 10px;
 }
-.home-wnn .auto-group-sxpx-TC2 .dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn .dominio-in-pista-le-vetture-di-velocit-avanzata-dominarono-le-competizioni-automobilistiche-conquistando-titoli-in-campionati-gt-endurance-e-rally-UGn-sub-0 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.195;
-  letter-spacing: 0.25rem;
-  color: #ffffff;
-  font-family: Advent Pro, 'Source Sans Pro';
-}
+
 .home-wnn .auto-group-uapy-yFU {
   box-sizing: border-box;
   padding: 10.1rem 14.1rem 11.85rem 8rem;
@@ -437,7 +427,8 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../assets/f1ec18-f83e-4f4f-bd27-decb23da4cd2-fotor-20240228175647-1-bg.png');
+  background-image: url('../assets/f1ec18-f83e-4f4f-bd27-decb23da4cd2-fotor-20240228175647-1-bg.jpg');
+ 
   flex-shrink: 0;
 }
 .home-wnn .auto-group-uapy-yFU .sostenibilit-H1G {
@@ -452,8 +443,9 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
 }
-.home-wnn .auto-group-uapy-yFU .in-velocit-avanzata-la-sostenibilit-un-impegno-fondamentale-per-il-nostro-futuro-ci-concentriamo-su-tre-pilastri-ambiente-sociale-ed-economia-AKx {
-  margin: 0rem 0rem 8.85rem 3.4rem;
+.home-wnn .auto-group-uapy-yFU .primo-paragrafo {
+  margin-bottom: 12%;
+  text-align: center;
   max-width: 60.1rem;
   display: flex;
   font-size: 2.5rem;
@@ -485,10 +477,12 @@ body {
   letter-spacing: 0.35rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
+  display: inline-block;
+  margin-bottom: 5%;
   white-space: nowrap;
   flex-shrink: 0;
 }
-.home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .auto-group-tb3k-VmY .la-nostra-nuova-autovettura-dotata-di-un-motore-elettrico-allavanguardia-che-offre-prestazioni-elevate-e-unesperienza-di-guida-fluida-e-silenziosa-con-autonomia-stimata-fino-a-500km-con-una-ricarica-da-0-80-in-soli-25-mininuti-XiE {
+.home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .auto-group-tb3k-VmY .secondo-paragrafo {
   margin-left: 0.3rem;
   max-width: 51.4rem;
   display: flex;
@@ -500,33 +494,32 @@ body {
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
 }
-.home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6 {
-  max-width: 46.1rem;
-  display: flex;
+
+.home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .dal2018 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.195;
+  letter-spacing: 0.35rem;
+  color: #ffffff;
+  font-family: Advent Pro, 'Source Sans Pro';
+  display: inline-block;
+  white-space: nowrap;
+  margin-bottom: 5%; /* Aumentato lo spazio tra il sottotitolo e il paragrafo */
+}
+
+.home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .dal2018paragrafo {
   font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.1959999847;
+  font-weight: 700;
+  line-height: 1.195;
+  max-width: 51.4rem;
+  display: flex;
   letter-spacing: 0.25rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
 }
-.home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6 .dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6-sub-0 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.195;
-  letter-spacing: 0.25rem;
-  color: #ffffff;
-  font-family: Advent Pro, 'Source Sans Pro';
-}
-.home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6 .dal-2018-riduciamo-i-consumi-ci-impegniamo-a-ridurre-limpatto-ambientale-della-nostra-produzione-le-nostre-fabbriche-sono-progettate-per-minimizzare-i-consumi-energetici-e-le-emissioni-Ke6-sub-1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.195;
-  letter-spacing: 0.25rem;
-  color: #ffffff;
-  font-family: Advent Pro, 'Source Sans Pro';
-}
+
+
 .home-wnn .auto-group-r2kg-arr {
   margin-bottom: 12.6rem;
   box-sizing: border-box;
@@ -602,27 +595,29 @@ body {
   align-items: flex-start;
   flex-shrink: 0;
 }
-.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA {
+.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .paragrafo-connettivita {
   margin-right: 23.2rem;
   max-width: 52.6rem;
   display: flex;
+  flex-direction: column; /* Imposta il layout a colonna */
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 1.1959999847;
+  line-height: 0.1959999847;
   letter-spacing: 0.25rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
 }
-.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA .connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA-sub-0 {
+.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .connettivita {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.195;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.35rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
+  white-space: nowrap;
 }
-.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA .connettivit-la-nostra-autovettura-dotata-di-sistemi-di-connettivit-avanzati-che-ti-permettono-di-rimanere-sempre-connesso-e-di-avere-accesso-a-unampia-gamma-di-servizi-in-tempo-reale-WAA-sub-1 {
+.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .connettivita-testo {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.195;
@@ -630,18 +625,20 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC {
+
+.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .paragrafo-guida-autonoma {
   max-width: 48.6rem;
   display: flex;
+  flex-direction: column; /* Imposta il layout a colonna */
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 1.1959999847;
+  line-height: 0.1959999847;
   letter-spacing: 0.25rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
 }
-.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC .guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC-sub-0 {
+.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .guida-autonoma {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.195;
@@ -649,7 +646,7 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC .guida-autonoma-le-nuove-tecnologie-di-guida-autonoma-in-collaborazione-con-tesla-garantiscono-comfort-e-sicurezza-per-i-lunghi-tragitti-DsC-sub-1 {
+.home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .guida-autonoma-testo {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.195;
@@ -657,21 +654,27 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-.home-wnn .auto-group-i2ei-f9Y .interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2 {
+
+
+
+.home-wnn .auto-group-i2ei-f9Y .paragrafo-interfaccia {
   margin-left: 3.3rem;
   max-width: 41.5rem;
   display: flex;
+  text-align: center;
+  flex-direction: column; /* Imposta il layout a colonna */
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 1.1959999847;
+  line-height: 0.1959999847;
   letter-spacing: 0.25rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
+  margin-bottom: 30px; /* Aggiunto spazio tra il titolo e il paragrafo */
 }
-.home-wnn .auto-group-i2ei-f9Y .interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2 .interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2-sub-0 {
+.home-wnn .auto-group-i2ei-f9Y .interfaccia {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.195;
@@ -679,14 +682,16 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-.home-wnn .auto-group-i2ei-f9Y .interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2 .interfaccia-intuitiva-per-unesprienza-di-guida-semplice-e-senza-distrazioni-EA2-sub-1 {
+.home-wnn .auto-group-i2ei-f9Y .interfaccia-testo {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.195;
   letter-spacing: 0.25rem;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
+  margin-bottom: 30px; /* Aggiunto spazio tra il titolo e il paragrafo */
 }
+
 .home-wnn .line-3-H1p {
   width: 100%;
   height: 0.5rem;
@@ -695,7 +700,6 @@ body {
 }
 .home-wnn .auto-group-ikjc-R82 {
   box-sizing: border-box;
-  padding: 1rem 7.55rem 4.6rem 7.55rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -708,10 +712,10 @@ body {
   flex-shrink: 0;
 }
 .home-wnn .auto-group-ikjc-R82 .auto-group-n1gz-YCe .socials-GeS {
-  margin-right: 34.35rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-right: 23%;
+  margin-left: 17%;
+  display: block;
+
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.195;
@@ -722,7 +726,7 @@ body {
   flex-shrink: 0;
 }
 .home-wnn .auto-group-ikjc-R82 .auto-group-n1gz-YCe .contatti-NBg {
-  margin-right: 34.5rem;
+  margin-right: 29%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -751,11 +755,13 @@ body {
 .home-wnn .auto-group-ikjc-R82 .auto-group-d4fg-JUe {
   margin-left: 1.75rem;
   display: flex;
+  
   align-items: flex-start;
   flex-shrink: 0;
 }
 .home-wnn .auto-group-ikjc-R82 .auto-group-d4fg-JUe .youtube-pC6 {
   margin: 0.15rem 4.9rem 0rem 0rem;
+  margin-left: 9%;
   width: 6rem;
   height: 6rem;
   object-fit: contain;
@@ -779,7 +785,7 @@ body {
   flex-shrink: 0;
 }
 .home-wnn .auto-group-ikjc-R82 .auto-group-d4fg-JUe .auto-group-sxke-8rz {
-  margin-right: 15.35rem;
+  margin-right: 15%;
   width: 28.75rem;
   flex-shrink: 0;
 }
@@ -813,6 +819,7 @@ body {
 }
 .home-wnn .auto-group-ikjc-R82 .auto-group-d4fg-JUe .scopri-come-utilizziamo-i-tuoi-dati-per-migliorare-i-nostri-servizi-sxz {
   margin-top: 0.35rem;
+  text-align: center;
   max-width: 27.6rem;
   display: flex;
   font-size: 1.5rem;
