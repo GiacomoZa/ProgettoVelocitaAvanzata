@@ -200,7 +200,7 @@ input[type="text"],input[type="password"] {
   padding: 10px;
   outline: none;
 }
-input[type="text"],input[type="password"]::placeholder {
+input[type="text"]::placeholder, input[type="password"]::placeholder {
   color: white; 
 }
 .group-2-k9t .frame-9-JSJ .input--DBC {

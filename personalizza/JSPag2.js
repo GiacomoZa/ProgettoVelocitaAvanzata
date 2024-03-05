@@ -45,12 +45,14 @@ function esterni(){
     var foto = document.getElementById("macchina");
     if (foto.src.includes("./assets/foto1-4.png")) {
         foto.src = "./assets/internineri2.png";
-        foto.style.width="78rem";
+        foto.style.width="60%";
         foto.style.right="45%";
+        foto.style.top="25%";
     } else {
         foto.src = "./assets/foto1-4.png";
         foto.style.width="60%";
         foto.style.right="44%";
+        foto.style.top="25%";
     }
 }
 function interni(){
@@ -59,16 +61,33 @@ function interni(){
         foto.src = "./assets/foto1-4.png";
         foto.style.width="60%";
         foto.style.right="44%";
+        foto.style.top="25%";
     } else {
         foto.src = "./assets/internineri2.png";
-        foto.style.width="78rem";
+        foto.style.width="60%";
         foto.style.right="45%";
+        foto.style.top="25%";
     }
 }
 
-function selezionaCerchio(this){
-    var cerchio1 = document.getElementById("cerchio1");
-    var cerchio2 = document.getElementById("cerchio1");
-    var cerchio3 = document.getElementById("cerchio1");
+document.addEventListener("DOMContentLoaded", function() {
+    var c1 = document.getElementById("cerchio1");
+    var c2 = document.getElementById("cerchio2");
+    var c3 = document.getElementById("cerchio3");    
 
-}
+    c1.addEventListener("click", function() {
+        c1.style.border="2px solid red"
+        c2.style.border="none"
+        c3.style.border="none"    
+    });
+    c2.addEventListener("click", function() {
+        c2.style.border="2px solid red"
+        c1.style.border="none"
+        c3.style.border="none"
+    });
+    c3.addEventListener("click", function() {
+        c3.style.border="2px solid red"
+        c1.style.border="none"
+        c2.style.border="none"    
+    });
+});

@@ -23,24 +23,26 @@
       <span class="already-a-member-log-in-y2e-sub-2">Log In</span>
     </p>
     <div class="frame-7-iwG">
-      <div class="configura-R4z">Avanti</div>
+      <div class="configura-R4z" onclick="document.getElementById('registrazione').submit()">Avanti</div>
       <img class="chevron-right-v1k" src="./assets/chevron-right-Qte.png"/>
     </div>
     <img class="screenshot-2024-02-23-alle-0822-3-RjC" src="./assets/screenshot-2024-02-23-alle-0822-3.png"/>
     <p class="get-started-LbG">Get Started</p>
     <p class="by-creating-a-free-account-qnv">by creating a free account.</p>
+    <form id="registrazione" action="registrazione.php" method="post">
     <div class="input--user">
-      <input type="text" placeholder="Username" maxlength="20">
+      <input type="text" placeholder="Username" maxlength="20" name="user">
     </div>
     <div class="input--DBC">
-      <input type="password" placeholder="Password" maxlength="20">
+      <input type="password" placeholder="Password" maxlength="20" name="psw">
     </div>
     <div class="input--x2J">      
-      <input type="text" placeholder="Mail" maxlength="20">
+      <input type="text" placeholder="Nome" maxlength="20" name="nome">
     </div>
     <div class="input--fqp">
-      <input type="text" placeholder="Telephone" maxlength="20">
+      <input type="text" placeholder="Cognome" maxlength="20" name="cognome">
     </div>
+  </form>
   </div>
 </div>
 </body>

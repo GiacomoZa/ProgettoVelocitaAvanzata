@@ -30,15 +30,14 @@ body {
       height: 750px;
       overflow: auto;
   }
-}
-input[type="text"] {
+}input[type="text"],input[type="password"] {
   border: none;
   background-color: transparent;
   border-radius: 20px;
-  padding: 18px;
+  padding: 10px;
   outline: none;
 }
-input[type="text"]::placeholder {
+input[type="text"]::placeholder, input[type="password"]::placeholder {
   color: white; 
 }
 .group-1-B8A {
