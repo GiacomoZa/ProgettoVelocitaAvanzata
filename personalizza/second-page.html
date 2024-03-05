@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="./styles/second-page.css"/>
+  <script src="./JSPag2.js"></script>
 </head>
 <body>
 <div class="first-page-3kr">
@@ -37,19 +38,19 @@
     <span class="velocit-avanzata-meser-P3L-sub-1">Meser</span>
   </p>
   <p class="colore-T58">Colore</p>
-  <img class="MetallicRed" src="./assets/MetallicRed.jpg" alt="MetallicRed">
-  <img class="MetallicBlue" src="./assets/MetallicBlue.jpg" alt="MetallicBlue">
-  <img class="MetallicBlack" src="./assets/MetallicBlack.png" alt="MetallicBlack">
-  <img class="PearlWhite" src="./assets/PearlWhite.png" alt="PearlWhite">
+  <img id="MRed" class="MetallicRed" src="./assets/MetallicRed.jpg" alt="MetallicRed">
+  <img id="MBlu" class="MetallicBlue" src="./assets/MetallicBlue.jpg" alt="MetallicBlue">
+  <img id="MBlack" class="MetallicBlack" src="./assets/MetallicBlack.png" alt="MetallicBlack">
+  <img id="PWhite" class="PearlWhite" src="./assets/PearlWhite.png" alt="PearlWhite">
   <p class="cerchi-9Cr">Cerchi</p>
-  <img class="GreyWheels" src="./assets/GreyWheels.png" alt="GreyWheels">
-  <img class="BlackWheels" src="./assets/BlackWheels.png" alt="BlackWheels">
-  <img class="BBS" src="./assets/BBS.png" alt="BBS">
+  <img id="cerchio1" class="GreyWheels" src="./assets/GreyWheels.png" alt="GreyWheels" onclick="selezionaCerchio(this)">
+  <img id="cerchio2"  class="BlackWheels" src="./assets/BlackWheels.png" alt="BlackWheels" onclick="selezionaCerchio(this)">
+  <img id="cerchio3"  class="BBS" src="./assets/BBS.png" alt="BBS" onclick="selezionaCerchio(this)">
   <p class="select-colore-Czz">Select colore</p>
   <p class="select-cerchi-X1g">Select cerchi</p>
-  <p class="procedi-1hY">PROCEDI</p>
-  <p class="esterni-KCS">Esterni</p>
-  <p class="interni-Qjg">Interni</p>
-  <img class="foto1-2-ikN" src="./assets/foto1-2.png"/>
+  <a class="procedi-1hY" href="third-page.html">PROCEDI</a>
+  <a class="esterni-KCS" onclick="esterni()">Esterni</a>
+  <a class="interni-Qjg" onclick="interni()">Interni</a>
+  <img id="macchina" class="foto1-2-ikN" src="./assets/foto1-4.png"/>
 </div>
 </body>

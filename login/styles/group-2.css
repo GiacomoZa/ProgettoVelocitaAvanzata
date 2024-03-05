@@ -193,14 +193,14 @@ body {
   background-color: rgba(196, 196, 196, 0.8000000119);
   border-radius: 1rem;
 }
-input[type="text"] {
+input[type="text"],input[type="password"] {
   border: none;
   background-color: transparent;
   border-radius: 20px;
   padding: 10px;
   outline: none;
 }
-input[type="text"]::placeholder {
+input[type="text"],input[type="password"]::placeholder {
   color: white; 
 }
 .group-2-k9t .frame-9-JSJ .input--DBC {

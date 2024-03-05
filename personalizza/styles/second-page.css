@@ -179,7 +179,7 @@ body {
   width: 12rem;
   height: 2.4rem;
   position: absolute;
-  left: 74.5%;
+  left: 75%;
   top: 36.1rem;
   font-size: 2rem;
   font-weight: 400;
@@ -252,7 +252,7 @@ body {
   height: 41.3rem;
   position: absolute;
   right: 44%;
-  top: 28%;
+  top: 25%;
   object-fit: cover;
   vertical-align: top;
 }
@@ -296,6 +296,9 @@ body {
   top: 50rem;
   vertical-align: top;
 }
+.first-page-3kr .GreyWheels .selected{
+  border: 2px solid red;
+}
 .first-page-3kr .BlackWheels {
   width: 80px;
   height: 80px;
@@ -304,6 +307,9 @@ body {
   top: 50rem;
   vertical-align: top;
 }
+.first-page-3kr .BlackWheels .selected{
+  border: 2px solid red;
+}
 .first-page-3kr .BBS {
   width: 80px;
   height: 80px;
@@ -311,4 +317,7 @@ body {
   left: 85%;
   top: 50rem;
   vertical-align: top;
+}
+.first-page-3kr .BBS .selected{
+  border: 2px solid red;
 }
