@@ -16,7 +16,7 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  min-width: 650px;
+  min-width: 830px;
   min-height: 750px;
 }
 @media screen and (max-width: 650px){
@@ -30,6 +30,16 @@ body {
       height: 750px;
       overflow: auto;
   }
+}
+input[type="text"] {
+  border: none;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 18px;
+  outline: none;
+}
+input[type="text"]::placeholder {
+  color: white; 
 }
 .group-1-B8A {
   width: 100%;
@@ -53,8 +63,8 @@ body {
   align-items: flex-start;
 }
 .group-1-B8A .frame-8-LFx .rectangle-6-Ud4 {
-  width: 50%;
-  height: 70%;
+  width: 40%;
+  height: 75%;
   position: absolute;
   top: 10%;
   background-color: #000000;
@@ -147,7 +157,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 60%;
+  top: 57%;
   background-color: rgba(196, 196, 196, 0.8000000119);
   border-radius: 1rem;
 }

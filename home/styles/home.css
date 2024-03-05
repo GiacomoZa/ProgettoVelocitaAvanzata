@@ -352,8 +352,8 @@ body {
   flex-shrink: 0;
 }
 .home-wnn .auto-group-sxpx-TC2 .fotor-2024022491830-1-PSN {
-  width: 144rem;
-  height: 85rem;
+  width: 150rem;
+  height: 90rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);    
@@ -429,6 +429,7 @@ body {
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(0.2rem);
+  margin-top: 2.5%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -469,7 +470,7 @@ body {
   flex-shrink: 0;
 }
 .home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .auto-group-tb3k-VmY {
-  margin: 0.15rem 24.1rem 0rem 0rem;
+  padding-right: 25%;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -490,7 +491,7 @@ body {
 }
 .home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .auto-group-tb3k-VmY .secondo-paragrafo {
   margin-left: 0.3rem;
-  max-width: 51.4rem;
+  max-width: 70rem;
   display: flex;
   padding-left: 50%;
   font-size: 2.5rem;
@@ -513,7 +514,6 @@ body {
   white-space: nowrap;
   margin-bottom: 5%; /* Aumentato lo spazio tra il sottotitolo e il paragrafo */
 }
-
 .home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .dal2018paragrafo {
   font-size: 2.5rem;
   font-weight: 700;
@@ -525,8 +525,6 @@ body {
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
 }
-
-
 .home-wnn .auto-group-r2kg-arr {
   margin-bottom: 12.6rem;
   box-sizing: border-box;
@@ -595,15 +593,10 @@ body {
   flex-shrink: 0;
 }
 .home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS {
-  margin-bottom: 10.55rem;
   width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
 }
 .home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .paragrafo-connettivita {
-  margin-right: 23.2rem;
-  max-width: 52.6rem;
+  max-width: 48rem;
   display: flex;
   flex-direction: column; /* Imposta il layout a colonna */
   font-size: 2.5rem;
@@ -613,6 +606,7 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
+  padding-left: 15%;
 }
 .home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .connettivita {
   font-size: 3.5rem;
@@ -631,7 +625,6 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-
 .home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .paragrafo-guida-autonoma {
   max-width: 48.6rem;
   display: flex;
@@ -643,6 +636,8 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
+  padding-right: 15%;
+  padding-left: 55%;
 }
 .home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .guida-autonoma {
   font-size: 3.5rem;
@@ -650,7 +645,7 @@ body {
   line-height: 1.195;
   letter-spacing: 0.25rem;
   color: #ffffff;
-  font-family: Advent Pro, 'Source Sans Pro';
+  font-family: Advent Pro, 'Source Sans Pro';  
 }
 .home-wnn .auto-group-i2ei-f9Y .auto-group-l7rw-xeS .guida-autonoma-testo {
   font-size: 2.5rem;
@@ -660,9 +655,6 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
 }
-
-
-
 .home-wnn .auto-group-i2ei-f9Y .paragrafo-interfaccia {
   margin-left: 3.3rem;
   max-width: 41.5rem;
@@ -796,6 +788,7 @@ body {
 }
 .home-wnn .auto-group-ikjc-R82 .auto-group-d4fg-JUe .auto-group-sxke-8rz .velocitaavanzatacustomersgmailcom-5GS {
   margin-bottom: 1.45rem;
+  width: fit-content;
   width: 100%;
   display: flex;
   align-items: center;
@@ -804,7 +797,6 @@ body {
   font-weight: 700;
   line-height: 1.195;
   letter-spacing: 0.15rem;
-  text-decoration-line: underline;
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   white-space: nowrap;
