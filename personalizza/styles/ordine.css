@@ -1,0 +1,95 @@
+html {
+	font-size: 62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+	height: 100vh;
+	min-width: 1440px;
+	min-height: 744px;
+}
+.summary-CZt {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: #ffffff;
+}
+.summary-CZt .velocit-avanzata-meser-WcW {
+	width: 31rem;
+	height: 2.9rem;
+	position: absolute;
+	left: 5rem;
+	top: 2.5rem;
+	font-size: 2.4rem;
+	font-weight: 400;
+	line-height: 1.1725;
+	color: #000000;
+	font-family: Roboto, 'Source Sans Pro';
+}
+.summary-CZt .velocit-avanzata-meser-WcW .velocit-avanzata-meser-WcW-sub-0 {
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 1.1725;
+	color: #000000;
+	font-family: Roboto, 'Source Sans Pro';
+}
+.summary-CZt .rectangle-2-uMp {
+	width: 100%;
+	height: 7.8rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: solid 0 #000000;
+	box-sizing: border-box;
+	box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.25);
+	background-color: #ffffff;
+}
+h2 {
+	width: 45rem;
+	height: 3.5rem;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translate(-50%, -50%);
+	font-size: 2.4rem;
+	font-weight: 400;
+	line-height: 2;
+	color: #000000;
+	font-family: Roboto, 'Source Sans Pro';
+}
+.summary-CZt .paragrafo-centrato {
+	width: 55rem;
+	height: 2.9rem;
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, -50%);
+	font-size: 2.4rem;
+	font-weight: 300;
+	line-height: 1.1725;
+	color: #000000;
+	font-family: Roboto, 'Source Sans Pro';
+}
+
+.input-email {
+    width: 300px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1.5px solid #ccc;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}

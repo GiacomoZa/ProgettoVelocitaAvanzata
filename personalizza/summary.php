@@ -75,4 +75,39 @@
   </p>
   <img class="foto1-4-oEn" src="./assets/foto1-4.png" id="macchina"/>
 </div>
+
+<form action="pagina.php" method="POST">
+  <label for="concessionaria">Seleziona una concessionaria:</label>
+  <select id="concessionaria" name="concessionaria">
+    <?php
+    // Connessione al database
+    $conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
+
+    // Verifica della connessione
+    if (!$conn) {
+        die("Connessione al database fallita: " . mysqli_connect_error());
+    }
+
+    // Query SQL per selezionare le informazioni desiderate dalla tabella concessionaria
+    $sql = "SELECT * FROM concessionaria";
+    $result = mysqli_query($conn, $sql);
+
+    // Verifica se sono presenti risultati
+    if (mysqli_num_rows($result) > 0) {
+        // Output dei dati di ogni riga
+        while($row = mysqli_fetch_assoc($result)) {
+            echo "<option value='" . $row['IdConcessionaria'] . "'>" . $row['indirizzo'] . ", " . $row['regione'] . ", " . $row['citta'] . "</option>";
+        }
+    } else {
+        echo "Nessuna concessionaria trovata.";
+    }
+
+    // Chiudi la connessione al database
+    mysqli_close($conn);
+    ?>
+  </select>
+  <input type="submit" value="Procedi">
+</form>
+
 </body>
+</html>

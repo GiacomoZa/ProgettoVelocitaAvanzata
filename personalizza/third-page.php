@@ -51,3 +51,18 @@
   <img class="foto1-2-ikN" src="./assets/interniNeri.jpeg" id="macchina"/>
 </div>
 </body>
+</html>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["colore"])) {
+        $coloreSelezionato = $_POST["colore"];
+        
+    }
+    
+    
+    if (isset($_POST["cerchio"])) {
+        $cerchioSelezionato = $_POST["cerchio"];
+        
+    }
+}
+?>
