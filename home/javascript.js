@@ -1,29 +1,15 @@
-function scorri(sezione) {
-    var sottotitolo = document.getElementById(sezione);
-    sottotitolo.scrollIntoView({ behavior: 'smooth'});
-  }
-
-
-  function Redirect(pagina) {
-    // Cambia l'URL con quello della pagina a cui vuoi reindirizzare l'utente
-    window.location.href = pagina;
-}
-
-// Codice JavaScript per la richiesta AJAX
 document.addEventListener("DOMContentLoaded", function() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("loginButton").innerHTML = this.responseText;
+          // Check if the response contains an username
+          var username = this.responseText;
+          if (username) {
+              // If yes, display the username in the loginButton element
+              document.getElementById("loginButton").innerText = "Welcome, " + username;
+          }
       }
   };
-  xmlhttp.open("POST", "../login/login.php", true);
+  xmlhttp.open("GET", "../login/getUsername.php", true);
   xmlhttp.send();
 });
-
-
-
-
-
-
-  

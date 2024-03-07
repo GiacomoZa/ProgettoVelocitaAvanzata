@@ -15,7 +15,7 @@ if (!$conn) {
 
 // Verifica se è stato inviato un modulo con il metodo POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Se il modulo è stato inviato, esegui la logica di autenticazione
+    // If the form is submitted, perform authentication logic
     $user = $_POST['user'];
     $psw = $_POST['psw'];
 
@@ -32,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $riga = mysqli_fetch_array($risultato);
 
         if ($riga) {
-            // Imposta la variabile di sessione per l'utente
+            // Set session variable for the user
             $_SESSION['username'] = $user;
-            // Restituisci l'username dell'utente come risposta alla richiesta AJAX
-            echo $user;
+            // Redirect to home page
+            header("Location: ../home/home.html");
         } else {
             echo "Username o password errate";
         }
@@ -43,6 +43,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 mysqli_close($conn);
-
-
 ?>
