@@ -42,10 +42,9 @@
   <img id="MBlu" class="MetallicBlue" src="./assets/MetallicBlue.jpg" alt="MetallicBlue" onclick="salvaColore('2')">
   <img id="MBlack" class="MetallicBlack" src="./assets/MetallicBlack.png" alt="MetallicBlack" onclick="salvaColore('3')">
   <img id="PWhite" class="PearlWhite" src="./assets/PearlWhite.png" alt="PearlWhite" onclick="salvaColore('4')">
-  <p class="cerchi-9Cr">Cerchi</p>  <!--Aggiungere o meno tabella nel db ?-->
+  <p class="cerchi-9Cr">Cerchi</p>  <!--un cerchio=cerchi in lega, l'altro no-->
   <img id="cerchio1" class="GreyWheels" src="./assets/GreyWheels.png" alt="GreyWheels" onclick="salvaCerchio('1')">
-  <img id="cerchio2" class="BlackWheels" src="./assets/BlackWheels.png" alt="BlackWheels" onclick="salvaCerchio('2')">
-  <img id="cerchio3" class="BBS" src="./assets/BBS.png" alt="BBS" onclick="salvaCerchio('3')">
+  <img id="cerchio2" class="BlackWheels" src="./assets/BlackWheels.png" alt="BlackWheels" onclick="salvaCerchio('0')">
   <p class="select-colore-Czz">Select colore</p>
   <p class="select-cerchi-X1g">Select cerchi</p>
   <form id="formData" method="post" action="third-page.php">
