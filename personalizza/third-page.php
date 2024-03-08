@@ -1,3 +1,18 @@
+<?php
+session_start();
+$prezzo = $_SESSION['prezzo'];
+$colore = $_SESSION["idC"];
+$cerchio = $_SESSION["cerchi"];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST["prezzo"])) {
+      $_SESSION["prezzo"] = $_POST["prezzo"];
+  }
+
+  header("Location: summary.php");
+  exit; 
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +24,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="./styles/third-page.css"/>
-  <script src="./JSPag3.js"></script>
+  <script src="JSPag3.js"></script>
 </head>
 <body>
 <div class="first-page-3kr">
@@ -17,7 +32,7 @@
   </div>
   <p class="price-69-000-HYi">
     <span class="price-69-000-HYi-sub-0">Price:</span>
-    <span class="price-69-000-HYi-sub-1"> €69 000</span>   <!--da modificare in base all'opzional-->
+    <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1"><?php echo $prezzo;?></span>
   </p>
   <div class="rectangle-1-AW2">
   </div>

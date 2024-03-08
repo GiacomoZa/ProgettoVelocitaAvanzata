@@ -30,9 +30,8 @@
         echo '<div class="welcome-back-j58">Benvenuto, '.$_SESSION['username'].'</div>';
       } else {
         echo '
-              
-                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.html\'))">Login</div>
-                <div style="margin-left: 20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
+                <a class="login-PnW" href="../login/group-1.html">Login</a>
+                <a style="margin-left: 20%;" class="login-PnW" href="../login/group-2.html">Registrati</a>
               ';
       }
       ?>
@@ -57,7 +56,7 @@
     <div class="caption-tTg">
       <div class="scopri-la-potenza-meser-c8n">Scopri la potenza Meser.</div>
       <div class="frame-5-75Y">
-        <div class="configura-B5Q">Configura</div>
+        <a class="configura-B5Q" href="../personalizza/first-page.php">Configura</a>
         <img class="chevron-right-HeE" src="./assets/chevron-right.png"/>
       </div>
     </div>

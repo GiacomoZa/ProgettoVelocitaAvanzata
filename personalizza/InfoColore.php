@@ -11,7 +11,7 @@ if (!$conn) {
 $id = $_GET['id'];
 
 // Query per selezionare i dati dalla tabella
-$sql = "SELECT prezzo FROM motore WHERE IdMotore = $id";
+$sql = "SELECT * FROM verniciatura WHERE IdVerniciatura = $id";
 
 // Esegui la query
 $result = mysqli_query($conn, $sql);

@@ -138,6 +138,7 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
   cursor: pointer;
+  text-decoration: none;
 }
 .home-wnn .header-ZpA .logo-wrapper-3WN > div:hover {
   color: #f89797;
@@ -328,6 +329,7 @@ body {
   font-family: Advent Pro, 'Source Sans Pro';
   white-space: nowrap;
   flex-shrink: 0;
+  text-decoration: none;
 }
 .home-wnn .auto-group-sxpx-TC2 .caption-tTg .frame-5-75Y .chevron-right-HeE {
   margin-top: 0rem;

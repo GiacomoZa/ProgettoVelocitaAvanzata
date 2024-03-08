@@ -1,3 +1,22 @@
+<?php
+session_start();
+$prezzo = $_SESSION['prezzo'];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST["prezzo2"])) {
+      $_SESSION["prezzo"] = $_POST["prezzo2"];
+  }
+  if (isset($_POST["coloreSelezionato"])) {
+      $_SESSION["idC"] = $_POST["coloreSelezionato"];
+  }
+  if (isset($_POST["cerchioSelezionato"])) {
+    $_SESSION["cerchi"] = $_POST["cerchioSelezionato"];
+  }
+
+  header("Location: third-page.php");
+  exit; 
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +28,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="./styles/second-page.css"/>
-  <script src="./JSPag2.js"></script>
+  <script src="JSPag2.js"></script>
 </head>
 <body>
 <div class="first-page-3kr">
@@ -17,7 +36,7 @@
   </div>
   <p class="price-69-000-HYi">
     <span class="price-69-000-HYi-sub-0">Price:</span>
-    <span class="price-69-000-HYi-sub-1"> €69 000</span>   <!--da modificare in base all'opzional-->
+    <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1"><?php echo $prezzo;?></span>   <!--da modificare in base all'opzional-->
   </p>
   <div class="rectangle-1-AW2">
   </div>
@@ -38,41 +57,27 @@
     <span class="velocit-avanzata-meser-P3L-sub-1">Meser</span>
   </p>
   <p class="colore-T58">Colore</p>
-  <img id="MRed" class="MetallicRed" src="./assets/MetallicRed.jpg" alt="MetallicRed" onclick="salvaColore('1')">
-  <img id="MBlu" class="MetallicBlue" src="./assets/MetallicBlue.jpg" alt="MetallicBlue" onclick="salvaColore('2')">
-  <img id="MBlack" class="MetallicBlack" src="./assets/MetallicBlack.png" alt="MetallicBlack" onclick="salvaColore('3')">
-  <img id="PWhite" class="PearlWhite" src="./assets/PearlWhite.png" alt="PearlWhite" onclick="salvaColore('4')">
-  <p class="cerchi-9Cr">Cerchi</p>  <!--un cerchio=cerchi in lega, l'altro no-->
-  <img id="cerchio1" class="GreyWheels" src="./assets/GreyWheels.png" alt="GreyWheels" onclick="salvaCerchio('1')">
-  <img id="cerchio2" class="BlackWheels" src="./assets/BlackWheels.png" alt="BlackWheels" onclick="salvaCerchio('0')">
+  <img id="MRed" class="MetallicRed" src="./assets/MetallicRed.jpg" alt="MetallicRed">
+  <img id="MBlu" class="MetallicBlue" src="./assets/MetallicBlue.jpg" alt="MetallicBlue">
+  <img id="MBlack" class="MetallicBlack" src="./assets/MetallicBlack.png" alt="MetallicBlack">
+  <img id="PWhite" class="PearlWhite" src="./assets/PearlWhite.png" alt="PearlWhite">
+  <p class="cerchi-9Cr">Cerchi</p>
+  <img id="cerchio1" class="GreyWheels" src="./assets/GreyWheels.png" alt="GreyWheels">
+  <img id="cerchio2" class="BlackWheels" src="./assets/BlackWheels.png" alt="BlackWheels">
   <p class="select-colore-Czz">Select colore</p>
   <p class="select-cerchi-X1g">Select cerchi</p>
-  <form id="formData" method="post" action="third-page.php">
-    <input type="hidden" id="coloreSelezionato" name="colore">
-    <input type="hidden" id="cerchioSelezionato" name="cerchio">
+
+  <form id="formData" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <input type="hidden" id="coloreSelezionato" name="coloreSelezionato" value="1">
+    <input type="hidden" id="cerchioSelezionato" name="cerchioSelezionato" value="0">
+    <input type="hidden" id="prezzo" name="prezzo" value="<?php echo $prezzo;?>">
+    <input type="hidden" id="prezzo2" name="prezzo2" value="">
+    <input type="submit" class="procedi-1hY" value="Procedi">
   </form>
-  <a class="procedi-1hY" href="#" onclick="salvaDati()">PROCEDI</a>
+
   <a class="esterni-KCS" onclick="esterni()">Esterni</a>
   <a class="interni-Qjg" onclick="interni()">Interni</a>
   <img id="macchina" class="foto1-2-ikN" src="./assets/foto1-4.png"/>
 </div>
-<script>
-  var coloreSelezionato = null;
-  var cerchioSelezionato = null;
-
-  function salvaColore(id) {
-    coloreSelezionato = id;
-  }
-
-  function salvaCerchio(id) {
-    cerchioSelezionato = id;
-  }
-
-  function salvaDati() {
-    document.getElementById('coloreSelezionato').value = coloreSelezionato;
-    document.getElementById('cerchioSelezionato').value = cerchioSelezionato;
-    document.getElementById('formData').submit();
-  }
-</script>
 </body>
 </html>
