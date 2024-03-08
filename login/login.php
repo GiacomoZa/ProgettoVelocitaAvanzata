@@ -8,37 +8,37 @@ $dbname = "dbvelocitaavanzata";
 
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
 
-// Check connection
+// Verifica se è stata effettuata una connessione al database
 if (!$conn) {
     die("Errore nella connessione: " . mysqli_connect_error());
 }
 
-// Verifica se è stato inviato un modulo con il metodo POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // If the form is submitted, perform authentication logic
-    $user = $_POST['user'];
-    $psw = $_POST['psw'];
+// Recupera i dati inviati dal modulo di login
+$user = $_POST['user'];
+$psw = $_POST['psw'];
 
-    if ($user == "" || $psw == "") {
-        echo "Campi vuoti";
+// Controlla se sono stati inviati username e password
+if ($user == "" || $psw == "") {
+    echo "Campi vuoti";
+} else {
+    // Esegui la query per controllare le credenziali dell'utente
+    $query = "SELECT * FROM Utente WHERE user = '$user' && password = '$psw'";
+    $risultato = mysqli_query($conn, $query);
+
+    if (!$risultato) {
+        echo "Errore nel comando";
+        exit();
+    }
+
+    // Controlla se le credenziali sono corrette
+    $riga = mysqli_fetch_array($risultato);
+    if ($riga) {
+        // Memorizza l'username dell'utente nella sessione
+        $_SESSION['username'] = $user;
+        // Reindirizza alla pagina home
+        header("Location: ../home/home.php");
     } else {
-        $query = "SELECT * FROM Utente WHERE user = '$user' && password = '$psw'";
-        $risultato = mysqli_query($conn, $query);
-        if (!$risultato) {
-            echo "Errore nel comando"; 
-            exit();
-        }
-
-        $riga = mysqli_fetch_array($risultato);
-
-        if ($riga) {
-            // Set session variable for the user
-            $_SESSION['username'] = $user;
-            // Redirect to home page
-            header("Location: ../home/home.html");
-        } else {
-            echo "Username o password errate";
-        }
+        echo "Username o password errate";
     }
 }
 

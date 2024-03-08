@@ -1,15 +1,32 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          // Check if the response contains an username
-          var username = this.responseText;
-          if (username) {
-              // If yes, display the username in the loginButton element
-              document.getElementById("loginButton").innerText = "Welcome, " + username;
-          }
-      }
-  };
-  xmlhttp.open("GET", "../login/getUsername.php", true);
-  xmlhttp.send();
+function scorri(sezione) {
+    var sottotitolo = document.getElementById(sezione);
+    sottotitolo.scrollIntoView({ behavior: 'smooth'});
+  }
+  function Redirect(pagina) {
+    // Cambia l'URL con quello della pagina a cui vuoi reindirizzare l'utente
+    window.location.href = pagina;
+}
+
+
+document.getElementById("submitButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita l'invio del modulo predefinito
+
+    // Ottieni i dati del modulo
+    var formData = new FormData(document.getElementById("login"));
+
+    // Invia i dati al tuo script PHP tramite AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "login.php", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                // Gestisci la risposta del tuo script PHP se necessario
+                console.log(xhr.responseText);
+            } else {
+                // Gestisci eventuali errori di invio
+                console.error('Si è verificato un errore durante l\'invio dei dati.');
+            }
+        }
+    };
+    xhr.send(formData);
 });

@@ -21,17 +21,24 @@
       <img class="line-1-hzE" src="./assets/line-1.png"/>
       <div class="english-RQS" >English</div>
       <img class="screenshot-2024-02-23-alle-0822-1-uaW" src="./assets/screenshot-2024-02-23-alle-0822-1.png"/>
-      
+     
       <div class="login-PnW" onclick="(Redirect('../login/group-1.html'))" >Login</div>
-      <div class="login-PnW" id="loginButton"></div>
+      <div class="login-PnW" id="logged-in-user">
+        <?php
+        session_start();
+        if(isset($_SESSION['username'])){
+        echo "Benvenuto, ".$_SESSION['username'];
+        }
+        ?>
+  </div>
       <div class="chevron-down-bta">
       </div>
     </div>
     <div class="navigation-6qL">
-      <div class="history-1SW" onclick="scorri('storia')">History</div>
-      <div class="sustainability-W8N" onclick="scorri('sostenibilita')">Sustainability</div>
+      <div class="history-1SW" onclick="scorri('storia')">Storia</div>
+      <div class="sustainability-W8N" onclick="scorri('sostenibilita')">Sostenibilità</div>
       <div class="design-DYa" onclick="scorri('design')">Design</div>
-      <div class="innovation-jWv" onclick="scorri('innovazione')">Innovation</div>
+      <div class="innovation-jWv" onclick="scorri('innovazione')">Innovazione</div>
     </div>
   </div>
   <div class="auto-group-sxpx-TC2">
@@ -136,3 +143,4 @@
 
 </div>
 </body>
+</html>
