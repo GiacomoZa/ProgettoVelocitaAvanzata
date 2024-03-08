@@ -22,17 +22,22 @@
       <div class="english-RQS" >English</div>
       <img class="screenshot-2024-02-23-alle-0822-1-uaW" src="./assets/screenshot-2024-02-23-alle-0822-1.png"/>
      
-      <div class="login-PnW" onclick="(Redirect('../login/group-1.html'))" >Login</div>
+      
       <div class="login-PnW" id="logged-in-user">
-        <?php
-        session_start();
-        if(isset($_SESSION['username'])){
-        echo "Benvenuto, ".$_SESSION['username'];
-        }
-        ?>
-  </div>
-      <div class="chevron-down-bta">
-      </div>
+      <?php
+      session_start();
+      if(isset($_SESSION['username'])){
+        echo '<div class="welcome-back-j58">Benvenuto, '.$_SESSION['username'].'</div>';
+      } else {
+        echo '
+              
+                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.html\'))">Login</div>
+                <div style="margin-left: 20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
+              ';
+      }
+      ?>
+   </div>
+     
     </div>
     <div class="navigation-6qL">
       <div class="history-1SW" onclick="scorri('storia')">Storia</div>
