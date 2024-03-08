@@ -44,7 +44,7 @@
   <div class="auto-group-sxpx-TC2">
     <div class="rectangle-1-nEJ">
     </div>
-    <img class="meser-GfG" src="./assets/meser.png"/>
+    <img class="meser-GfG" src="./assets/image.png"/>
     <div class="foto1-1-oQJ">
     </div>
     <img class="mask-group-U94" src="./assets/mask-group.png"/>

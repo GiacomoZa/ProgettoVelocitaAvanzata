@@ -189,6 +189,7 @@ input[type="text"]::placeholder, input[type="password"]::placeholder {
   font-family: Advent Pro, 'Source Sans Pro';
   white-space: nowrap;
   flex-shrink: 0;
+  background-color: #f8313e;
 }
 .group-1-B8A .frame-8-LFx .frame-6-2VU .chevron-right-ouY {
   margin-bottom: 0rem;
@@ -207,4 +208,8 @@ input[type="text"]::placeholder, input[type="password"]::placeholder {
   top: 14%;
   object-fit: cover;
   vertical-align: top;
+}
+
+input [type="submit"]{
+  color: #f8313e;
 }

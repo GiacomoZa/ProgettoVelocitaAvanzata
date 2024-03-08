@@ -30,3 +30,12 @@ document.getElementById("submitButton").addEventListener("click", function(event
     };
     xhr.send(formData);
 });
+
+function validateForm() {
+    var username = document.forms["login"]["user"].value;
+    var password = document.forms["login"]["psw"].value;
+    if (username == "" || password == "") {
+      alert("Compila entrambi i campi del login");
+      return false;
+    }
+  }

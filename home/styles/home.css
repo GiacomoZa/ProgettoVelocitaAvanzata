@@ -224,6 +224,7 @@ body {
   top: 0;
   object-fit: contain;
   vertical-align: top;
+  filter: brightness(10);
 }
 .home-wnn .auto-group-sxpx-TC2 .foto1-1-oQJ {
   width: 134.1rem;
