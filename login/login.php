@@ -33,14 +33,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $user;
 
             // Esegui la query per ottenere l'ID utente
-            $query_id_utente = "SELECT id_utente FROM Utente WHERE user = '$user'";
+            $query_id_utente = "SELECT IdUtente FROM Utente WHERE user = '$user'";
             $result_id_utente = mysqli_query($conn, $query_id_utente);
             $row_id_utente = mysqli_fetch_assoc($result_id_utente);
-            $id_utente = $row_id_utente['id_utente'];
+            $id_utente = $row_id_utente['IdUtente'];
 
             // Memorizza l'ID utente nella sessione
             $_SESSION['id_utente'] = $id_utente;
-
+            
             // Reindirizza alla pagina home
             header("Location: ../home/home.php");
         } else {
