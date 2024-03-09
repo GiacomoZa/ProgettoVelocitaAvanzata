@@ -46,7 +46,7 @@
         }
         else {
             echo '
-                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.html\'))">Login</div>
+                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.php\'))">Login</div>
                 <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
             ';
         }

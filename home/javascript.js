@@ -3,6 +3,10 @@ function scorri(sezione) {
     sottotitolo.scrollIntoView({ behavior: 'smooth'});
 }
 
+function Redirect(percorso){
+    window.location.href = percorso;
+}
+
 document.getElementById("submitButton").addEventListener("click", function(event) {
     event.preventDefault(); // Evita l'invio del modulo predefinito
 
