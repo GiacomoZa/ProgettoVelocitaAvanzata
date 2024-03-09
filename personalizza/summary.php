@@ -6,23 +6,114 @@ if(!isset($_SESSION['username'])){
 }
 
 $prezzo = $_SESSION['prezzo'];
-if (isset($_SESSION["idM"])) {
-  $idM = $_SESSION["idM"];
-}
-if (isset($_SESSION["idC"])) {
-  $idC = $_SESSION["idC"];
-}
-if (isset($_SESSION["cerchi"])) {
-  $cerchi = $_SESSION["cerchi"];
-}
-if (isset($_SESSION["pelle"])) {
-  $pelle = $_SESSION["pelle"];
-}
-if (isset($_SESSION["dettagli"])) {
-  $dettagli = $_SESSION["dettagli"];
-}
+$idM = isset($_SESSION["idM"]) ? $_SESSION["idM"] : null;
+$idC = isset($_SESSION["idC"]) ? $_SESSION["idC"] : null;
+$cerchi = isset($_SESSION["cerchi"]) ? $_SESSION["cerchi"] : null;
+$pelle = isset($_SESSION["pelle"]) ? $_SESSION["pelle"] : null;
+$dettagli = isset($_SESSION["dettagli"]) ? $_SESSION["dettagli"] : null;
+$idUtente = isset($_SESSION["id_utente"]) ? $_SESSION["id_utente"] : null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $idConcessionaria = $_POST["IdConcessionaria"];
+  
+  // Connessione al database
+  $conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
+
+  $dataOrdine = date("Y-m-d H:i:s");
+
+  $prezzo = preg_replace('/[^0-9.,]/', '', $prezzo);
+  $prezzo = str_replace('.', '', $prezzo);
+
+  // Verifica della connessione
+  if ($conn->connect_error) {
+    die("Connessione al database fallita: " . $conn->connect_error);
+  }
+
+  $sql_max_id = "SELECT MAX(IdPersonalizzazione) AS max_id FROM listapersonalizzazione";
+  $result = mysqli_query($conn, $sql_max_id);
+  $row = mysqli_fetch_assoc($result);
+  $max_id = $row["max_id"];
+
+  $new_id = $max_id + 1;
+  // Query per inserire un elemento nella tabella personalizzazione
+  $sql = "INSERT INTO listapersonalizzazione (IdPersonalizzazione, IdUtente, prezzoTot) VALUES ($new_id, $idUtente ,$prezzo)";
+
+  if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'listapersonalizzazione'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'listapersonalizzazione': " . $conn->error;
+  }
+
+  // Collegamento dell'elemento alla tabella auto tramite la tabella compone
+  $sql = "INSERT INTO compone (IdAuto, IdPersonalizzazione) VALUES (1, $new_id)";
+if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'compone'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'compone': " . $conn->error;
+  }
+  // Associazione ai vari elementi tramite le rispettive tabelle
+  if ($idM) {
+    $sql = "UPDATE motore SET IdAuto = 1 WHERE IdMotore = $idM";
+    if ($conn->query($sql) === TRUE) {
+      echo "Dati inseriti correttamente nella tabella 'motore'.<br>";
+    } else {
+      echo "Errore durante l'inserimento dei dati nella tabella 'motore': " . $conn->error;
+    }
+  }
+
+  if ($cerchi) {
+    $sql = "UPDATE optionals SET IdAuto = 1 WHERE IdOptionals = $cerchi";
+    if ($conn->query($sql) === TRUE) {
+      echo "Dati inseriti correttamente nella tabella 'optionals1'.<br>";
+    } else {
+      echo "Errore durante l'inserimento dei dati nella tabella 'optionals1': " . $conn->error;
+    }
+  }
+
+  if ($pelle) {
+    $sql = "UPDATE optionals SET IdAuto = 1 WHERE IdOptionals = $pelle";
+    if ($conn->query($sql) === TRUE) {
+      echo "Dati inseriti correttamente nella tabella 'optionals2'.<br>";
+    } else {
+      echo "Errore durante l'inserimento dei dati nella tabella 'optionals2': " . $conn->error;
+    }
+  }
+
+  if ($dettagli) {
+    $sql = "UPDATE optionals SET IdAuto = 1 WHERE IdOptionals = $dettagli";
+    if ($conn->query($sql) === TRUE) {
+      echo "Dati inseriti correttamente nella tabella 'optionals3'.<br>";
+    } else {
+      echo "Errore durante l'inserimento dei dati nella tabella 'optionals3': " . $conn->error;
+    }
+  }
+
+  if ($idC) {
+    $sql = "UPDATE verniciatura SET IdAuto = 1 WHERE IdVerniciatura = $idC";
+    if ($conn->query($sql) === TRUE) {
+      echo "Dati inseriti correttamente nella tabella 'verniciatura'.<br>";
+    } else {
+      echo "Errore durante l'inserimento dei dati nella tabella 'verniciatura': " . $conn->error;
+    }
+  }
+
+  //Collegamento alla concessionaria selezionata
+  $sql = "INSERT INTO scelta (IdOrdine, IdConcessionaria) VALUES ($new_id, $idConcessionaria)";
+  if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'scelta'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'verniciatura': " . $conn->error;
+  }
+
+  $sql = "INSERT INTO ordine (IdPersonalizzazione, IdUtente, prezzoTot) VALUES ($new_id ,$idUtente ,$prezzo)";
+  if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'ordine'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'verniciatura': " . $conn->error;
+  }
+  // Chiusura della connessione
+  $conn->close();
+
   header("Location: ordineEffettuato.html");
   exit; 
 }
@@ -104,7 +195,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <img class="foto1-4-oEn" src="./assets/foto1-4.png" id="macchina"/>
   <a class="compra-meser-Vcr" value="Compra Meser" onclick="submitForm()">Compra Meser</a>
   <div class="concessionaria-container">
-  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="myForm">
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="myForm">  <!--dataOrdine, data di oggi al momento del submit-->
+  <input type="hidden" id="IdConcessionaria" value="">
   <label for="concessionaria" class="dropConcessionaria">Seleziona una concessionaria:</label>
   <select id="concessionaria" name="concessionaria">
     <?php
@@ -133,4 +225,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   function submitForm() {
     document.getElementById("myForm").submit();
   }
+
+  document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("myForm");
+
+  form.addEventListener("submit", function(event) {
+
+    var selectConcessionaria = document.getElementById("concessionaria");
+    document.getElementById("IdConcessionaria").value = selectConcessionaria.value;
+
+    form.submit();
+  });
+
+});
 </script>
