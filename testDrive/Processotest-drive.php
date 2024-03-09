@@ -21,18 +21,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = $_POST['date'];
     $concessionaria = (int) $_POST['concessionaria'];
     
-    
-    // Debug: Verifica i valori delle variabili
-    var_dump($email, $date, $concessionaria);
+    // Ottieni il massimo IDTest attualmente presente nella tabella testdrive
+    $sql_max_id = "SELECT MAX(IdTest) AS max_id FROM testdrive";
+    $result = $conn->query($sql_max_id);
+    $row = $result->fetch_assoc();
+    $max_id = $row["max_id"];
 
+    // Genera un nuovo ID per il test drive
+    $new_id = $max_id + 1;
+
+    
     // Prepara la query per l'inserimento dei dati nel database
-    $query = "INSERT INTO NomeDellaTabella (email, data_preferita, id_concessionaria, id_utente) 
-              VALUES ('$email', '$date', '$concessionaria', '{$_SESSION['idUtente']}')";
-    // Debug: Verifica la stringa della query
-    echo "<script>alert('Query: $query');</script>";
+    $sql_testdrive = "INSERT INTO testdrive (IdTest, mail, datatest, IdUtente) VALUES ('$new_id', '$email', '$date', '{$_SESSION['id_utente']}')";
+
+    if ($conn->query($sql_testdrive) === TRUE) {
+        echo "Dati inseriti correttamente nella tabella 'testdrive'.";
+    } else {
+        echo "Errore durante l'inserimento dei dati nella tabella 'testdrive': " . $conn->error;
+    }
+
+    $sql_seleziona = "INSERT INTO seleziona (IdTest, IdConcessionaria) VALUES ('$new_id', '$concessionaria')";
+
+    if ($conn->query($sql_seleziona) === TRUE) {
+        echo "Dati inseriti correttamente nella tabella 'seleziona'.";
+    } else {
+        echo "Errore durante l'inserimento dei dati nella tabella 'seleziona': " . $conn->error;
+    }
 
     // Esegui la query di inserimento
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($conn, $sql_testdrive);
+    $result2 = mysqli_query($conn, $sql_seleziona);
 
     if ($result) {
         // Chiudi la connessione al database

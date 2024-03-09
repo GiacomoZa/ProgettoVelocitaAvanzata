@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Memorizza l'ID utente nella sessione
             $_SESSION['id_utente'] = $id_utente;
-
+            
             // Reindirizza alla pagina home
             header("Location: ../home/home.php");
         } else {
