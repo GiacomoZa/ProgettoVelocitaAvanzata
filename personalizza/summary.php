@@ -1,3 +1,32 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+  header("Location: ../login/group-1.html");
+  exit;
+}
+
+$prezzo = $_SESSION['prezzo'];
+if (isset($_SESSION["idM"])) {
+  $idM = $_SESSION["idM"];
+}
+if (isset($_SESSION["idC"])) {
+  $idC = $_SESSION["idC"];
+}
+if (isset($_SESSION["cerchi"])) {
+  $cerchi = $_SESSION["cerchi"];
+}
+if (isset($_SESSION["pelle"])) {
+  $pelle = $_SESSION["pelle"];
+}
+if (isset($_SESSION["dettagli"])) {
+  $dettagli = $_SESSION["dettagli"];
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  header("Location: ordineEffettuato.html");
+  exit; 
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +40,7 @@
   <link rel="stylesheet" href="./styles/summary.css"/>
   <script src="./JSPag4.js"></script>
 </head>
-<body>
+<body onload="datiMotore(<?php echo $idM; ?>), datiColore(<?php echo $idC; ?>), datiCerchi(<?php echo $cerchi; ?>), datiDettagli(<?php echo $dettagli; ?>), datiInterni(<?php echo $pelle; ?>)">
 <div class="summary-CZt">
   <div class="rectangle-3-JN2">
   </div>
@@ -26,43 +55,42 @@
     <span class="velocit-avanzata-meser-WcW-sub-1">Meser</span>
   </p>
   <p class="resoconto-PZp">Resoconto</p>
-  <p class="compra-meser-Vcr">ComPRA MESER </p>
   <div class="line-1-PiE">
   </div>
   <div class="line-2-hU2">
   </div>
-  <p class="item-6-000--QdL">6 000 €</p>
-  <p class="item-10-000--5zN">10 000 €</p>
-  <p class="item-59-000--BXc">59 000 €</p>
-  <p class="item-10-000--GZ4">10 000 €</p>
-  <p class="item-109-000--BR8">109 000 €</p>
-  <p class="totale--HDG">Totale:</p>
-  <p class="velocit-avanzata-meser-modello-sport-BZY">Velocità Avanzata Meser Modello Sport</p>
+  <p class="item-6-000--QdL" id="CostoColore"><!--costo vernice--></p>
+  <p class="item-10-000--5zN" id="CostoMotore"><!--costo motore--></p>
+  <p class="item-59-000--BXc">€ 69000</p>
+  <p class="item-10-000--GZ4" id="CostoDettagli"><!--costo dettagli--></p>
+  <p class="item-109-000--BR8" id="totale"><?php echo $prezzo; ?><!--totale--></p>
+  <p class="totale--HDG">Totale: </p>
+  <p class="velocit-avanzata-meser-modello-sport-BZY">Velocità Avanzata Meser</p>
   <div class="frame-1-sSN">
     <p class="meser-AwG">Meser</p>
     <p class="modello-sport-K3U">
       <span class="modello-sport-K3U-sub-0">+ </span>
-      <span class="modello-sport-K3U-sub-1">Modello Sport</span>
+      <span class="modello-sport-K3U-sub-1" id="NomeMotore">Motore: <!--motore--></span>
     </p>
     <p class="verniciatura-metallizzata-fire-red-F5Y">
       <span class="verniciatura-metallizzata-fire-red-F5Y-sub-0">+</span>
-      <span class="verniciatura-metallizzata-fire-red-F5Y-sub-1"> Verniciatura metallizzata &#34;Fire Red&#34;</span>
+      <span class="verniciatura-metallizzata-fire-red-F5Y-sub-1" id="NomeColore"> Verniciatura: <!--tipo vernice--><!--colore vernice--></span>
     </p>
     <p class="cerchioni-sport-jet-black-d66">
       <span class="cerchioni-sport-jet-black-d66-sub-0">+</span>
-      <span class="cerchioni-sport-jet-black-d66-sub-1"> 19&#34; cerchioni Sport, Jet Black</span>
+      <span class="cerchioni-sport-jet-black-d66-sub-1" id="NomeCerchi"> Cerchi in lega: <!--cerchi in lega si/no--></span>
     </p>
     <p class="interni-pelle-nera-pAa">
       <span class="interni-pelle-nera-pAa-sub-0">+</span>
-      <span class="interni-pelle-nera-pAa-sub-1"> Interni pelle nera</span>
+      <span class="interni-pelle-nera-pAa-sub-1" id="NomeInterni"> Interni: <!--tipo interni--></span>
     </p>
     <p class="dettagli-in-aluminio-dti">
       <span class="dettagli-in-aluminio-dti-sub-0">+</span>
-      <span class="dettagli-in-aluminio-dti-sub-1"> Dettagli in aluminio</span>
+      <span class="dettagli-in-aluminio-dti-sub-1" id="NomeDettagli"> Dettagli: <!--tipo dettagli--></span>
     </p>
   </div>
-  <p class="item-25-000--F9Q">25 000 €</p>
-  <p class="item-9-000--YeJ">9 000 €</p>
+  <p class="item-25-000--F9Q" id="CostoCerchi"><!--costo cerchi--></p>
+  <p class="item-9-000--YeJ" id="CostoInterni"><!--costo interni--></p>
   <div class="rectangle-11-dfk">
   </div>
   <div class="rectangle-12-KYa">
@@ -71,43 +99,38 @@
   <a class="interni-i4v" onclick="interni()">Interni</a>
   <p class="prezzo-109-000-D1g">
     <span class="prezzo-109-000-D1g-sub-0">Prezzo:</span>
-    <span class="prezzo-109-000-D1g-sub-1"> €109 000</span>
+    <span class="prezzo-109-000-D1g-sub-1"><?php echo $prezzo; ?></span>
   </p>
   <img class="foto1-4-oEn" src="./assets/foto1-4.png" id="macchina"/>
-</div>
-
-<form action="pagina.php" method="POST">
-  <label for="concessionaria">Seleziona una concessionaria:</label>
+  <a class="compra-meser-Vcr" value="Compra Meser" onclick="submitForm()">Compra Meser</a>
+  <div class="concessionaria-container">
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="myForm">
+  <label for="concessionaria" class="dropConcessionaria">Seleziona una concessionaria:</label>
   <select id="concessionaria" name="concessionaria">
     <?php
-    // Connessione al database
     $conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
-
-    // Verifica della connessione
     if (!$conn) {
         die("Connessione al database fallita: " . mysqli_connect_error());
     }
-
-    // Query SQL per selezionare le informazioni desiderate dalla tabella concessionaria
     $sql = "SELECT * FROM concessionaria";
     $result = mysqli_query($conn, $sql);
-
-    // Verifica se sono presenti risultati
     if (mysqli_num_rows($result) > 0) {
-        // Output dei dati di ogni riga
         while($row = mysqli_fetch_assoc($result)) {
             echo "<option value='" . $row['IdConcessionaria'] . "'>" . $row['indirizzo'] . ", " . $row['regione'] . ", " . $row['citta'] . "</option>";
         }
     } else {
         echo "Nessuna concessionaria trovata.";
     }
-
-    // Chiudi la connessione al database
     mysqli_close($conn);
     ?>
   </select>
-  <input type="submit" value="Procedi">
 </form>
-
+</div>
+</div>
 </body>
 </html>
+<script>
+  function submitForm() {
+    document.getElementById("myForm").submit();
+  }
+</script>

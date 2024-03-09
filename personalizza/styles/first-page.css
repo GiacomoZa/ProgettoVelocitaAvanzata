@@ -521,10 +521,9 @@ body {
   width: 30rem;
   height: 15rem;
   position: absolute;
-  right: 10%;
+  right: 14%;
   top: 15rem;
   font-size: 1.6rem;
-  font-weight: bold;
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
   border: solid 2px #737373;
@@ -533,10 +532,9 @@ body {
   width: 30rem;
   height: 15rem;
   position: absolute;
-  right: 10%;
+  right: 14%;
   top: 45rem;
   font-size: 1.6rem;
-  font-weight: bold;
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
   border: solid 2px #737373;
@@ -553,7 +551,7 @@ button {
   cursor: pointer;
 }
 #button1 {
-  right: 2%;
+  right: 5%;
   top: 20rem;
 }
 
@@ -563,7 +561,7 @@ button {
 }
 
 #button3 {
-  right: 2%;
+  right: 5%;
   top: 50rem;
 }
 

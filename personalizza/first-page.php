@@ -9,12 +9,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST["prezzo"])) {
       $_SESSION["prezzo"] = $_POST["prezzo"];
   }
-  if (isset($_POST["idMP"])) {
-      $_SESSION["idMP"] = $_POST["idMP"];
+  if (isset($_POST["idM"])) {
+      $_SESSION["idM"] = $_POST["idM"];
+  }
+  if (isset($_POST["idP"])) {
+    $_SESSION["idP"] = $_POST["idP"];
   }
 
+if ($_SESSION["idM"] != 0) {
   header("Location: second-page.php");
-  exit; 
+} elseif ($_SESSION["idP"] != 0) {
+  header("Location: summary2.php");
+}
+exit;  
 }
 ?>
 <!DOCTYPE html>
@@ -67,7 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <form id="pag1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
     <input type="submit" class="procedi-1hY" value="Procedi">
     <input type="hidden" id="prezzo" name="prezzo" value="">
-    <input type="hidden" id="idMP" name="idMP" value="1">
+    <input type="hidden" id="idM" name="idM" value="1">
+    <input type="hidden" id="idP" name="idP" value="1">
   </form>
   <img class="foto1-2-ikN" src="./assets/foto1-4.png"/>  
 </div>

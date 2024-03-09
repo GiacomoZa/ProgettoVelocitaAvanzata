@@ -35,3 +35,86 @@ function interni(){
         foto.style.right="0";
     }
 }
+
+function datiMotore(id){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById("NomeMotore").innerHTML += data.IdMotore;
+        document.getElementById("CostoMotore").innerHTML = "€ " + data.prezzo;
+      }
+    };
+    xhttp.open("POST", "pag4.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("idM=" + id);
+}
+
+function datiPacchetto(id){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var data = JSON.parse(this.responseText);
+      document.getElementById("infoPacchetto").innerHTML = "<b>Nome:</b> " + data.NomePacchetto  + "<br><b>Descrizione:</b> " + data.descrizione + "<br><b>Prezzo:</b> " + data.Prezzo; 
+    }
+  };
+  xhttp.open("POST", "pag4.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("idP=" + id);
+}
+
+function datiColore(id){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById("NomeColore").innerHTML += data.IdVerniciatura +", " + data.tipologia;
+        document.getElementById("CostoColore").innerHTML = "€ " + data.prezzo;
+      }
+    };
+    xhttp.open("POST", "pag4.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("idC=" + id);
+}
+
+function datiCerchi(id){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById("NomeCerchi").innerHTML += data.IdOptionals;
+        document.getElementById("CostoCerchi").innerHTML = "€ " + data.Prezzo;
+      }
+    };
+    xhttp.open("POST", "pag4.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("cerchi=" + id);
+}
+
+function datiDettagli(id){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById("NomeDettagli").innerHTML += data.IdOptionals;
+        document.getElementById("CostoDettagli").innerHTML = "€ " + data.Prezzo;
+      }
+    };
+    xhttp.open("POST", "pag4.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("dettagli=" + id);
+}
+
+function datiInterni(id){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById("NomeInterni").innerHTML += data.IdOptionals;
+        document.getElementById("CostoInterni").innerHTML = "€ " + data.Prezzo;
+      }
+    };
+    xhttp.open("POST", "pag4.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("pelle=" + id);
+}

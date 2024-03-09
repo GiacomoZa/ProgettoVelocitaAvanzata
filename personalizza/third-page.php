@@ -1,12 +1,21 @@
 <?php
 session_start();
+if(!isset($_SESSION['username'])){
+  header("Location: ../login/group-1.html");
+  exit;
+}  
+
 $prezzo = $_SESSION['prezzo'];
-$colore = $_SESSION["idC"];
-$cerchio = $_SESSION["cerchi"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (isset($_POST["prezzo"])) {
-      $_SESSION["prezzo"] = $_POST["prezzo"];
+  if (isset($_POST["prezzo2"])) {
+      $_SESSION["prezzo"] = $_POST["prezzo2"];
+  }
+  if (isset($_POST["pelle"])) {
+    $_SESSION["pelle"] = $_POST["pelle"];
+  }
+  if (isset($_POST["dettagli"])) {
+    $_SESSION["dettagli"] = $_POST["dettagli"];
   }
 
   header("Location: summary.php");
@@ -31,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="rectangle-3-gJ2">
   </div>
   <p class="price-69-000-HYi">
-    <span class="price-69-000-HYi-sub-0">Price:</span>
+    <span class="price-69-000-HYi-sub-0">Prezzo:</span>
     <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1"><?php echo $prezzo;?></span>
   </p>
   <div class="rectangle-1-AW2">
@@ -60,24 +69,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <img class="carbonFiber" src="./assets/carbonFiber.png" alt="carbonFiber" id="dettagli2">
   <p class="select-tappezzeria-Czz">Select tappezzeria</p>
   <p class="select-dettagli-X1g">Select dettagli</p>
-  <a class="procedi-1hY" href="summary.html">PROCEDI</a>
-  <a class="esterni-KCS" onclick="esterni()">Esterni</a>
+  <form id="formData" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <input type="hidden" id="pelle" name="pelle" value="">
+    <input type="hidden" id="dettagli" name="dettagli" value="">
+    <input type="hidden" id="prezzo" name="prezzo" value="<?php echo $prezzo;?>">
+    <input type="hidden" id="prezzo2" name="prezzo2" value="">
+    <input type="submit" class="procedi-1hY" value="Procedi">
+  </form>  <a class="esterni-KCS" onclick="esterni()">Esterni</a>
   <a class="interni-Qjg" onclick="interni()">Interni</a>
   <img class="foto1-2-ikN" src="./assets/interniNeri.jpeg" id="macchina"/>
 </div>
 </body>
 </html>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["colore"])) {
-        $coloreSelezionato = $_POST["colore"];
-        
-    }
-    
-    
-    if (isset($_POST["cerchio"])) {
-        $cerchioSelezionato = $_POST["cerchio"];
-        
-    }
-}
-?>

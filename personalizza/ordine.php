@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $subject = "Grazie per aver ordinato la tua nuova MESER";
         
-        $message = "Grazie per aver ordinato la tua nuova MESER!";
+        $message = "Grazie per aver ordinato la tua nuova MESER!, <br><br><br>Abbiamo preso il tuo ordine e inizieremo a lavorarci al più presto";
         
         $headers = "From: velocitaavanzata.costumers@gmail.com"; 
         
@@ -48,6 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
-    <a href="../home/home.html">Torna alla home</a>
+    <a href="../home/home.php">Torna alla home</a>
 </body>
 </html>

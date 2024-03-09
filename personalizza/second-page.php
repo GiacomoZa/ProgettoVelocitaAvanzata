@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(!isset($_SESSION['username'])){
+  header("Location: ../login/group-1.html");
+  exit;
+}  
+
 $prezzo = $_SESSION['prezzo'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -35,16 +40,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="rectangle-3-gJ2">
   </div>
   <p class="price-69-000-HYi">
-    <span class="price-69-000-HYi-sub-0">Price:</span>
+    <span class="price-69-000-HYi-sub-0">Prezzo:</span>
     <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1"><?php echo $prezzo;?></span>   <!--da modificare in base all'opzional-->
   </p>
   <div class="rectangle-1-AW2">
   </div>
   <div class="rectangle-2-3pi">
-  </div>
-  <div class="rectangle-4-wv6">
-  </div>
-  <div class="rectangle-5-FQz">
   </div>
   <div class="rectangle-6-jb4">
   </div>
@@ -64,12 +65,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <p class="cerchi-9Cr">Cerchi</p>
   <img id="cerchio1" class="GreyWheels" src="./assets/GreyWheels.png" alt="GreyWheels">
   <img id="cerchio2" class="BlackWheels" src="./assets/BlackWheels.png" alt="BlackWheels">
-  <p class="select-colore-Czz">Select colore</p>
-  <p class="select-cerchi-X1g">Select cerchi</p>
 
   <form id="formData" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input type="hidden" id="coloreSelezionato" name="coloreSelezionato" value="1">
-    <input type="hidden" id="cerchioSelezionato" name="cerchioSelezionato" value="0">
+    <input type="hidden" id="cerchioSelezionato" name="cerchioSelezionato" value="3">
     <input type="hidden" id="prezzo" name="prezzo" value="<?php echo $prezzo;?>">
     <input type="hidden" id="prezzo2" name="prezzo2" value="">
     <input type="submit" class="procedi-1hY" value="Procedi">

@@ -1,4 +1,3 @@
-// Variabile globale per tenere traccia dell'ID corrente
 var idMotoreCorrente = 1;
 var idPacchettoCorrente = 1;
 var prezzoIniziale = 69000;
@@ -123,10 +122,8 @@ function passaElementoPrecedenteP() {
 }
 
 function resetPrezzo() {
-    // Riporta il prezzo al valore iniziale
     prezzoIniziale = 69000;
 
-    // Aggiorna il prezzo visualizzato sulla pagina
     document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoIniziale.toLocaleString();
 }
 
@@ -141,11 +138,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function salvaIDM(){
-  var id = document.getElementById("idMP");
-  id.value = idMotoreCorrente;
+  var idM = document.getElementById("idM");
+  idM.value = idMotoreCorrente - 1;
+  var idP = document.getElementById("idP");
+  idP.value = 0;
 }
 
 function salvaIDP(){
-  var id = document.getElementById("idMP");
-  id.value = idPacchettoCorrente;
+  var idP = document.getElementById("idP");
+  idP.value = idPacchettoCorrente - 1;
+  var idM = document.getElementById("idM");
+  idM.value = 0;
 }

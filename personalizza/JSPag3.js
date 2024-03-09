@@ -1,4 +1,4 @@
-function fetchImage(url, targetImage) {
+function fetchImage(url, targetImage) {  //non serve utilizzare ajax qua che non ci si collega al db
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'arraybuffer';
@@ -8,9 +8,9 @@ function fetchImage(url, targetImage) {
             var blob = this.response;
             var reader = new FileReader();
             reader.onload = function() {
-                targetImage.src = reader.result; // Imposta l'immagine di destinazione con l'URL restituito dall'API
+                targetImage.src = reader.result; 
             };
-            reader.readAsDataURL(new Blob([blob])); // Converti il buffer in un URL Blob
+            reader.readAsDataURL(new Blob([blob])); 
         }
     };
     xhr.send();
@@ -18,16 +18,69 @@ function fetchImage(url, targetImage) {
 
 document.addEventListener("DOMContentLoaded", function() {
     var image1 = document.getElementById("LBlack");
-    var image2 = document.getElementById("LBrown");    
+    var image2 = document.getElementById("LBrown");  
+    var d1 = document.getElementById("dettagli1");
+    var d2 = document.getElementById("dettagli2");
+
+    var idPelle = document.getElementById("pelle"); 
+    var idDettagli = document.getElementById("dettagli"); 
 
     var foto = document.getElementById("macchina");
 
+    var prezzoS = document.getElementById("prezzo").value.trim();   
+    prezzoS = prezzoS.replace(/[^0-9]/g, "");       
+    var prezzo = parseInt(prezzoS);
+    var prezzoCorrente = prezzo;
+    var prezzoInterni = 0;
+    var prezzoDettagli = 0;
+
     image1.addEventListener("click", function() {
         fetchImage("./assets/interniNeri.jpeg", foto);
+        image1.style.border="2px solid red"
+        image2.style.border="none"
+        idPelle.value=1;
+        prezzoInterni = 1200;
+        aggiornaPrezzo();
     });
 
     image2.addEventListener("click", function() {
         fetchImage("./assets/interniMarroni.jpg", foto);
+        image2.style.border="2px solid red"
+        image1.style.border="none"
+        idPelle.value=2;
+        prezzoInterni = 1500;
+        aggiornaPrezzo();
+    });
+
+    d1.addEventListener("click", function() {
+        d1.style.border="2px solid red"
+        d2.style.border="none"
+        idDettagli.value=5;
+        prezzoDettagli = 300;
+        aggiornaPrezzo();
+    });
+    
+    d2.addEventListener("click", function() {
+        d2.style.border="2px solid red"
+        d1.style.border="none"
+        idDettagli.value=6;
+        prezzoDettagli = 1000;
+        aggiornaPrezzo();
+    });
+
+    function aggiornaPrezzo() {
+        prezzoCorrente = prezzo + prezzoInterni + prezzoDettagli;
+        document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoCorrente.toLocaleString();
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("formData");
+  
+    form.addEventListener("submit", function(event) {
+      var prezzo = document.getElementById("price-69-000-HYi-sub-1").innerText.trim();
+      var prezzoHiddenInput = document.getElementById("prezzo2");
+      prezzoHiddenInput.value = prezzo;
     });
 });
 
@@ -60,17 +113,3 @@ function interni(){
         foto.style.top="9.5rem";
     }
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    var d1 = document.getElementById("dettagli1");
-    var d2 = document.getElementById("dettagli2");
-
-    d1.addEventListener("click", function() {
-        d1.style.border="2px solid red"
-        d2.style.border="none"
-    });
-    d2.addEventListener("click", function() {
-        d2.style.border="2px solid red"
-        d1.style.border="none"
-    });
-});

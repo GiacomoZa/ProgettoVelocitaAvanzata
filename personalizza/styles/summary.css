@@ -22,6 +22,49 @@ body {
   overflow: hidden;
   background-color: #ffffff;
 }
+.summary-CZt .concessionaria-container {
+  position: absolute;
+  left: 63%;
+  top: 24rem;
+}
+.summary-CZt .dropConcessionaria {
+  width: 18rem;
+  height: 2.9rem;
+  position: absolute;
+  left: 6%;
+  top: 2.5rem;
+  font-size: 2rem;
+  font-weight: 150;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.summary-CZt select {
+  width: 20rem; /* Regola la larghezza a tua discrezione */
+  height: 3rem; /* Regola l'altezza a tua discrezione */
+  position: absolute;
+  left: 18rem;
+  top: 3rem; /* Regola questa posizione a seconda della tua preferenza */
+  font-size: 1.6rem; /* Regola la dimensione del carattere a tua discrezione */
+  font-weight: 200;
+  font-family: Roboto, 'Source Sans Pro';
+  border: 1px solid #ccc; /* Stile del bordo della select box */
+  border-radius: 4px; /* Angoli arrotondati della select box */
+  background-color: #fff; /* Colore di sfondo della select box */
+  padding: 0.5rem; /* Spazio interno della select box */
+  appearance: none;
+}
+#infoPacchetto {
+  width: 40rem;
+  height: 15rem;
+  position: absolute;
+  left: 65%;
+  top: 50%;
+  font-size: 1.6rem;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  border: solid 2px #737373;
+}
 .summary-CZt .rectangle-3-JN2 {
   width: 100%;
   height: 7.5rem;
@@ -134,7 +177,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 85%;
-  top: 59.5%;
+  top: 59%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
@@ -148,8 +191,8 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 85%;
-  top: 55%;
-  text-align: right;
+  top: 54.5%;
+  text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -163,7 +206,7 @@ body {
   position: absolute;
   left: 85%;
   top: 50%;
-  text-align: right;
+  text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -176,7 +219,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 85%;
-  top: 64%;
+  top: 72.7%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
@@ -191,7 +234,7 @@ body {
   position: absolute;
   left: 85%;
   top: 82%;
-  text-align: right;
+  text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.1725;
@@ -339,7 +382,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 85%;
-  top: 68.5%;
+  top: 63.5%;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
@@ -353,7 +396,7 @@ body {
   height: 1.7rem;
   position: absolute;
   left: 85%;
-  top: 73%;
+  top: 68.2%;
   text-align: right;
   font-size: 1.4rem;
   font-weight: 400;

@@ -25,60 +25,64 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var c1 = document.getElementById("cerchio1");
     var c2 = document.getElementById("cerchio2");
-    var form1 = document.getElementById("pag1");    
-    var id = document.getElementById("cerchioSelezionato");
+    var idCerchio = document.getElementById("cerchioSelezionato");
 
     var foto = document.getElementById("macchina");
+
+    var prezzoS = document.getElementById("prezzo").value.trim();   
+    prezzoS = prezzoS.replace(/[^0-9]/g, "");       
+    var prezzo = parseInt(prezzoS);
+    var prezzoCorrente = prezzo;
+    var prezzoColore = 0;
+    var prezzoCerchio = 0;
 
     image1.addEventListener("click", function() {
         fetchImage("./assets/macchinaBlu.png", foto);
         idColore.value = 2;
-        var prezzoS = document.getElementById("prezzo").value.trim();   
-        prezzoS = prezzoS.replace(/[^0-9]/g, "");       
-        var prezzo = parseInt(prezzoS);
-        var prezzoModificato = prezzo + 800;
-        document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoModificato.toLocaleString();
+        prezzoColore = 800;
+        aggiornaPrezzo();
     });
 
     image2.addEventListener("click", function() {
         fetchImage("./assets/macchinaNera.png", foto);
         idColore.value = 3;
-        var prezzoS = document.getElementById("prezzo").value.trim();   
-        prezzoS = prezzoS.replace(/[^0-9]/g, "");       
-        var prezzo = parseInt(prezzoS);
-        var prezzoModificato = prezzo + 800;
-        document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoModificato.toLocaleString();
+        prezzoColore = 800;
+        aggiornaPrezzo();
     });
 
     image3.addEventListener("click", function() {
         fetchImage("./assets/macchinaBianca.png", foto);
         idColore.value = 4;
-        var prezzoS = document.getElementById("prezzo").value.trim();   
-        prezzoS = prezzoS.replace(/[^0-9]/g, "");       
-        var prezzo = parseInt(prezzoS);
-        var prezzoModificato = prezzo + 3000;
-        document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoModificato.toLocaleString();
+        prezzoColore = 3000;
+        aggiornaPrezzo();
     });
 
     image4.addEventListener("click", function() {
         fetchImage("./assets/foto1-4.png", foto);
         idColore.value = 1;
-        var prezzoS = document.getElementById("prezzo").value.trim();   
-        prezzoS = prezzoS.replace(/[^0-9]/g, "");       
-        var prezzo = parseInt(prezzoS)
-        document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzo.toLocaleString();
+        prezzoColore = 0;
+        aggiornaPrezzo();
     });
 
     c1.addEventListener("click", function() {
         c1.style.border="2px solid red"
         c2.style.border="none"
-        id.value = 1;
+        idCerchio.value = 3;
+        prezzoCerchio = 400;
+        aggiornaPrezzo();
     });
     c2.addEventListener("click", function() {
         c2.style.border="2px solid red"
         c1.style.border="none"
-        id.value = 0;
+        idCerchio.value = 4;
+        prezzoCerchio = 1600;
+        aggiornaPrezzo();
     });
+
+    function aggiornaPrezzo() {
+        prezzoCorrente = prezzo + prezzoColore + prezzoCerchio;
+        document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoCorrente.toLocaleString();
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -89,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var prezzoHiddenInput = document.getElementById("prezzo2");
       prezzoHiddenInput.value = prezzo;
     });
-  });
+});
 
 function esterni(){
     var foto = document.getElementById("macchina");
