@@ -17,24 +17,43 @@
 <div class="home-wnn">
   <div class="header-ZpA">
     <div class="logo-wrapper-3WN">
-      <div class="italian-g3Y" >Italian</div>
+      <a class="italian-g3Y" href="../testDrive/drive.php" >Prenota un test drive</a>
       <img class="line-1-hzE" src="./assets/line-1.png"/>
-      <div class="english-RQS" >English</div>
+      
       <img class="screenshot-2024-02-23-alle-0822-1-uaW" src="./assets/screenshot-2024-02-23-alle-0822-1.png"/>
      
       
       <div class="login-PnW" id="logged-in-user">
       <?php
-      session_start();
-      if(isset($_SESSION['username'])){
-        echo '<div class="welcome-back-j58">Benvenuto, '.$_SESSION['username'].'</div>';
-      } else {
-        echo '
-                <a class="login-PnW" href="../login/group-1.html">Login</a>
-                <a style="margin-left: 20%;" class="login-PnW" href="../login/group-2.html">Registrati</a>
-              ';
-      }
+
+        session_start();
+
+        // Gestione del logout se il parametro "logout" è presente nell'URL
+        if(isset($_GET['logout'])) {
+            // Elimina tutte le variabili di sessione
+            session_unset();
+            // Distruggi la sessione
+            session_destroy();
+            // Reindirizza alla pagina corrente
+            header("Location: ".$_SERVER['PHP_SELF']);
+            exit; // Assicura che lo script termini qui dopo il reindirizzamento
+        }
+
+        // Mostra il nome utente e il link di logout solo se l'utente è autenticato
+        if(isset($_SESSION['username'])) {
+            echo '<div class="welcome-message">Benvenuto, '.$_SESSION['username'].'</div>';
+            echo '<a class="logout-link" href="?logout">Logout</a>';
+        }
+        else {
+            echo '
+                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.html\'))">Login</div>
+                <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
+            ';
+        }
+
       ?>
+
+
    </div>
      
     </div>

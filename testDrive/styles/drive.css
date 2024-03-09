@@ -1,0 +1,106 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Advent Pro, 'Source Sans Pro';
+}
+
+/* Global Styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.logo img {
+    max-width: 150px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.reservation-form {
+    width: 50%; /* Imposta la larghezza del modulo di prenotazione */
+    margin: auto; /* Centra il modulo orizzontalmente */
+    margin-top: 50px; /* Aggiunge spazio sopra il modulo */
+    padding: 20px; /* Aggiunge spazio interno al modulo */
+    border: 2px solid #f00; /* Aggiunge un bordo rosso */
+    border-radius: 20px; /* Aggiunge bordi smussati */
+    background-color: #f9f9f9; /* Imposta il colore di sfondo */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    
+}
+
+.reservation-form label,
+.reservation-form input,
+.reservation-form select,
+.reservation-form button {
+    display: block;
+    margin-bottom: 15px; /* Aggiunge spazio tra gli elementi */
+}
+
+.reservation-form button {
+    background-color: #f72f38; /* Imposta il colore di sfondo del pulsante */
+    color: #fff; /* Imposta il colore del testo del pulsante */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation-form button:hover {
+    background-color: #ff545b; /* Cambia il colore di sfondo del pulsante al passaggio del mouse */
+}
+
+.reservation-form label,
+.reservation-form input,
+.reservation-form select,
+.reservation-form button {
+    display: block;
+    margin: 0 auto 15px; /* Aggiunge spazio sotto e centra gli elementi orizzontalmente */
+}
+
+.reservation-page {
+   
+    
+    justify-content: center;
+    align-items: center;
+    /* Imposta l'altezza della pagina al 100% della finestra del browser */
+}
+
+
+

@@ -50,6 +50,7 @@ body {
 .home-wnn .header-ZpA .logo-wrapper-3WN .italian-g3Y {
   margin: 0rem 3rem 0.7rem 0rem;
   display: flex;
+  padding-right: 27%;
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.195;
@@ -58,6 +59,10 @@ body {
   font-family: Advent Pro, 'Source Sans Pro';
   white-space: nowrap;
   flex-shrink: 0;
+  text-decoration: none;
+}
+.home-wnn .header-ZpA .logo-wrapper-3WN .italian-g3Y:hover {
+  color: #f89797; 
 }
 .home-wnn .header-ZpA .logo-wrapper-3WN .line-1-hzE {
   margin: 0rem 2.5rem 0.331rem 0rem;
@@ -67,18 +72,7 @@ body {
   vertical-align: top;
   flex-shrink: 0;
 }
-.home-wnn .header-ZpA .logo-wrapper-3WN .english-RQS {
-  margin: 0rem 41.6rem 0.7rem 0rem;
-  display: flex;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.195;
-  letter-spacing: 0.2rem;
-  color: #f8313e;
-  font-family: Advent Pro, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
+
 .home-wnn .header-ZpA .logo-wrapper-3WN .screenshot-2024-02-23-alle-0822-1-uaW {
   margin-right: 38.2rem;
   width: 10.1rem;
@@ -138,8 +132,31 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
   cursor: pointer;
-  text-decoration: none;
 }
+.home-wnn .header-ZpA .login-PnW > div:hover {
+  color: #f89797;
+}
+
+.welcome-message {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.195;
+  letter-spacing: 0.2rem; 
+  color: #f7313c; /* Cambia il colore del testo */
+}
+
+.logout-link {
+  margin-left: 20px; /* Aggiungi margine a sinistra */
+  text-decoration: none; /* Rimuovi la sottolineatura */
+  color: #f7313c; /* Cambia il colore del testo */
+  cursor: pointer; /* Cambia il cursore quando passi sopra al link */
+}
+
+.logout-link:hover {
+  color: #f89797;/* Sottolinea il testo quando passi sopra al link */
+}
+
+
 .home-wnn .header-ZpA .logo-wrapper-3WN > div:hover {
   color: #f89797;
 }
