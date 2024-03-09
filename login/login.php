@@ -23,20 +23,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($user == "" || $psw == "") {
         echo "Campi vuoti";
     } else {
-        // Esegui la query per controllare le credenziali dell'utente
         $query = "SELECT * FROM Utente WHERE user = '$user' && password = '$psw'";
         $risultato = mysqli_query($conn, $query);
-
-        if (!$risultato) {
-            echo "Errore nel comando";
-            exit();
-        }
 
         // Controlla se le credenziali sono corrette
         $riga = mysqli_fetch_array($risultato);
         if ($riga) {
             // Memorizza l'username dell'utente nella sessione
             $_SESSION['username'] = $user;
+
+            // Esegui la query per ottenere l'ID utente
+            $query_id_utente = "SELECT id_utente FROM Utente WHERE user = '$user'";
+            $result_id_utente = mysqli_query($conn, $query_id_utente);
+            $row_id_utente = mysqli_fetch_assoc($result_id_utente);
+            $id_utente = $row_id_utente['id_utente'];
+
+            // Memorizza l'ID utente nella sessione
+            $_SESSION['id_utente'] = $id_utente;
+
             // Reindirizza alla pagina home
             header("Location: ../home/home.php");
         } else {
