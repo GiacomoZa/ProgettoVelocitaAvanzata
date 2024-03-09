@@ -216,6 +216,7 @@ body {
   color: #ffffff;
   font-family: Roboto, 'Source Sans Pro';
   white-space: nowrap;
+  background-color: #f8313e;
 }
 .first-page-3kr .esterni-KCS {
   width: 4.4rem;
@@ -292,7 +293,7 @@ body {
   width: 80px;
   height: 80px;
   position: absolute;
-  left: 69%;
+  left: 71%;
   top: 50rem;
   vertical-align: top;
 }
@@ -303,21 +304,10 @@ body {
   width: 80px;
   height: 80px;
   position: absolute;
-  left: 77%;
+  left: 81%;
   top: 50rem;
   vertical-align: top;
 }
 .first-page-3kr .BlackWheels .selected{
-  border: 2px solid red;
-}
-.first-page-3kr .BBS {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  left: 85%;
-  top: 50rem;
-  vertical-align: top;
-}
-.first-page-3kr .BBS .selected{
   border: 2px solid red;
 }

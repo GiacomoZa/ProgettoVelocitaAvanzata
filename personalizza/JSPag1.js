@@ -129,3 +129,23 @@ function resetPrezzo() {
     // Aggiorna il prezzo visualizzato sulla pagina
     document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoIniziale.toLocaleString();
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("pag1");
+
+  form.addEventListener("submit", function(event) {
+    var prezzo = document.getElementById("price-69-000-HYi-sub-1").innerText.trim();
+    var prezzoHiddenInput = document.getElementById("prezzo");
+    prezzoHiddenInput.value = prezzo;
+  });
+});
+
+function salvaIDM(){
+  var id = document.getElementById("idMP");
+  id.value = idMotoreCorrente;
+}
+
+function salvaIDP(){
+  var id = document.getElementById("idMP");
+  id.value = idPacchettoCorrente;
+}

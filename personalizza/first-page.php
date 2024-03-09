@@ -1,6 +1,21 @@
 <?php
-// Avvia la sessione
 session_start();
+if(!isset($_SESSION['username'])){
+  header("Location: ../login/group-1.html");
+  exit;
+}  
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST["prezzo"])) {
+      $_SESSION["prezzo"] = $_POST["prezzo"];
+  }
+  if (isset($_POST["idMP"])) {
+      $_SESSION["idMP"] = $_POST["idMP"];
+  }
+
+  header("Location: second-page.php");
+  exit; 
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +36,7 @@ session_start();
   </div>
   <p class="price-69-000-HYi">
     <span class="price-69-000-HYi-sub-0">Price:</span>
-    <span class="price-69-000-HYi-sub-1"> 69000</span>
+    <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1">69000</span>
   </p>
   <div class="rectangle-1-AW2">
   </div>
@@ -46,9 +61,14 @@ session_start();
 
   <button onclick="passaElementoSuccessivoP()" id="button3">Successivo</button>
   <button onclick="passaElementoPrecedenteP()" id="button4">Precedente</button>
-  <p class="select-motore-Czz">Select motore</p>
-  <a class="select-pacchetto-X1g">Select pacchetto</a>
-  <a class="procedi-1hY">PROCEDI</a> <!---->
+  <a class="select-motore-Czz" onclick="salvaIDM()">Select motore</a>
+  <a class="select-pacchetto-X1g" onclick="salvaIDP()">Select pacchetto</a>
+
+  <form id="pag1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
+    <input type="submit" class="procedi-1hY" value="Procedi">
+    <input type="hidden" id="prezzo" name="prezzo" value="">
+    <input type="hidden" id="idMP" name="idMP" value="1">
+  </form>
   <img class="foto1-2-ikN" src="./assets/foto1-4.png"/>  
 </div>
 </body>

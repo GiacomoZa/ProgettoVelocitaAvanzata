@@ -25,6 +25,7 @@
       
       <div class="login-PnW" id="logged-in-user">
       <?php
+
         session_start();
 
         // Gestione del logout se il parametro "logout" è presente nell'URL
@@ -49,6 +50,7 @@
                 <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
             ';
         }
+
       ?>
 
 
@@ -73,7 +75,7 @@
     <div class="caption-tTg">
       <div class="scopri-la-potenza-meser-c8n">Scopri la potenza Meser.</div>
       <div class="frame-5-75Y">
-        <div class="configura-B5Q">Configura</div>
+        <a class="configura-B5Q" href="../personalizza/first-page.php">Configura</a>
         <img class="chevron-right-HeE" src="./assets/chevron-right.png"/>
       </div>
     </div>
