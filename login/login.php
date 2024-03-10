@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['id_utente'] = $id_utente;
 
             // Controlla se è stato selezionato il checkbox "Ricordami"
-            if (!empty($_POST['ricordami'])) {
+            if (empty($_POST['ricordami'])) {
                 // Imposta il cookie per memorizzare l'ID utente
                
                 setcookie('utente', $id_utente, time() + 3600, "/"); // Scade dopo un'ora

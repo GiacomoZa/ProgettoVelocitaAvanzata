@@ -39,21 +39,6 @@
       
       <div class="login-PnW" id="logged-in-user">
       <?php
-       
-
-        
-        if(isset($_SESSION['username'])) {
-          echo '<div class="welcome-message">Benvenuto, '.$_SESSION['username'].'</div>';
-          echo '<a class="logout-link" href="?logout">Logout</a>';
-        }
-        else {
-          echo '
-              <div class="login-PnW" onclick="(Redirect(\'../login/group-1.php\'))">Login</div>
-              <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
-          ';
-        }
-
-        
 
         // Gestione del logout se il parametro "logout" è presente nell'URL
         if(isset($_GET['logout'])) {

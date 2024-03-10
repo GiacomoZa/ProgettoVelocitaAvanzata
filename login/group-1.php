@@ -18,6 +18,10 @@
 <div class="group-1-B8A">
   <div class="frame-8-LFx">
     <div class="rectangle-6-Ud4">
+    <div style='text-align: center; padding-top:80%;'>
+      <label style='color: red; text-align: center; padding-top:80%; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
+      <input  type='checkbox' name='ricordami'>
+    </div>
     <?php
     if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
         echo "<div style='color: red; text-align: center; padding-top:81.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
@@ -27,10 +31,6 @@
       echo "<div style='color: red; text-align: center; padding-top:81.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
     }
     ?>
-   <div style='text-align: center; padding-top:80%;'>
-      <label style='color: red; text-align: center; padding-top:80%; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
-      <input  type='checkbox' name='ricordami'>
-    </div>
     </div>
     
      
