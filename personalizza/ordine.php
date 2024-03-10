@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_SESSION['username'])){
+  header("Location: ../login/group-1.php");
+  exit;
+}  
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
