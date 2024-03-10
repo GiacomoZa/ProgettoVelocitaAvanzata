@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Collegamento dell'elemento alla tabella auto tramite la tabella compone
   $sql = "INSERT INTO compone (IdAuto, IdPersonalizzazione) VALUES (1, $new_id)";
-if ($conn->query($sql) === TRUE) {
+  if ($conn->query($sql) === TRUE) {
     echo "Dati inseriti correttamente nella tabella 'compone'.<br>";
   } else {
     echo "Errore durante l'inserimento dei dati nella tabella 'compone': " . $conn->error;
@@ -208,7 +208,6 @@ if ($conn->query($sql) === TRUE) {
   <a class="compra-meser-Vcr" value="Compra Meser" onclick="submitForm()">Compra Meser</a>
   <div class="concessionaria-container">
   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="myForm">  <!--dataOrdine, data di oggi al momento del submit-->
-  <input type="hidden" id="IdConcessionaria" value="">
   <label for="concessionaria" class="dropConcessionaria">Seleziona una concessionaria:</label>
   <select id="concessionaria" name="concessionaria">
     <?php
