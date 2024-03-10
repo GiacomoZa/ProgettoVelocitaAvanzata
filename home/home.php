@@ -1,3 +1,17 @@
+<?php
+ session_start();
+
+ // Controllo se il cookie contiene un identificativo utente valido
+
+ if(isset($_COOKIE['utente']) && $_COOKIE['utente'] != "") {
+   // Il cookie contiene un identificativo utente valido
+   $_SESSION['id_utente'] = $_COOKIE['utente'];
+   $_SESSION['username'] = $_COOKIE['username'];
+   // Reindirizza alla pagina home
+   header("Location: home.php");
+   exit; // Assicura che lo script termini qui dopo il reindirizzamento
+ }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,8 +39,21 @@
       
       <div class="login-PnW" id="logged-in-user">
       <?php
+       
 
-        session_start();
+        
+        if(isset($_SESSION['username'])) {
+          echo '<div class="welcome-message">Benvenuto, '.$_SESSION['username'].'</div>';
+          echo '<a class="logout-link" href="?logout">Logout</a>';
+        }
+        else {
+          echo '
+              <div class="login-PnW" onclick="(Redirect(\'../login/group-1.php\'))">Login</div>
+              <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
+          ';
+        }
+
+        
 
         // Gestione del logout se il parametro "logout" è presente nell'URL
         if(isset($_GET['logout'])) {
@@ -34,22 +61,15 @@
             session_unset();
             // Distruggi la sessione
             session_destroy();
+
+            setcookie('id_utente', '', time() - 3600, "/");
             // Reindirizza alla pagina corrente
             header("Location: ".$_SERVER['PHP_SELF']);
             exit; // Assicura che lo script termini qui dopo il reindirizzamento
         }
 
         // Mostra il nome utente e il link di logout solo se l'utente è autenticato
-        if(isset($_SESSION['username'])) {
-            echo '<div class="welcome-message">Benvenuto, '.$_SESSION['username'].'</div>';
-            echo '<a class="logout-link" href="?logout">Logout</a>';
-        }
-        else {
-            echo '
-                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.php\'))">Login</div>
-                <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
-            ';
-        }
+        
 
       ?>
 

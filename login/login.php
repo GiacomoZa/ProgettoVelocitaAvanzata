@@ -19,9 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['user'];
     $psw = $_POST['psw'];
 
+
     // Controlla se sono stati inviati username e password
     if ($user == "" || $psw == "") {
-        echo "Campi vuoti";
+         header("Location: group-1.php?error2=invalid");
     } else {
         $query = "SELECT * FROM Utente WHERE user = '$user' && password = '$psw'";
         $risultato = mysqli_query($conn, $query);
@@ -33,21 +34,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $user;
 
             // Esegui la query per ottenere l'ID utente
-            $query_id_utente = "SELECT IdUtente FROM Utente WHERE user = '$user'";
+            $query_id_utente = "SELECT IdUtente FROM Utente WHERE user = '$user'"; 
             $result_id_utente = mysqli_query($conn, $query_id_utente);
             $row_id_utente = mysqli_fetch_assoc($result_id_utente);
             $id_utente = $row_id_utente['IdUtente'];
 
+
             // Memorizza l'ID utente nella sessione
             $_SESSION['id_utente'] = $id_utente;
-            
+
+            // Controlla se è stato selezionato il checkbox "Ricordami"
+            if (!empty($_POST['ricordami'])) {
+                // Imposta il cookie per memorizzare l'ID utente
+               
+                setcookie('utente', $id_utente, time() + 3600, "/"); // Scade dopo un'ora
+                setcookie('username', $user, time() + 3600, "/");
+            }
+           
             // Reindirizza alla pagina home
             header("Location: ../home/home.php");
         } else {
             // Se le credenziali sono errate, visualizza un messaggio di errore
-            echo "<script>alert('Username o password errati');</script>";
-            // Evita il reindirizzamento alla pagina di output PHP
-            echo "<script>window.history.back();</script>";
+            header("Location: group-1.php?error=invalid");
+            
+            
         }
     }
 }

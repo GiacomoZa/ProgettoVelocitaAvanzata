@@ -18,7 +18,22 @@
 <div class="group-1-B8A">
   <div class="frame-8-LFx">
     <div class="rectangle-6-Ud4">
+    <?php
+    if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
+        echo "<div style='color: red; text-align: center; padding-top:81.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
+
+    }
+    if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
+      echo "<div style='color: red; text-align: center; padding-top:81.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
+    }
+    ?>
+   <div style='text-align: center; padding-top:80%;'>
+      <label style='color: red; text-align: center; padding-top:80%; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
+      <input  type='checkbox' name='ricordami'>
     </div>
+    </div>
+    
+     
     <p class="new-member-register-now-zbQ">
       <span class="new-member-register-now-zbQ-sub-0">New Member?</span>
       <span class="new-member-register-now-zbQ-sub-1"> </span>
@@ -26,7 +41,7 @@
     </p>
     <p class="welcome-back-j58">Welcome back</p>
     <p class="sign-in-to-access-your-account-qP4">sign in to access your account</p>
-    <form id="login" action="login.php" method="post" onsubmit="return validateForm()">
+    <form id="login" action="login.php" method="post" >
         <div class="rectangle-8-jjL">
           <input type="text" placeholder="Username" maxlength="20" name="user">
         </div>
