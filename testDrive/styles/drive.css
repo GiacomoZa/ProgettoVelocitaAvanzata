@@ -1,70 +1,83 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Advent Pro, 'Source Sans Pro';
 }
-
-/* Global Styles */
 .header {
-    background-color: #333;
+    background-color: black;
     color: #fff;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: center; /* Centra gli elementi verticalmente */
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo {
+    margin-right: 20px; /* Distanza tra l'immagine e il titolo */
 }
-
-
 
 .logo img {
-    max-width: 150px;
+    width: 8rem;
+    height: 6rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.195;
+    color: #f7313c;
+    font-family: Advent Pro, 'Source Sans Pro';
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .navigation ul {
     list-style-type: none;
     display: flex;
 }
-
 .navigation li {
     margin-right: 20px;
 }
-
 .navigation a {
     text-decoration: none;
     color: #fff;
 }
-
 .main {
     width: 80%;
     margin: 20px auto;
     text-align: center;
 }
-
 .reservation-form {
-    width: 50%; /* Imposta la larghezza del modulo di prenotazione */
-    margin: auto; /* Centra il modulo orizzontalmente */
-    margin-top: 50px; /* Aggiunge spazio sopra il modulo */
-    padding: 20px; /* Aggiunge spazio interno al modulo */
-    border: 2px solid #f00; /* Aggiunge un bordo rosso */
-    border-radius: 20px; /* Aggiunge bordi smussati */
-    background-color: #f9f9f9; /* Imposta il colore di sfondo */
+    width: 50%;
+    margin: auto;
+    margin-top: 20px; /* Riduci leggermente lo spazio sopra il modulo */
+    margin-bottom: 50px; /* Aggiungi spazio sotto il modulo */
+    padding: 20px;
+    border: 2px solid #f00;
+    border-radius: 20px;
+    background-color: #f9f9f9;
     justify-content: center;
     align-items: center;
-    margin-top: 20%;
-    
 }
-
+.leaflet-control-geocoder-icon {
+    border: none;
+}
+.custom-select {
+    width: 15rem; /* Regola la larghezza a tua discrezione */
+    height: 1.7rem; /* Regola l'altezza a tua discrezione */
+    font-size: 0.8rem; /* Regola la dimensione del carattere a tua discrezione */
+    font-weight: 80;
+    font-family: Roboto, 'Source Sans Pro';
+    border: 1px solid #ccc; /* Stile del bordo della select box */
+    border-radius: 4px; /* Angoli arrotondati della select box */
+    background-color: #fff; /* Colore di sfondo della select box */
+    appearance: none;
+    position: relative;
+    padding: 0.3rem;
+}
 .reservation-form label,
 .reservation-form input,
 .reservation-form select,
@@ -72,7 +85,6 @@ body {
     display: block;
     margin-bottom: 15px; /* Aggiunge spazio tra gli elementi */
 }
-
 .reservation-form button {
     background-color: #f72f38; /* Imposta il colore di sfondo del pulsante */
     color: #fff; /* Imposta il colore del testo del pulsante */
@@ -81,11 +93,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
 .reservation-form button:hover {
     background-color: #ff545b; /* Cambia il colore di sfondo del pulsante al passaggio del mouse */
 }
-
 .reservation-form label,
 .reservation-form input,
 .reservation-form select,
@@ -93,14 +103,8 @@ body {
     display: block;
     margin: 0 auto 15px; /* Aggiunge spazio sotto e centra gli elementi orizzontalmente */
 }
-
 .reservation-page {
-   
-    
     justify-content: center;
     align-items: center;
     /* Imposta l'altezza della pagina al 100% della finestra del browser */
 }
-
-
-

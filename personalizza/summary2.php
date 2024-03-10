@@ -9,8 +9,71 @@ $prezzo = $_SESSION['prezzo'];
 if (isset($_SESSION["idP"])) {
   $idP = $_SESSION["idP"];
 }
+$idUtente = isset($_SESSION["id_utente"]) ? $_SESSION["id_utente"] : null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  $idConcessionaria = (int) $_POST["concessionaria"];
+  
+  $conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
+
+  $dataOrdine = date("Y-m-d");
+
+  $prezzo = preg_replace('/[^0-9.,]/', '', $prezzo);
+  $prezzo = str_replace('.', '', $prezzo);
+
+  if ($conn->connect_error) {
+    die("Connessione al database fallita: " . $conn->connect_error);
+  }
+
+  $sql_max_id = "SELECT MAX(IdPersonalizzazione) AS max_id FROM listapersonalizzazione";
+  $result = mysqli_query($conn, $sql_max_id);
+  $row = mysqli_fetch_assoc($result);
+  $max_id = $row["max_id"];
+
+  $new_id = $max_id + 1;
+  // Query per inserire un elemento nella tabella personalizzazione
+  $sql = "INSERT INTO listapersonalizzazione (IdPersonalizzazione, IdUtente, prezzoTot) VALUES ($new_id, $idUtente ,$prezzo)";
+
+  if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'listapersonalizzazione'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'listapersonalizzazione': " . $conn->error;
+  }
+
+  // Collegamento dell'elemento alla tabella auto tramite la tabella compone
+  $sql = "INSERT INTO compone (IdAuto, IdPersonalizzazione) VALUES (1, $new_id)";
+  if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'compone'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'compone': " . $conn->error;
+  }
+
+  $sql_max_id = "SELECT MAX(IdOrdine) AS max_id FROM ordine";
+  $result = mysqli_query($conn, $sql_max_id);
+  $row = mysqli_fetch_assoc($result);
+  $max_id = $row["max_id"];
+
+  $new_id2 = $max_id + 1;
+
+  $sql = "INSERT INTO ordine (IdOrdine, dataordine, IdUtente, IdPersonalizzazione) VALUES ($new_id2, NOW(), $idUtente, $new_id)";
+
+  echo $sql;
+  if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'ordine'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'ordine': " . $conn->error;
+  }
+
+  //Collegamento alla concessionaria selezionata
+  $sql = "INSERT INTO scelta (IdOrdine, IdConcessionaria) VALUES ($new_id2, $idConcessionaria)";
+  
+  if ($conn->query($sql) === TRUE) {
+    echo "Dati inseriti correttamente nella tabella 'scelta'.<br>";
+  } else {
+    echo "Errore durante l'inserimento dei dati nella tabella 'scelta': " . $conn->error;
+  }
+
   header("Location: ordineEffettuato.html");
   exit; 
 }

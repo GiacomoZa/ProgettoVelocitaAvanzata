@@ -1,35 +1,43 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenota un Test Drive</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro%3A400%2C600%2C700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400"/>
     <link rel="stylesheet" href="./styles/drive.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <style>
+        .leaflet-control-geocoder-icon {
+            border: none; 
+        }
+    </style>
 </head>
-
 <body>
     <div class="reservation-page">
     <header class="header">
     <div class="logo">
-        <img src="../home/assets/foto1-1-bg.png" alt="Logo">
+    <a  href="../home/home.php">
+        <img src="assets/logo.png" alt="Logo">
+    </a>
     </div>
-    <h1 style="color: #f72f38;">Prenota un Test Drive</h1>
-    <div class="logo">
-        <img src="../home/assets/foto1-1-bg.png" alt="Logo">
-    </div>
+    <h1>Prenota un Test Drive</h1>
 </header>
-            <?php
-                session_start();
-            ?>
-        <main class="main">
-            <section class="reservation-form">
-            <div class="user-info">
-                </div>
-                <form action="Processotest-drive.php" method="post" onsubmit="return validateForm()" >
-                    <input type="hidden" name="idUser" value="<?php echo $_SESSION['idUtente']; ?>">
-                    <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
-                        
+    <main class="main">
+        <section class="reservation-form">
+        <div class="user-info">
+            </div>
+            <form action="Processotest-drive.php" method="post" onsubmit="return validateForm()" >
+                <input type="hidden" name="idUser" value="<?php echo $_SESSION['idUtente']; ?>">
+                <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
+
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
 
@@ -37,7 +45,7 @@
                     <input type="date" id="date" name="date" required>
                     
                     <label for="concessionario">Concessionario:</label>
-                    <select id="concessionaria" name="concessionaria">
+                    <select id="concessionaria" name="concessionaria" class="custom-select">
                         <?php
                         // Connessione al database
                         $conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
@@ -65,7 +73,7 @@
                         mysqli_close($conn);
                         ?>
                       </select>
-                    
+                      <div id="map" style="height: 300px; margin: 10px;"></div>
                     <button type="submit">Prenota</button>
                 </form>
             </section>
@@ -99,6 +107,21 @@
                                     // - Uno o più caratteri non spazio dopo il punto.
             return re.test(email);
         }
+        function initMap() {
+        // Inizializza la mappa sull'Italia
+        var map = L.map('map').setView([41.8719, 12.5674], 6); // Centra la mappa sull'Italia (latitudine e longitudine) con livello di zoom 6
+
+        // Aggiungi un layer della mappa (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Aggiungi il controllo di geocoding per la ricerca degli indirizzi
+        L.Control.geocoder().addTo(map);
+    }
+
+    // Esegui la funzione initMap() quando la pagina è completamente caricata
+    document.addEventListener('DOMContentLoaded', initMap);;
     </script>
 </body>
 
