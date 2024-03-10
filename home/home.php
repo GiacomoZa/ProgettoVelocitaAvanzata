@@ -29,23 +29,26 @@ session_start();
       
       <div class="login-PnW" id="logged-in-user">
       <?php
-        if(isset($_COOKIE['utente']) && $_COOKIE['utente'] != "") {
+        if(isset($_COOKIE['utente']) && isset($_COOKIE['username'])) {
           // Il cookie contiene un identificativo utente valido
           $_SESSION['id_utente'] = $_COOKIE['utente'];
           $_SESSION['username'] = $_COOKIE['username'];
-          
         }
 
         // Gestione del logout se il parametro "logout" è presente nell'URL
         if(isset($_GET['logout'])) {
-            // Elimina tutte le variabili di sessione
-            session_unset();
-            // Distruggi la sessione
-            session_destroy();
-            // Reindirizza alla pagina corrente
-            header("Location: ".$_SERVER['PHP_SELF']);
-            exit; // Assicura che lo script termini qui dopo il reindirizzamento
-        }
+          // Elimina tutte le variabili di sessione
+          session_unset();
+          // Distruggi la sessione
+          session_destroy();
+          // Elimina i cookie sovrascrivendoli con cookie vuoti e scadenza passata
+          setcookie('utente', '', time() - 3600, "/");
+          setcookie('username', '', time() - 3600, "/");
+          // Reindirizza alla pagina corrente
+          header("Location: ".$_SERVER['PHP_SELF']);
+          exit; // Assicura che lo script termini qui dopo il reindirizzamento
+      }
+      
 
         // Mostra il nome utente e il link di logout solo se l'utente è autenticato
         if(isset($_SESSION['username'])) {

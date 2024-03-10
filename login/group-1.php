@@ -12,17 +12,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro%3A700"/>
   <link rel="stylesheet" href="./styles/group-1.css"/>
   <script src="../home/javascript.js"></script>
-
 </head>
 <body>
-
 <div class="group-1-B8A">
   <div class="frame-8-LFx">
     <div class="rectangle-6-Ud4">
-    <div style='text-align: center; padding-top:65%;'>
-      <label style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
-      <input  type='checkbox' name='ricordami'>
-    </div>
     <?php
         session_start();
 
@@ -49,6 +43,11 @@
         <div class="rectangle-5-UKY">
           <input type="password" placeholder="Password" maxlength="20" name="psw">
         </div>
+
+        <div class="checkbox-container">
+          <label for="ricordami" style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
+          <input type='checkbox' name='ricordami' id="ricordami">
+        </div>
         <div class="frame-6-2VU">
           <input type="submit" value="Accedi" class="configura-uJN">
           <img class="chevron-right-ouY" src="./assets/chevron-right-Fjk.png"/>
@@ -57,7 +56,6 @@
     <a href="../home/home.php">    
       <img class="screenshot-2024-02-23-alle-0822-2-vDU" src="./assets/screenshot-2024-02-23-alle-0822-2.png"/>
     </a>
-   
 </div>
 </body>
 </html>

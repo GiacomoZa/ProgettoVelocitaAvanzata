@@ -209,7 +209,15 @@ input[type="text"]::placeholder, input[type="password"]::placeholder {
   object-fit: cover;
   vertical-align: top;
 }
-
-input [type="submit"]{
+input[type="submit"] {
   color: #f8313e;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.checkbox-container label {
+  display: inline-block;
+  vertical-align: middle;
 }

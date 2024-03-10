@@ -42,11 +42,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Memorizza l'ID utente nella sessione
             $_SESSION['id_utente'] = $id_utente;
 
-             if (!empty($_POST['ricordami'])) {
+            if ($_POST['ricordami']) {
                 // Imposta il cookie per memorizzare l'ID utente
                
-                setcookie('utente',$_SESSION['id_utente'], time() + 3600, "/"); // Scade dopo un'ora
-                setcookie('username', $_SESSION['username'], time() + 3600, "/");
+                setcookie('utente',$id_utente, time() + (60*60), "/"); // Scade dopo un'ora
+                setcookie('username',$user, time() + (60*60), "/");
             }
            
             // Reindirizza alla pagina home

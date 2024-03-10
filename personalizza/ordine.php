@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Indirizzo email non valido.";
     }
+    header("Location: ../home/home.php");
 }
 ?>
 <!DOCTYPE html>
