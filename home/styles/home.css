@@ -136,7 +136,12 @@ body {
 .home-wnn .header-ZpA .login-PnW > div:hover {
   color: #f89797;
 }
-
+.galleria {
+  margin-left: 20px; /* Aggiungi margine a sinistra */
+  text-decoration: none; /* Rimuovi la sottolineatura */
+  color: #f7313c; /* Cambia il colore del testo */
+  cursor: pointer; 
+}
 .welcome-message {
   font-size: 2rem;
   font-weight: 400;

@@ -41,7 +41,8 @@
 
         // Mostra il nome utente e il link di logout solo se l'utente è autenticato
         if(isset($_SESSION['username'])) {
-            echo '<div class="welcome-message">Benvenuto, '.$_SESSION['username'].'</div>';
+            echo '<div class="welcome-message">'.$_SESSION['username'].'</div>';
+            echo '<a class="galleria" href="../login/galleria.php">Galleria</a>';
             echo '<a class="logout-link" href="?logout">Logout</a>';
         }
         else {
@@ -50,12 +51,8 @@
                 <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
             ';
         }
-
       ?>
-
-
    </div>
-     
     </div>
     <div class="navigation-6qL">
       <div class="history-1SW" onclick="scorri('storia')">Storia</div>
