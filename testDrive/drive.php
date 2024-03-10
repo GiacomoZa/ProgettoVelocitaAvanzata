@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login/group-1.php");
+        exit;
+      } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,8 +39,8 @@
         <div class="user-info">
             </div>
             <form action="Processotest-drive.php" method="post" onsubmit="return validateForm()" >
-                <input type="hidden" name="idUser" value="<?php echo $_SESSION['idUtente']; ?>">
-                <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
+                <input type="hidden" name="idUser" value='<?php echo $_SESSION['idUtente']; ?>'>
+                <input type="hidden" name="username" value='<?php echo $_SESSION['username']; ?>'>
 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>

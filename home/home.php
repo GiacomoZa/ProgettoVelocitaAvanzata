@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,8 +29,12 @@
       
       <div class="login-PnW" id="logged-in-user">
       <?php
-
-        session_start();
+        if(isset($_COOKIE['utente']) && $_COOKIE['utente'] != "") {
+          // Il cookie contiene un identificativo utente valido
+          $_SESSION['id_utente'] = $_COOKIE['utente'];
+          $_SESSION['username'] = $_COOKIE['username'];
+          
+        }
 
         // Gestione del logout se il parametro "logout" è presente nell'URL
         if(isset($_GET['logout'])) {
@@ -48,7 +56,7 @@
         else {
             echo '
                 <div class="login-PnW" onclick="(Redirect(\'../login/group-1.php\'))">Login</div>
-                <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.html\'))">Registrati</div>
+                <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.php\'))">Registrati</div>
             ';
         }
       ?>

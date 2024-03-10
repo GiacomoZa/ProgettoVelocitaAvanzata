@@ -22,7 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
 
-    // Sanitizza i dati inseriti dall'utente per evitare SQL injection
+
+    if ($user == "" || $psw == "" || $nome == "" || $cognome == "") {
+        header("Location: group-2.php?error2=invalid");
+    }else{
+        // Sanitizza i dati inseriti dall'utente per evitare SQL injection
     $user = mysqli_real_escape_string($conn, $user);
     $psw = mysqli_real_escape_string($conn, $psw);
     $nome = mysqli_real_escape_string($conn, $nome);
@@ -49,10 +53,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit; // Assicurati di uscire dallo script dopo il reindirizzamento
     } catch (Exception $e) {
         // Questo blocco verrà eseguito solo se ci sono eccezioni PHP
-        // Gestisci eventuali eccezioni PHP qui
-        echo "Errore PHP: " . $e->getMessage();
+        header("Location: group-2.php?error=invalid");
     }
-  
+    }
+ 
 }
 
 mysqli_close($conn);

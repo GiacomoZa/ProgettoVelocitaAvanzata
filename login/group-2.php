@@ -16,6 +16,16 @@
 <div class="group-2-k9t">
   <div class="frame-9-JSJ">
     <div class="rectangle-7-eFG">
+    <?php
+      if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
+        echo "<div style='color: red; text-align: center; padding-top:82.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Utente già presente.</strong></p></div>";
+
+    }if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
+      echo "<div style='color: red; text-align: center; padding-top:82.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Compila tutti i campi</strong></p></div>";
+
+  }
+      ?>
+
     </div>
     <p class="already-a-member-log-in-y2e">
       <span class="already-a-member-log-in-y2e-sub-0">Already a member?</span>
