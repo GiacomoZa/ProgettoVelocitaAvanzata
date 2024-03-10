@@ -15,33 +15,34 @@
 
 </head>
 <body>
+
 <div class="group-1-B8A">
   <div class="frame-8-LFx">
     <div class="rectangle-6-Ud4">
-    <div style='text-align: center; padding-top:80%;'>
-      <label style='color: red; text-align: center; padding-top:80%; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
+    <div style='text-align: center; padding-top:65%;'>
+      <label style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
       <input  type='checkbox' name='ricordami'>
     </div>
     <?php
-    if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
-        echo "<div style='color: red; text-align: center; padding-top:81.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
+        session_start();
 
-    }
-    if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
-      echo "<div style='color: red; text-align: center; padding-top:81.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
-    }
-    ?>
+        if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
+            echo "<div style='color: red; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
+        }
+        if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
+          echo "<div style='color: red; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
+        }
+        ?>
     </div>
-    
-     
     <p class="new-member-register-now-zbQ">
       <span class="new-member-register-now-zbQ-sub-0">New Member?</span>
       <span class="new-member-register-now-zbQ-sub-1"> </span>
-      <a class="new-member-register-now-zbQ-sub-2" href="group-2.html">Register now</a>
+      <a class="new-member-register-now-zbQ-sub-2" href="group-2.php">Register now</a>
     </p>
     <p class="welcome-back-j58">Welcome back</p>
     <p class="sign-in-to-access-your-account-qP4">sign in to access your account</p>
-    <form id="login" action="login.php" method="post" >
+    
+    <form id="login" action="login.php" method="post">
         <div class="rectangle-8-jjL">
           <input type="text" placeholder="Username" maxlength="20" name="user">
         </div>

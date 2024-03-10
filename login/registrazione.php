@@ -56,8 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: group-2.php?error=invalid");
     }
     }
-    
-  
+ 
 }
 
 mysqli_close($conn);
