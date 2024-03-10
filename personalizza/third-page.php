@@ -47,10 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
   <div class="rectangle-2-3pi">
   </div>
-  <div class="rectangle-4-wv6">
-  </div>
-  <div class="rectangle-5-FQz">
-  </div>
   <div class="rectangle-6-jb4">
   </div>
   <div class="rectangle-7-DFL">
@@ -67,11 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <p class="dettagli-9Cr">Dettagli</p>
   <img class="aluminium" src="./assets/aluminium.png" alt="Aluminium" id="dettagli1">
   <img class="carbonFiber" src="./assets/carbonFiber.png" alt="carbonFiber" id="dettagli2">
-  <p class="select-tappezzeria-Czz">Select tappezzeria</p>
-  <p class="select-dettagli-X1g">Select dettagli</p>
   <form id="formData" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <input type="hidden" id="pelle" name="pelle" value="">
-    <input type="hidden" id="dettagli" name="dettagli" value="">
+    <input type="hidden" id="pelle" name="pelle" value="1">
+    <input type="hidden" id="dettagli" name="dettagli" value="5">
     <input type="hidden" id="prezzo" name="prezzo" value="<?php echo $prezzo;?>">
     <input type="hidden" id="prezzo2" name="prezzo2" value="">
     <input type="submit" class="procedi-1hY" value="Procedi">

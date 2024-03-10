@@ -5,6 +5,16 @@ if(!isset($_SESSION['username'])){
   exit;
 }  
 
+$conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
+if ($conn->connect_error) {
+  die("Connessione al database fallita: " . $conn->connect_error);
+}
+
+$sql = "SELECT PrezzoBase FROM auto WHERE IdAuto=1";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+$prezzobase = $row["PrezzoBase"];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST["prezzo"])) {
       $_SESSION["prezzo"] = $_POST["prezzo"];
@@ -43,7 +53,7 @@ exit;
   </div>
   <p class="price-69-000-HYi">
     <span class="price-69-000-HYi-sub-0">Price:</span>
-    <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1">69000</span>
+    <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1"><?php echo $prezzobase; ?></span>
   </p>
   <div class="rectangle-1-AW2">
   </div>
@@ -63,14 +73,13 @@ exit;
   </div>
   <div id="informazioni2">
   </div>
-  <button onclick="passaElementoSuccessivoM()" id="button1">Successivo</button>
-  <button onclick="passaElementoPrecedenteM()" id="button2">Precedente</button>
+  <button onclick="passaElementoSuccessivoM()" id="button1">></button>
+  <button onclick="passaElementoPrecedenteM()" id="button2"><</button>
 
-  <button onclick="passaElementoSuccessivoP()" id="button3">Successivo</button>
-  <button onclick="passaElementoPrecedenteP()" id="button4">Precedente</button>
+  <button onclick="passaElementoSuccessivoP()" id="button3">></button>
+  <button onclick="passaElementoPrecedenteP()" id="button4"><</button>
   <a class="select-motore-Czz" onclick="salvaIDM()">Select motore</a>
   <a class="select-pacchetto-X1g" onclick="salvaIDP()">Select pacchetto</a>
-
   <form id="pag1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
     <input type="submit" class="procedi-1hY" value="Procedi">
     <input type="hidden" id="prezzo" name="prezzo" value="">
