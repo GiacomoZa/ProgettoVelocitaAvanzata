@@ -56,8 +56,7 @@
         // Mostra il nome utente e il link di logout solo se l'utente è autenticato
 
         if(isset($_SESSION['username'])) {
-            echo '<div class="welcome-message">'.$_SESSION['username'].'</div>';
-            echo '<a class="galleria" href="../login/galleria.php">Galleria</a>';
+            echo '<div class="welcome-message">Benvenuto, '.$_SESSION['username'].'</div>';
             echo '<a class="logout-link" href="?logout">Logout</a>';
         }
         else {
@@ -68,7 +67,10 @@
         }
 
       ?>
+
+
    </div>
+     
     </div>
     <div class="navigation-6qL">
       <div class="history-1SW" onclick="scorri('storia')">Storia</div>
