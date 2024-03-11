@@ -17,16 +17,7 @@
 <div class="group-1-B8A">
   <div class="frame-8-LFx">
     <div class="rectangle-6-Ud4">
-    <?php
-        session_start();
-
-        if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
-            echo "<div style='color: red; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
-        }
-        if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
-          echo "<div style='color: red; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
-        }
-        ?>
+    
     </div>
     <p class="new-member-register-now-zbQ">
       <span class="new-member-register-now-zbQ-sub-0">New Member?</span>
@@ -42,17 +33,28 @@
         </div>
         <div class="rectangle-5-UKY">
           <input type="password" placeholder="Password" maxlength="20" name="psw">
-        </div>
-
-        <div class="checkbox-container">
+          <div style="margin-bottom:3%; margin-top:8%" class="checkbox-container">
           <label for="ricordami" style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
-          <input type='checkbox' name='ricordami' id="ricordami">
+          <input style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;' type='checkbox' name='ricordami' id="ricordami">
         </div>
+          <?php
+        session_start();
+
+        if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
+            echo "<div style='color: red;  text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
+        }
+        if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
+          echo "<div style='color: red; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
+        }
+        ?>
+        </div>
+        
         <div class="frame-6-2VU">
           <input type="submit" value="Accedi" class="configura-uJN">
           <img class="chevron-right-ouY" src="./assets/chevron-right-Fjk.png"/>
         </div>
     </form>
+    
     <a href="../home/home.php">    
       <img class="screenshot-2024-02-23-alle-0822-2-vDU" src="./assets/screenshot-2024-02-23-alle-0822-2.png"/>
     </a>
