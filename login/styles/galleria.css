@@ -9,6 +9,11 @@ body {
     flex-direction: column;
 }
 
+h2{
+    text-align: center;
+    padding: 20px;
+}
+
 .header {
     background-color: black;
     color: #fff;
