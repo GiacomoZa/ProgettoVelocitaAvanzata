@@ -37,28 +37,28 @@ document.addEventListener("DOMContentLoaded", function() {
     var prezzoCerchio = 0;
 
     image1.addEventListener("click", function() {
-        fetchImage("./assets/macchinaBlu.png", foto);
+        foto.src="./assets/macchinaBlu.png";
         idColore.value = 2;
         prezzoColore = 800;
         aggiornaPrezzo();
     });
 
     image2.addEventListener("click", function() {
-        fetchImage("./assets/macchinaNera.png", foto);
+        foto.src="./assets/macchinaNera.png";
         idColore.value = 3;
         prezzoColore = 800;
         aggiornaPrezzo();
     });
 
     image3.addEventListener("click", function() {
-        fetchImage("./assets/macchinaBianca.png", foto);
+        foto.src="./assets/macchinaBianca.png";
         idColore.value = 4;
         prezzoColore = 3000;
         aggiornaPrezzo();
     });
 
     image4.addEventListener("click", function() {
-        fetchImage("./assets/foto1-4.png", foto);
+        foto.src="./assets/foto1-4.png";
         idColore.value = 1;
         prezzoColore = 0;
         aggiornaPrezzo();

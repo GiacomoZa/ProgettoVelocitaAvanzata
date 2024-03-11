@@ -1,6 +1,8 @@
 var idMotoreCorrente = 1;
 var idPacchettoCorrente = 1;
 var prezzoIniziale = 69000;
+var imgElement = document.getElementById("fotoM");
+
 
 function passaElementoSuccessivoM() {
   if (idMotoreCorrente < 4) {
@@ -21,6 +23,14 @@ function passaElementoSuccessivoM() {
     // Effettua la richiesta GET per ottenere il prossimo elemento
     xhttp.open("GET", "InfoMotore.php?id=" + idMotoreCorrente, true);
     xhttp.send();
+
+    if(idMotoreCorrente == 1){
+      fotoM.src = "./assets/fotoMotore1.png";
+    } else if (idMotoreCorrente == 2) {
+      fotoM.src = "./assets/fotoMotore2.png";
+    } else if (idMotoreCorrente == 3) {
+      fotoM.src = "./assets/fotoMotore3.png";
+    }
 
     // Incrementa l'ID corrente per il prossimo elemento
     idMotoreCorrente++;
@@ -56,6 +66,14 @@ function passaElementoPrecedenteM() {
     xhttp.open("GET", "InfoMotore.php?id=" + idMotoreCorrente, true);
     xhttp.send();
 
+    if(idMotoreCorrente == 1){
+      fotoM.src = "./assets/fotoMotore1.png";
+    } else if (idMotoreCorrente == 2) {
+      fotoM.src = "./assets/fotoMotore2.png";
+    } else if (idMotoreCorrente == 3) {
+      fotoM.src = "./assets/fotoMotore3.png";
+    }
+
     // Aggiorna il prezzo visualizzato sulla pagina
   } else {
     alert("Non ci sono elementi precedenti!");
@@ -72,6 +90,7 @@ function passaElementoSuccessivoP() {
         // Ricevi la risposta JSON
         var data = JSON.parse(this.responseText);
         // Visualizza le informazioni
+        document.getElementById("informazioni2").style.textAlign="left";
         document.getElementById("informazioni2").innerHTML = "<b>Nome:</b> " + data.NomePacchetto + "<br><b>Prezzo:</b> " + data.Prezzo + "<br><b>Descrizione:</b> " + data.descrizione; 
         var prezzoPacchetto = parseInt(data.Prezzo);
         prezzoIniziale += prezzoPacchetto;

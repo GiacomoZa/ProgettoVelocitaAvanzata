@@ -388,7 +388,7 @@ body {
   width: 18.7rem;
   height: 7.7rem;
   position: absolute;
-  left: 50%;
+  left: 51%;
   transform: translateX(-50%);    
   top: 88.7rem;
   display: flex;
@@ -404,7 +404,7 @@ body {
   width: 52.2rem;
   height: auto; /* Cambiato da 20.4rem a auto per adattarsi al contenuto */
   position: absolute;
-  left: 56%;
+  left: 57%;
   top: 99.7rem;
   display: flex;
   flex-direction: column; /* Aggiunto per garantire che il testo vada a capo correttamente */
@@ -500,7 +500,6 @@ body {
   flex-shrink: 0;
 }
 .home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .auto-group-tb3k-VmY .secondo-paragrafo {
-  margin-left: 0.3rem;
   max-width: 53rem;
   display: flex;
   padding-left: 11%;

@@ -71,7 +71,11 @@ exit;
   </p>
   <div id="informazioni">
   </div>
+  <div class="fotoMotore1">  
+    <img id="fotoM" src="./assets/fotoMotore1.png"/> 
+  </div>
   <div id="informazioni2">
+    Nessun pacchetto selezionato
   </div>
   <button onclick="passaElementoSuccessivoM()" id="button1">></button>
   <button onclick="passaElementoPrecedenteM()" id="button2"><</button>
