@@ -30,21 +30,21 @@
     <form id="login" action="login.php" method="post">
         <div class="rectangle-8-jjL">
           <input type="text" placeholder="Username" maxlength="20" name="user">
-          <div style="padding-top:30%;" class="checkbox-container">
-          <label for="ricordami" style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
-          <input style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;' type='checkbox' name='ricordami' id="ricordami">
-        </div>
         </div>
         <div class="rectangle-5-UKY">
           <input type="password" placeholder="Password" maxlength="20" name="psw">
+          <div style="margin-bottom:3%; margin-top:8%" class="checkbox-container">
+          <label for="ricordami" style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
+          <input style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;' type='checkbox' name='ricordami' id="ricordami">
+        </div>
           <?php
         session_start();
 
         if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
-            echo "<div style='color: red; padding-top:11%; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
+            echo "<div style='color: red;  text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
         }
         if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
-          echo "<div style='color: red;padding-top:11%; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
+          echo "<div style='color: red; text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Compila entrambi i campi</strong></p></div>";
         }
         ?>
         </div>
