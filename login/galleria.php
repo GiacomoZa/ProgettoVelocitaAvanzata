@@ -57,7 +57,7 @@ if ($resultListaPersonalizzazione->num_rows > 0) {
 
 
 // Query per selezionare i dati di test drive e relative concessionarie
-$sql = "SELECT td.mail, td.datatest, c.indirizzo 
+$sql = "SELECT td.mail, td.datatest, CONCAT(c.indirizzo, ', ', c.citta) AS indirizzo
         FROM testdrive td
         INNER JOIN seleziona s ON td.IdTest = s.IdTest
         INNER JOIN concessionaria c ON s.IdConcessionaria = c.IdConcessionaria

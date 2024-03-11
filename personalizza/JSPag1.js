@@ -14,7 +14,7 @@ function passaElementoSuccessivoM() {
         // Ricevi la risposta JSON
         var data = JSON.parse(this.responseText);
         // Visualizza le informazioni
-        document.getElementById("informazioni").innerHTML = "<b>Cilindrata:</b> " + data.cilindrata + "<br><b>Carburante:</b> " + data.carburante + "<br><b>Prezzo:</b> " + data.prezzo + "<br><b>Trasmissione:</b> " + data.trasmissione + "<br><b>Trazione:</b> " + data.trazione;
+        document.getElementById("informazioni").innerHTML = "<b>Cilindrata:</b> " + data.cilindrata + "<br><b>Carburante:</b> " + data.carburante + "<br><b>Prezzo: €</b> " + data.prezzo + "<br><b>Trasmissione:</b> " + data.trasmissione + "<br><b>Trazione:</b> " + data.trazione;
         var prezzoMotore = parseInt(data.prezzo);
         prezzoIniziale += prezzoMotore;
         document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoIniziale.toLocaleString();
@@ -56,7 +56,7 @@ function passaElementoPrecedenteM() {
         // Ricevi la risposta JSON
         var data = JSON.parse(this.responseText);
         // Visualizza le informazioni
-        document.getElementById("informazioni").innerHTML = "<b>Cilindrata:</b> " + data.cilindrata + "<br><b>Carburante:</b> " + data.carburante + "<br><b>Prezzo:</b> " + data.prezzo + "<br><b>Trasmissione:</b> " + data.trasmissione + "<br><b>Trazione:</b> " + data.trazione;
+        document.getElementById("informazioni").innerHTML = "<b>Cilindrata:</b> " + data.cilindrata + "<br><b>Carburante:</b> " + data.carburante + "<br><b>Prezzo: €</b> " + data.prezzo + "<br><b>Trasmissione:</b> " + data.trasmissione + "<br><b>Trazione:</b> " + data.trazione;
         var prezzoMotore = parseInt(data.prezzo);
         prezzoIniziale += prezzoMotore;
         document.querySelector(".price-69-000-HYi-sub-1").innerHTML = "€" + prezzoIniziale.toLocaleString();
@@ -91,7 +91,7 @@ function passaElementoSuccessivoP() {
         var data = JSON.parse(this.responseText);
         // Visualizza le informazioni
         document.getElementById("informazioni2").style.textAlign="left";
-        document.getElementById("informazioni2").innerHTML = "<b>Nome:</b> " + data.NomePacchetto + "<br><b>Prezzo:</b> " + data.Prezzo + "<br><b>Descrizione:</b> " + data.descrizione; 
+        document.getElementById("informazioni2").innerHTML = "<b>Nome:</b> " + data.NomePacchetto + "<br><b>Prezzo: €</b> " + data.Prezzo + "<br><b>Descrizione:</b> " + data.descrizione; 
         var prezzoPacchetto = parseInt(data.Prezzo);
         prezzoIniziale += prezzoPacchetto;
 
@@ -125,7 +125,7 @@ function passaElementoPrecedenteP() {
         // Ricevi la risposta JSON
         var data = JSON.parse(this.responseText);
         // Visualizza le informazioni
-        document.getElementById("informazioni2").innerHTML = "<b>Nome:</b> " + data.NomePacchetto + "<br><b>Prezzo:</b> " + data.Prezzo + "<br><b>Descrizione:</b> " + data.descrizione; 
+        document.getElementById("informazioni2").innerHTML = "<b>Nome:</b> " + data.NomePacchetto + "<br><b>Prezzo: €</b> " + data.Prezzo + "<br><b>Descrizione:</b> " + data.descrizione; 
         var prezzoPacchetto = parseInt(data.Prezzo);
         prezzoIniziale += prezzoPacchetto;
 

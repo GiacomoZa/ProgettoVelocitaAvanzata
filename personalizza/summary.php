@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="./styles/summary.css"/>
   <script src="./JSPag4.js"></script>
 </head>
-<body onload="datiMotore(<?php echo $idM; ?>), datiColore(<?php echo $idC; ?>), datiCerchi(<?php echo $cerchi; ?>), datiDettagli(<?php echo $dettagli; ?>), datiInterni(<?php echo $pelle; ?>)">
+<body onload="datiMotore(<?php echo $idM; ?>), datiColore(<?php echo $idC; ?>), datiCerchi(<?php echo $cerchi; ?>), datiDettagli(<?php echo $dettagli; ?>), datiInterni(<?php echo $pelle; ?>), coloreAuto(<?php echo $idC; ?>);">
 <div class="summary-CZt">
   <div class="rectangle-3-JN2">
   </div>
@@ -231,9 +231,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 </div>
 </body>
-</html>
 <script>
   function submitForm() {
     document.getElementById("myForm").submit();
   }
+
+  function coloreAuto(id){
+
+    var macchina = document.getElementById("macchina");
+    if(id==2){
+      macchina.src= "./assets/macchinaBlu.png";
+    }else if(id==3){
+      macchina.src= "./assets/macchinaNera.png";
+    }else if(id==4){
+      macchina.src= "./assets/macchinaBianca.png";
+    }
+  }
 </script>
+</html>
