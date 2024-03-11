@@ -388,7 +388,7 @@ body {
   width: 18.7rem;
   height: 7.7rem;
   position: absolute;
-  left: 51%;
+  left: 52%;
   transform: translateX(-50%);    
   top: 88.7rem;
   display: flex;
@@ -404,7 +404,7 @@ body {
   width: 52.2rem;
   height: auto; /* Cambiato da 20.4rem a auto per adattarsi al contenuto */
   position: absolute;
-  left: 57%;
+  left: 58%;
   top: 99.7rem;
   display: flex;
   flex-direction: column; /* Aggiunto per garantire che il testo vada a capo correttamente */
@@ -521,6 +521,7 @@ body {
   font-family: Advent Pro, 'Source Sans Pro';
   display: flex;
   white-space: nowrap;
+  margin-right: 8px;
 }
 .home-wnn .auto-group-uapy-yFU .auto-group-npyt-MvE .dal2018paragrafo {
   font-size: 2.5rem;
@@ -532,6 +533,7 @@ body {
   color: #ffffff;
   font-family: Advent Pro, 'Source Sans Pro';
   flex-shrink: 0;
+  margin-right: 8px;
 }
 .home-wnn .auto-group-r2kg-arr {
   margin-bottom: 12.6rem;

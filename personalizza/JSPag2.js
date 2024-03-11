@@ -1,21 +1,3 @@
-function fetchImage(url, targetImage) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'arraybuffer';
-
-    xhr.onload = function() {
-        if (this.status == 200) {
-            var blob = this.response;
-            var reader = new FileReader();
-            reader.onload = function() {
-                targetImage.src = reader.result; // Imposta l'immagine di destinazione con l'URL restituito dall'API
-            };
-            reader.readAsDataURL(new Blob([blob])); // Converti il buffer in un URL Blob
-        }
-    };
-    xhr.send();
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     var image3 = document.getElementById("PWhite");
     var image1 = document.getElementById("MBlu");
@@ -38,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     image1.addEventListener("click", function() {
         foto.src="./assets/macchinaBlu.png";
+        image1.style.border="2px solid red"
+        image4.style.border="none"
+        image2.style.border="none"
+        image3.style.border="none"
         idColore.value = 2;
         prezzoColore = 800;
         aggiornaPrezzo();
@@ -45,6 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     image2.addEventListener("click", function() {
         foto.src="./assets/macchinaNera.png";
+        image2.style.border="2px solid red"
+        image1.style.border="none"
+        image4.style.border="none"
+        image3.style.border="none"
         idColore.value = 3;
         prezzoColore = 800;
         aggiornaPrezzo();
@@ -52,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     image3.addEventListener("click", function() {
         foto.src="./assets/macchinaBianca.png";
+        image3.style.border="2px solid red"
+        image1.style.border="none"
+        image2.style.border="none"
+        image4.style.border="none"
         idColore.value = 4;
         prezzoColore = 3000;
         aggiornaPrezzo();
@@ -59,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     image4.addEventListener("click", function() {
         foto.src="./assets/foto1-4.png";
+        image4.style.border="2px solid red"
+        image1.style.border="none"
+        image2.style.border="none"
+        image3.style.border="none"
         idColore.value = 1;
         prezzoColore = 0;
         aggiornaPrezzo();

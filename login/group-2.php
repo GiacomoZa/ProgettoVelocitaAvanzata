@@ -30,7 +30,7 @@
     <p class="already-a-member-log-in-y2e">
       <span class="already-a-member-log-in-y2e-sub-0">Already a member?</span>
       <span class="already-a-member-log-in-y2e-sub-1"> </span>
-      <a class="already-a-member-log-in-y2e-sub-2" href="group-1.html">Log In</a>
+      <a class="already-a-member-log-in-y2e-sub-2" href="group-1.php">Log In</a>
     </p>
     <div class="frame-7-iwG">
       <div class="configura-R4z" onclick="document.getElementById('registrazione').submit()">Avanti</div>

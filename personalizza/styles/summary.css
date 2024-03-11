@@ -55,15 +55,14 @@ body {
   appearance: none;
 }
 #infoPacchetto {
-  width: 40rem;
+  width: 30rem;
   height: 15rem;
   position: absolute;
-  left: 65%;
-  top: 50%;
+  left: 66%;
+  top: 55%;
   font-size: 1.6rem;
   color: #000000;
   font-family: Roboto, 'Source Sans Pro';
-  border: solid 2px #737373;
 }
 .summary-CZt .rectangle-3-JN2 {
   width: 100%;

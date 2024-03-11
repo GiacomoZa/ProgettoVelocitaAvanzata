@@ -52,7 +52,7 @@ if ($resultListaPersonalizzazione->num_rows > 0) {
     }
     echo "</table>";
 } else {
-    echo "Nessun risultato trovato per la lista di personalizzazioni";
+    echo "<br><br><br><br> <a style=text-align:center>Nessun risultato trovato per la lista di personalizzazioni <br><br><br><br><br><br></a>";
 }
 
 
@@ -76,7 +76,7 @@ if ($result->num_rows > 0) {
     }
     echo "</table>";
 } else {
-    echo "Nessun risultato trovato per i test drive e le relative concessionarie";
+    echo "<a style=text-align:center>Nessun risultato trovato per i test drive e le relative concessionarie</a>";
 }
 
 $conn->close();
