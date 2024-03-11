@@ -1,3 +1,5 @@
+
+//funzione per l'aggiornamento dell'immagine in base alla selezione dell'utente
 document.addEventListener("DOMContentLoaded", function() {
     var image3 = document.getElementById("PWhite");
     var image1 = document.getElementById("MBlu");

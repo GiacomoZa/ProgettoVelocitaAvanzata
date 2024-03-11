@@ -36,6 +36,7 @@ function interni(){
     }
 }
 
+//richiesta ajax per ottenere i dati del motore salvato nella sessione
 function datiMotore(id){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {

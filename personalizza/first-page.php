@@ -10,11 +10,13 @@ if ($conn->connect_error) {
   die("Connessione al database fallita: " . $conn->connect_error);
 }
 
+//ottenimento prezzo di base del modello
 $sql = "SELECT PrezzoBase FROM auto WHERE IdAuto=1";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $prezzobase = $row["PrezzoBase"];
 
+//salvataggio dei dati selezionati nella sessione
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST["prezzo"])) {
       $_SESSION["prezzo"] = $_POST["prezzo"];
@@ -26,11 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION["idP"] = $_POST["idP"];
   }
 
-if ($_SESSION["idM"] != 0) {
-  header("Location: second-page.php");
-} elseif ($_SESSION["idP"] != 0) {
-  header("Location: summary2.php");
-}
+  if ($_SESSION["idM"] != 0) {
+    header("Location: second-page.php");
+  } else if ($_SESSION["idP"] != 0) {
+    header("Location: summary2.php");
+  }
 exit;  
 }
 ?>

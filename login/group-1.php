@@ -37,9 +37,10 @@
           <label for="ricordami" style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;'>Ricordami</label>
           <input style='color: red; text-align: center; font-family: Mulish, Source Sans Pro;' type='checkbox' name='ricordami' id="ricordami">
         </div>
-          <?php
+        <?php
         session_start();
 
+        //controllo se il trigger genera errore
         if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
             echo "<div style='color: red;  text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
         }

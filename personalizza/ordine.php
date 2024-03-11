@@ -5,6 +5,7 @@ if(!isset($_SESSION['username'])){
   exit;
 }  
 
+//codice per l'invio di una mail, mysql non è progettato per l'invio di email, in questo caso non succederà nulla
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);

@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400"/>
     <link rel="stylesheet" href="./styles/drive.css">
+
+    <!--js per aggiungere una mappa reattiva al form del testdrive-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
@@ -51,21 +53,16 @@
                     <label for="concessionario">Concessionario:</label>
                     <select id="concessionaria" name="concessionaria" class="custom-select">
                         <?php
-                        // Connessione al database
                         $conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
                     
-                        // Verifica della connessione
                         if (!$conn) {
                             die("Connessione al database fallita: " . mysqli_connect_error());
                         }
                     
-                        // Query SQL per selezionare le informazioni desiderate dalla tabella concessionaria
                         $sql = "SELECT * FROM concessionaria";
                         $result = mysqli_query($conn, $sql);
                     
-                        // Verifica se sono presenti risultati
                         if (mysqli_num_rows($result) > 0) {
-                            // Output dei dati di ogni riga
                             while($row = mysqli_fetch_assoc($result)) {
                                 echo "<option value='" . $row['IdConcessionaria'] . "'>" . $row['indirizzo'] . ", " . $row['regione'] . ", " . $row['citta'] . "</option>";
                             }
@@ -73,7 +70,6 @@
                             echo "Nessuna concessionaria trovata.";
                         }
                     
-                        // Chiudi la connessione al database
                         mysqli_close($conn);
                         ?>
                       </select>
@@ -104,16 +100,13 @@
         }
 
         function validateEmail(email) {
-            var re = /\S+@\S+\.\S+/; // - Uno o più caratteri non spazio prima del simbolo '@'.
-                                    // - Il simbolo '@'.
-                                    // - Uno o più caratteri non spazio dopo il simbolo '@'.
-                                    // - Il simbolo '.' (punto).
-                                    // - Uno o più caratteri non spazio dopo il punto.
+            var re = /\S+@\S+\.\S+/; 
+                                    
             return re.test(email);
         }
         function initMap() {
         // Inizializza la mappa sull'Italia
-        var map = L.map('map').setView([41.8719, 12.5674], 6); // Centra la mappa sull'Italia (latitudine e longitudine) con livello di zoom 6
+        var map = L.map('map').setView([41.8719, 12.5674], 6); 
 
         // Aggiungi un layer della mappa (OpenStreetMap)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

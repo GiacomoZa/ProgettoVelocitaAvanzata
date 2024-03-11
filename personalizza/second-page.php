@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <title>First page</title>
+  <title>Second page</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500"/>
   <link rel="stylesheet" href="./styles/second-page.css"/>
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
   <p class="price-69-000-HYi">
     <span class="price-69-000-HYi-sub-0">Prezzo:</span>
-    <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1"><?php echo $prezzo;?></span>   <!--da modificare in base all'opzional-->
+    <span class="price-69-000-HYi-sub-1" id="price-69-000-HYi-sub-1"><?php echo $prezzo;?></span>
   </p>
   <div class="rectangle-1-AW2">
   </div>

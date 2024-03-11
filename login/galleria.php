@@ -32,12 +32,10 @@ $idUtente = isset($_SESSION["id_utente"]) ? $_SESSION["id_utente"] : null;
 $Utente = $_SESSION["username"];
 
 $conn = mysqli_connect("localhost", "root", "", "dbvelocitaavanzata");
-// Verifica della connessione
 if ($conn->connect_error) {
     die("Connessione al database fallita: " . $conn->connect_error);
 }
 
-// Query per selezionare i dati dalla tabella listapersonalizzazione
 $sqlListaPersonalizzazione = "SELECT IdPersonalizzazione, prezzoTot FROM listapersonalizzazione WHERE IdUtente = $idUtente";
 $resultListaPersonalizzazione = $conn->query($sqlListaPersonalizzazione);
 
@@ -46,7 +44,6 @@ if ($resultListaPersonalizzazione->num_rows > 0) {
     echo "<h2>Lista Personalizzazione</h2>";
     echo "<table border='1'>";
     echo "<tr><th>IdPersonalizzazione</th><th>Prezzo Totale</th></tr>";
-    // Output dei dati di ogni riga
     while ($row = $resultListaPersonalizzazione->fetch_assoc()) {
         echo "<tr><td>" . $row["IdPersonalizzazione"] . "</td><td>" . $row["prezzoTot"] . "</td></tr>";
     }
@@ -56,7 +53,6 @@ if ($resultListaPersonalizzazione->num_rows > 0) {
 }
 
 
-// Query per selezionare i dati di test drive e relative concessionarie
 $sql = "SELECT td.mail, td.datatest, CONCAT(c.indirizzo, ', ', c.citta) AS indirizzo
         FROM testdrive td
         INNER JOIN seleziona s ON td.IdTest = s.IdTest
@@ -65,12 +61,10 @@ $sql = "SELECT td.mail, td.datatest, CONCAT(c.indirizzo, ', ', c.citta) AS indir
 
 $result = $conn->query($sql);
 
-// Se sono presenti risultati, stampa la tabella
 if ($result->num_rows > 0) {
     echo "<h2>Test Drive e Concessionarie</h2>";
     echo "<table border='1'>";
     echo "<tr><th>Mail</th><th>Data Test</th><th>Indirizzo Concessionaria</th></tr>";
-    // Output dei dati di ogni riga
     while ($row = $result->fetch_assoc()) {
         echo "<tr><td>" . $row["mail"] . "</td><td>" . $row["datatest"] . "</td><td>" . $row["indirizzo"] . "</td></tr>";
     }

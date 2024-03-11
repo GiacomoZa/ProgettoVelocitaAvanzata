@@ -41,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Errore durante l'inserimento dei dati nella tabella 'listapersonalizzazione': " . $conn->error;
   }
 
-  // Collegamento dell'elemento alla tabella auto tramite la tabella compone
   $sql = "INSERT INTO compone (IdAuto, IdPersonalizzazione) VALUES (1, $new_id)";
   if ($conn->query($sql) === TRUE) {
     echo "Dati inseriti correttamente nella tabella 'compone'.<br>";
@@ -65,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Errore durante l'inserimento dei dati nella tabella 'ordine': " . $conn->error;
   }
 
-  //Collegamento alla concessionaria selezionata
   $sql = "INSERT INTO scelta (IdOrdine, IdConcessionaria) VALUES ($new_id2, $idConcessionaria)";
   
   if ($conn->query($sql) === TRUE) {

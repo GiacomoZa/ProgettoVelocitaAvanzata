@@ -1,21 +1,3 @@
-function fetchImage(url, targetImage) {  //non serve utilizzare ajax qua che non ci si collega al db
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'arraybuffer';
-
-    xhr.onload = function() {
-        if (this.status == 200) {
-            var blob = this.response;
-            var reader = new FileReader();
-            reader.onload = function() {
-                targetImage.src = reader.result; 
-            };
-            reader.readAsDataURL(new Blob([blob])); 
-        }
-    };
-    xhr.send();
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     var image1 = document.getElementById("LBlack");
     var image2 = document.getElementById("LBrown");  
@@ -27,15 +9,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var foto = document.getElementById("macchina");
 
+    //salvataggio del prezzo della sessione, recuperandolo da un elemento html
     var prezzoS = document.getElementById("prezzo").value.trim();   
     prezzoS = prezzoS.replace(/[^0-9]/g, "");       
     var prezzo = parseInt(prezzoS);
-    var prezzoCorrente = prezzo;
+    var prezzoCorrente = prezzo; 
+
     var prezzoInterni = 0;
     var prezzoDettagli = 0;
 
     image1.addEventListener("click", function() {
-        fetchImage("./assets/interniNeri.jpeg", foto);
+        foto.src="./assets/interniNeri.jpeg";
         image1.style.border="2px solid red"
         image2.style.border="none"
         idPelle.value=1;
@@ -44,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     image2.addEventListener("click", function() {
-        fetchImage("./assets/interniMarroni.jpg", foto);
+        foto.src = "./assets/interniMarroni.jpg";
         image2.style.border="2px solid red"
         image1.style.border="none"
         idPelle.value=2;
