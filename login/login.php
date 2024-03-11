@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 setcookie('username',$user, time() + (60*60), "/");
             }
            
-            header("Location: ../home/home.php");
+            header("Location: ../home/index.php");
             exit;
         } else {
             header("Location: group-1.php?error=invalid");

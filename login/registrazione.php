@@ -43,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['id_utente'] = $id_utente;
         $_SESSION['username'] = $user;
     
-        header("Location: ../home/home.php");
-        exit; // Assicurati di uscire dallo script dopo il reindirizzamento
+        header("Location: ../home/index.php");
+        exit; 
     } catch (Exception $e) {
         header("Location: group-2.php?error=invalid");
     }

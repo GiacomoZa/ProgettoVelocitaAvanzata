@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: ../login/group-1.html");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,19 +19,13 @@ session_start();
 <body>
 <header class="header">
     <div class="logo">
-        <a href="../home/home.php">
+        <a href="../home/index.php">
             <img src="assets/screenshot-2024-02-23-alle-0822-2.png" alt="Logo">
         </a>
     </div>
     <h1>Galleria</h1>
 </header>
 <?php
-
-if (!isset($_SESSION['username'])) {
-    header("Location: ../login/group-1.html");
-    exit;
-}
-
 $idUtente = isset($_SESSION["id_utente"]) ? $_SESSION["id_utente"] : null;
 $Utente = $_SESSION["username"];
 

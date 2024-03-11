@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          mysqli_close($conn);
      
          echo "<script>alert('Grazie per la prenotazione. Un'email è stata inviata all'indirizzo $email.');</script>";
-         header("Location: ../home/home.php");
+         header("Location: ../home/index.php");
          exit; 
      } else {
          echo "Errore nell'inserimento: " . $conn->error;

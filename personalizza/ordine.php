@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Indirizzo email non valido.";
     }
-    header("Location: ../home/home.php");
+    header("Location: ../home/index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -56,6 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
-    <a href="../home/home.php">Torna alla home</a>
+    <a href="../home/index.php">Torna alla home</a>
 </body>
 </html>

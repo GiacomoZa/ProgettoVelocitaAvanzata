@@ -30,7 +30,7 @@
     <div class="reservation-page">
     <header class="header">
     <div class="logo">
-    <a  href="../home/home.php">
+    <a  href="../home/index.php">
         <img src="assets/logo.png" alt="Logo">
     </a>
     </div>

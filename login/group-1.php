@@ -56,7 +56,7 @@
         </div>
     </form>
     
-    <a href="../home/home.php">    
+    <a href="../home/index.php">    
       <img class="screenshot-2024-02-23-alle-0822-2-vDU" src="./assets/screenshot-2024-02-23-alle-0822-2.png"/>
     </a>
 </div>

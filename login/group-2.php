@@ -34,7 +34,7 @@
       <div class="configura-R4z" onclick="document.getElementById('registrazione').submit()">Avanti</div>
       <img class="chevron-right-v1k" src="./assets/chevron-right-Qte.png"/>
     </div>
-    <a href="../home/home.php">
+    <a href="../home/index.php">
       <img class="screenshot-2024-02-23-alle-0822-3-RjC" src="./assets/screenshot-2024-02-23-alle-0822-3.png"/>
     </a>
     <p class="get-started-LbG">Get Started</p>
