@@ -10,24 +10,24 @@ function Redirect(percorso){
 document.getElementById("submitButton").addEventListener("click", function(event) {
     event.preventDefault(); // Evita l'invio del modulo predefinito
 
-    // Ottieni i dati del modulo
-    var formData = new FormData(document.getElementById("login"));
+   
+    var formData = new FormData(document.getElementById("login")); // ottiene i dati
 
-    // Invia i dati al tuo script PHP tramite AJAX
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "login.php", true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                // Gestisci la risposta del tuo script PHP se necessario
+   
+    var xhr = new XMLHttpRequest(); // Crea una nuova richiesta XMLHttpRequest
+
+    xhr.open("POST", "login.php", true); // Imposta la richiesta asincrona come POST e imposta lo script di destinazione
+
+    xhr.onreadystatechange = function() { // Funzione da eseguire ogni volta che lo stato della richiesta cambia
+        if (xhr.readyState === XMLHttpRequest.DONE) { // Controlla se la richiesta è stata fatta
+            if (xhr.status === 200) {  
                 console.log(xhr.responseText);
             } else {
-                // Gestisci eventuali errori di invio
                 console.error('Si è verificato un errore durante l\'invio dei dati.');
             }
         }
     };
-    xhr.send(formData);
+    xhr.send(formData); // invia i dati del modulo tramite ajax
 });
 
 function validateForm() {

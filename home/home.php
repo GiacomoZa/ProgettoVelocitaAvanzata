@@ -29,36 +29,35 @@ session_start();
       
       <div class="login-PnW" id="logged-in-user">
       <?php
-        if(isset($_COOKIE['utente']) && isset($_COOKIE['username'])) {
-          // Il cookie contiene un identificativo utente valido
+        if(isset($_COOKIE['utente']) && isset($_COOKIE['username'])) { // Controlla se ci sono cookie di login e li imposta come variabili di sessione
           $_SESSION['id_utente'] = $_COOKIE['utente'];
           $_SESSION['username'] = $_COOKIE['username'];
         }
 
-        // Gestione del logout se il parametro "logout" è presente nell'URL
-        if(isset($_GET['logout'])) {
-          // Elimina tutte le variabili di sessione
-          session_unset();
-          // Distruggi la sessione
-          session_destroy();
-          // Elimina i cookie sovrascrivendoli con cookie vuoti e scadenza passata
-          setcookie('utente', '', time() - 3600, "/");
+       
+        if(isset($_GET['logout'])) {  // controlla se il paramtro 'logout' è presente nell'URL
+          
+          session_unset(); // elimina le varibali di sessione corrente
+          
+          session_destroy(); // elimina completamente la sessione, eliminando l'ID della sessione
+        
+          setcookie('utente', '', time() - 3600, "/"); // elimina i cookie
           setcookie('username', '', time() - 3600, "/");
-          // Reindirizza alla pagina corrente
+         
           header("Location: ".$_SERVER['PHP_SELF']);
-          exit; // Assicura che lo script termini qui dopo il reindirizzamento
+          exit; 
       }
       
 
-        // Mostra il nome utente e il link di logout solo se l'utente è autenticato
-        if(isset($_SESSION['username'])) {
+      
+        if(isset($_SESSION['username'])) {  // controlla se ci sono sessioni settate
             echo '<div class="welcome-message">'.$_SESSION['username'].'</div>';
             echo '<a class="galleria" href="../login/galleria.php">Galleria</a>';
             echo '<a class="logout-link" href="?logout">Logout</a>';
         }
         else {
             echo '
-                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.php\'))">Login</div>
+                <div class="login-PnW" onclick="(Redirect(\'../login/group-1.php\'))">Login</div> 
                 <div style="padding-left:20%;" class="login-PnW" onclick="(Redirect(\'../login/group-2.php\'))">Registrati</div>
             ';
         }
@@ -169,9 +168,6 @@ session_start();
         </tr>
     </table>
 </div>
-
-
-
 </div>
 </body>
 </html>
