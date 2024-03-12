@@ -17,7 +17,7 @@
   <div class="frame-9-JSJ">
     <div class="rectangle-7-eFG">
     <?php
-      //controllo se il trigger genera errore
+      //controllo se genera errore
       if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
         echo "<div style='color: red; text-align: center; padding-top:82.5%; font-family: Mulish, Source Sans Pro;'><p><strong>Utente già presente.</strong></p></div>";
       }if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {

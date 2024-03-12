@@ -24,6 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $max_id = $row["max_id"];
  
      $new_id = $max_id + 1;
+
+    $email = mysqli_real_escape_string($conn, $email);
+    $date = mysqli_real_escape_string($conn, $date);
+    $concessionaria = mysqli_real_escape_string($conn, $concessionaria);
  
      $sql_testdrive = "INSERT INTO testdrive (IdTest, mail, datatest, IdUtente) VALUES ('$new_id', '$email', '$date', '{$_SESSION['id_utente']}')";
      $sql_seleziona = "INSERT INTO seleziona (IdTest, IdConcessionaria) VALUES ('$new_id', '$concessionaria')";
@@ -31,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      if ($conn->query($sql_testdrive) === TRUE && $conn->query($sql_seleziona) === TRUE) {
          mysqli_close($conn);
      
-         echo "<script>alert('Grazie per la prenotazione. Un'email è stata inviata all'indirizzo $email.');</script>";
          header("Location: ../home/index.php");
          exit; 
      } else {

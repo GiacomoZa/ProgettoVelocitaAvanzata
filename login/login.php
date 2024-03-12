@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 // Controlla se è stato inviato il modulo di login
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     $user = $_POST['user'];
     $psw = $_POST['psw'];
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "SELECT * FROM Utente WHERE user = '$user' && password = '$psw'";
         $risultato = mysqli_query($conn, $query);
 
-        $riga = mysqli_fetch_array($risultato);
+        $riga = mysqli_fetch_array($risultato); 
         if ($riga) {
 
             $_SESSION['username'] = $user;

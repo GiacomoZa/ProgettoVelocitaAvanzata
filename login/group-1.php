@@ -40,8 +40,8 @@
         <?php
         session_start();
 
-        //controllo se il trigger genera errore
-        if (isset($_GET['error']) && $_GET['error'] == 'invalid') {
+        //controllo se viene generato l'errore
+        if (isset($_GET['error']) && $_GET['error'] == 'invalid') { 
             echo "<div style='color: red;  text-align: center;  font-family: Mulish, Source Sans Pro;'><p><strong>Utente o password errati</strong></p></div>";
         }
         if (isset($_GET['error2']) && $_GET['error2'] == 'invalid') {
