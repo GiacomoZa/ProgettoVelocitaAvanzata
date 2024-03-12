@@ -21,6 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: group-1.php?error2=invalid");
         exit;
     } else {
+        $user = mysqli_real_escape_string($conn, $user);
+        $psw = mysqli_real_escape_string($conn, $psw);
         //query al database per verificare le credenziali e salvarle nella sessione
         $query = "SELECT * FROM Utente WHERE user = '$user' && password = '$psw'";
         $risultato = mysqli_query($conn, $query);
