@@ -21,27 +21,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: group-1.php?error2=invalid");
         exit;
     } else {
-        $user = mysqli_real_escape_string($conn, $user);
-        $psw = mysqli_real_escape_string($conn, $psw);
-        //query al database per verificare le credenziali e salvarle nella sessione
-        $query = "SELECT * FROM Utente WHERE user = '$user' && password = '$psw'";
-        $risultato = mysqli_query($conn, $query);
+        // Prepara una query parametrizzata per verificare le credenziali
+        $stmt = $conn->prepare("SELECT * FROM Utente WHERE user = ? AND password = ?");
+        $stmt->bind_param("ss", $user, $psw);
+        $stmt->execute();
+        $risultato = $stmt->get_result();
 
-        $riga = mysqli_fetch_array($risultato); 
-        if ($riga) {
-
+        if ($riga = $risultato->fetch_array(MYSQLI_ASSOC)) {
             $_SESSION['username'] = $user;
 
-            $query_id_utente = "SELECT IdUtente FROM Utente WHERE user = '$user'";
-            $result_id_utente = mysqli_query($conn, $query_id_utente);
-            $row_id_utente = mysqli_fetch_assoc($result_id_utente);
+            // Prepara una query parametrizzata per ottenere l'ID dell'utente
+            $stmt_id = $conn->prepare("SELECT IdUtente FROM Utente WHERE user = ?");
+            $stmt_id->bind_param("s", $user);
+            $stmt_id->execute();
+            $result_id_utente = $stmt_id->get_result();
+            $row_id_utente = $result_id_utente->fetch_assoc();
             $id_utente = $row_id_utente['IdUtente'];
 
             $_SESSION['id_utente'] = $id_utente;
 
-            if ($_POST['ricordami']) {               
-                setcookie('utente',$id_utente, time() + (60*60), "/"); // Scade dopo un'ora
-                setcookie('username',$user, time() + (60*60), "/");
+            if (isset($_POST['ricordami']) && $_POST['ricordami']) {               
+                setcookie('utente', $id_utente, time() + (60*60), "/"); // Scade dopo un'ora
+                setcookie('username', $user, time() + (60*60), "/");
             }
            
             header("Location: ../home/index.php");

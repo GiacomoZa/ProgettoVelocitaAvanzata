@@ -20,36 +20,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
 
-
     if ($user == "" || $psw == "" || $nome == "" || $cognome == "") {
         header("Location: group-2.php?error2=invalid");
-    }else{
-
-    //controlli per sql injection
-    $user = mysqli_real_escape_string($conn, $user);
-    $psw = mysqli_real_escape_string($conn, $psw);
-    $nome = mysqli_real_escape_string($conn, $nome);
-    $cognome = mysqli_real_escape_string($conn, $cognome);
-
-    $query = "INSERT INTO Utente (Nome, Cognome, user, password) 
-              VALUES ('$nome', '$cognome','$user', '$psw')";
-    
-    //query per inserire l'utente nel database
-    try {
-        mysqli_query($conn, $query);
-
-        $id_utente = mysqli_insert_id($conn);
-
-        $_SESSION['id_utente'] = $id_utente;
-        $_SESSION['username'] = $user;
-    
-        header("Location: ../home/index.php");
-        exit; 
-    } catch (Exception $e) {
-        header("Location: group-2.php?error=invalid");
+    } else {
+        // Prepara la query parametrizzata
+        $query = "INSERT INTO Utente (Nome, Cognome, user, password) VALUES (?, ?, ?, ?)";
+        
+        if ($stmt = mysqli_prepare($conn, $query)) {
+            // Associa i parametri
+            mysqli_stmt_bind_param($stmt, 'ssss', $nome, $cognome, $user, $psw);
+            
+            // Esegui la query
+            if (mysqli_stmt_execute($stmt)) {
+                $id_utente = mysqli_insert_id($conn);
+                
+                $_SESSION['id_utente'] = $id_utente;
+                $_SESSION['username'] = $user;
+                
+                header("Location: ../home/index.php");
+                exit;
+            } else {
+                header("Location: group-2.php?error=invalid");
+            }
+            
+            // Chiudi lo statement
+            mysqli_stmt_close($stmt);
+        } else {
+            header("Location: group-2.php?error=invalid");
+        }
     }
-    }
- 
 }
 
 mysqli_close($conn);
